@@ -397,6 +397,15 @@
     "episode": "S03E02",
     "phrase": "Is that relevant?",
     "meaning_ko": "그게 (지금) 중요해?, 그게 관련이 있어?",
+    "hook_ko": "회의가 자꾸 딴길로 샐 때",
+    "context_ko": "지금 논점과 관련 있는지 되물을 때",
+    "source_label": "SEINFELD S3E2 · 실제 대사",
+    "delayed_answer": true,
+    "quiz_ko": "그게 지금 중요한 거야?",
+    "choice_a": "Is that relevant right now?",
+    "choice_b": "Does that relevant right now?",
+    "answer_choice": "A",
+    "answer_explanation_ko": "relevant는 형용사이므로 be동사 is와 함께 씁니다. does 뒤에 바로 relevant를 둘 수 없습니다.",
     "posts": [
       {
         "index": 1,
@@ -416,6 +425,15 @@
     "episode": "S03E02",
     "phrase": "keep your spirits up",
     "meaning_ko": "기운/사기를 북돋우다, 힘을 내게 하다",
+    "hook_ko": "팀 전체가 지쳐갈 때",
+    "context_ko": "힘든 상황에서도 기운을 유지하게 할 때",
+    "source_label": "SEINFELD S3E2 · 실제 대사",
+    "delayed_answer": true,
+    "quiz_ko": "힘든 프로젝트 동안 팀의 사기를 유지해야 해.",
+    "choice_a": "We need to keep team's spirit up during this tough project.",
+    "choice_b": "We need to keep the team's spirits up during this tough project.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "이 관용구는 보통 spirits를 복수로 쓰고, 특정 팀의 사기이므로 the team's가 자연스럽습니다.",
     "posts": [
       {
         "index": 1,
@@ -435,11 +453,20 @@
     "episode": "S03E03",
     "phrase": "What's the difference?",
     "meaning_ko": "그게 무슨 차이야? / 무슨 상관이야?",
+    "hook_ko": "둘이 뭐가 다른지 모르겠을 때",
+    "context_ko": "차이를 묻거나 구분이 무의미하다고 반문할 때",
+    "source_label": "SEINFELD S3E3 · 실제 대사",
+    "delayed_answer": true,
+    "quiz_ko": "그 두 버전 사이에 무슨 차이가 있어?",
+    "choice_a": "What's the difference between the two versions?",
+    "choice_b": "What's different between the two versions?",
+    "answer_choice": "A",
+    "answer_explanation_ko": "차이를 명사로 물을 때는 What's the difference between A and B?가 기본형입니다.",
     "posts": [
       {
         "index": 1,
         "type": "main",
-        "text": "[미드 실전 영어 #Day017]\n📌 \"What's the difference?\"\n(그게 무슨 차이야? / 무슨 상관이야?)\n\n💡 원어민 뉘앙스\n상대의 구분이나 걱정이 불필요하다고 느낄 때 쓰는 반문형 표현으로, 캐주얼하고 약간 퉁명스럽게 들릴 수 있다. 격식 있는 자리에서는 'Does it matter?' 정도로 순화하는 것이 좋다.\n\n🔥 실전 예문:\n• \"What's the difference if we run the test on Monday or Tuesday? The data will be the same.\"\n  (월요일에 테스트하든 화요일에 하든 무슨 차이가 있어? 데이터는 똑같을 텐데.)\n• \"What's the difference between using Python or R here? Both will give us the same output.\"\n  (여기서 파이썬을 쓰든 R을 쓰든 무슨 차이야? 둘 다 같은 결과가 나올 텐데.)\n\n👇 발음·퀴즈는 답글에!"
+        "text": "두 버전이 사실상 같아 보일 때:\n\n📌 What's the difference?\n무슨 차이가 있어?\n\n💡 뉘앙스\n진짜 차이를 묻는 질문도 되고, 억양에 따라 '그게 무슨 상관이야?'라는 퉁명스러운 반문도 됩니다. 차이를 중립적으로 묻고 싶다면 What's the difference between A and B?처럼 대상을 붙이세요.\n\n🗣 \"What's the difference between the two plans?\"\n두 계획은 뭐가 달라?\n\n최근에 차이를 몰라 고민한 두 가지가 있나요?"
       },
       {
         "index": 2,
@@ -454,6 +481,15 @@
     "episode": "S03E03",
     "phrase": "go over well",
     "meaning_ko": "(반응이) 잘 먹히다, 좋은 반응을 얻다",
+    "hook_ko": "이 제안, 사람들이 좋아할까?",
+    "context_ko": "말·제안·농담에 대한 반응을 예상할 때",
+    "source_label": "SEINFELD S3E3 · 실제 대사",
+    "delayed_answer": true,
+    "quiz_ko": "그 제안은 팀에서 잘 안 먹힐 것 같아.",
+    "choice_a": "That proposal won't go well over with the team.",
+    "choice_b": "That proposal isn't going to go over well with the team.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "'좋은 반응을 얻다'는 go over well이라는 고정 어순으로 씁니다.",
     "posts": [
       {
         "index": 1,
@@ -471,13 +507,22 @@
     "day": 19,
     "card_id": "S03E03-06",
     "episode": "S03E03",
-    "phrase": "kick someone out of (something)",
-    "meaning_ko": "~에서 쫓아내다, 밀어내다",
+    "phrase": "They kicked him out.",
+    "meaning_ko": "그들은 그를 쫓아냈어.",
+    "hook_ko": "규칙을 어겨 모임에서 내보냈을 때",
+    "context_ko": "장소·조직에서 누군가를 강제로 내보낼 때",
+    "source_label": "SEINFELD S3E3 · 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "그들은 그를 팀에서 쫓아냈어.",
+    "choice_a": "They kicked him out of team.",
+    "choice_b": "They kicked him out of the team.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "특정 팀을 뜻하므로 the team이 자연스럽습니다. kick 사람 out of 장소 순서로 씁니다.",
     "posts": [
       {
         "index": 1,
         "type": "main",
-        "text": "[미드 실전 영어 #Day019]\n📌 \"kick someone out of (something)\"\n(~에서 쫓아내다, 밀어내다)\n\n💡 원어민 뉘앙스\n직설적이고 캐주얼한 구동사로, 물리적 공간(침대, 집, 방)뿐 아니라 조직·모임에서 배제하는 상황에도 비유적으로 쓸 수 있다.\n\n🔥 실전 예문:\n• \"We had to kick that vendor out of the project after repeated delays.\"\n  (그 업체를 반복된 지연 끝에 프로젝트에서 뺄 수밖에 없었어요.)\n• \"Don't kick him out of the meeting just because he disagreed.\"\n  (그가 동의하지 않는다고 회의에서 쫓아내지는 마세요.)\n\n👇 발음·퀴즈는 답글에!"
+        "text": "규칙을 계속 어겨 결국 모임에서 내보냈을 때:\n\n📌 They kicked him out.\n그들은 그를 쫓아냈어.\n\n💡 패턴\nkick 사람 out은 장소·모임에서 강제로 내보낸다는 직설적인 구동사예요. 장소를 붙이면 kick him out of the bar처럼 씁니다. 단순히 팀에서 제외했다면 remove him from the team이 더 중립적입니다.\n\n🗣 \"They kicked him out of the club.\"\n그들은 그를 클럽에서 쫓아냈어."
       },
       {
         "index": 2,
@@ -490,8 +535,17 @@
     "day": 20,
     "card_id": "S03E03-08",
     "episode": "S03E03",
-    "phrase": "it just goes to show you (that)",
-    "meaning_ko": "그게 바로 ~라는 걸 보여주는 거야, 그게 증거지",
+    "phrase": "It just goes to show you.",
+    "meaning_ko": "그게 바로 증거야 / 역시 그렇다는 걸 보여줘.",
+    "hook_ko": "방금 일이 내 말을 증명했을 때",
+    "context_ko": "사실에서 교훈이나 결론을 끌어낼 때",
+    "source_label": "SEINFELD S3E3 · 실제 대사",
+    "delayed_answer": true,
+    "quiz_ko": "싼 게 항상 낫지는 않다는 증거야.",
+    "choice_a": "It just goes to show you that cheaper isn't always better.",
+    "choice_b": "It just shows to you that cheaper isn't always better.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "결론을 꺼내는 관용적 틀은 It just goes to show you (that)입니다.",
     "posts": [
       {
         "index": 1,
@@ -509,8 +563,17 @@
     "day": 21,
     "card_id": "S03E03-16",
     "episode": "S03E03",
-    "phrase": "make a big deal out of (something)",
-    "meaning_ko": "~을 크게 문제 삼다, 과장하다",
+    "phrase": "Don't make a big deal out of it.",
+    "meaning_ko": "그걸 너무 크게 문제 삼지 마.",
+    "hook_ko": "작은 실수에 반응이 너무 클 때",
+    "context_ko": "상대가 일을 과장한다고 말할 때",
+    "source_label": "SEINFELD S3E3 · 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "사소한 실수를 너무 크게 문제 삼지 마.",
+    "choice_a": "Don't make a big deal out of a small mistake.",
+    "choice_b": "Don't make a big deal from a small mistake.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "'~을 크게 문제 삼다'는 make a big deal out of라는 결합으로 씁니다.",
     "posts": [
       {
         "index": 1,
@@ -528,8 +591,17 @@
     "day": 22,
     "card_id": "S03E03-19",
     "episode": "S03E03",
-    "phrase": "jinx",
-    "meaning_ko": "(안 좋게 될 거라고 말해서) 부정 타게 하다, 재수 없게 만들다",
+    "phrase": "Don't jinx it.",
+    "meaning_ko": "부정 타게 하지 마 / 재수 없는 소리 하지 마.",
+    "hook_ko": "잘되고 있다고 입 밖에 내는 순간",
+    "context_ko": "좋은 상황을 미리 장담하지 말라고 할 때",
+    "source_label": "SEINFELD S3E3 · 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "그렇게 말하지 마. 부정 탈라.",
+    "choice_a": "Don't say that. You'll jinx it.",
+    "choice_b": "Don't say that. You'll jinx to it.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "jinx는 타동사라 전치사 없이 목적어 it을 바로 받습니다.",
     "posts": [
       {
         "index": 1,
@@ -547,13 +619,22 @@
     "day": 23,
     "card_id": "S03E03-31",
     "episode": "S03E03",
-    "phrase": "where do you come off ~ing",
-    "meaning_ko": "네가 무슨 자격으로 ~하는 거야?, 감히 어떻게 그럴 수 있어?",
+    "phrase": "Where do you come off talking to me like that?",
+    "meaning_ko": "네가 무슨 자격으로 나한테 그런 식으로 말해?",
+    "hook_ko": "상대가 선을 심하게 넘었을 때",
+    "context_ko": "무례한 행동을 강하게 따질 때",
+    "source_label": "SEINFELD S3E3 · 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "네가 무슨 자격으로 나한테 그런 식으로 말해?",
+    "choice_a": "Where do you come off talking to me like that?",
+    "choice_b": "Where are you come off to talk to me like that?",
+    "answer_choice": "A",
+    "answer_explanation_ko": "이 강한 반문은 Where do you come off + -ing? 형태로 씁니다.",
     "posts": [
       {
         "index": 1,
         "type": "main",
-        "text": "[미드 실전 영어 #Day023]\n📌 \"where do you come off ~ing\"\n(네가 무슨 자격으로 ~하는 거야?, 감히 어떻게 그럴 수 있어?)\n\n💡 원어민 뉘앙스\n매우 직설적이고 대립적인 표현으로 화가 났을 때 쓰인다. 격식 있는 자리에서는 절대 쓰지 않으며, 실제 발화보다는 듣기·이해 위주로 익혀두는 것이 안전하다.\n\n🔥 실전 예문:\n• \"Where do you come off changing the spec without telling the team?\"\n  (팀에 말도 안 하고 스펙을 바꾸다니 네가 무슨 자격으로 그러는 거야?)\n• \"Where does he come off criticizing our design when he hasn't even reviewed the data?\"\n  (데이터도 안 본 주제에 우리 설계를 비판하다니 걔가 뭔데 그래?)\n\n👇 발음·퀴즈는 답글에!"
+        "text": "상대가 선을 심하게 넘었을 때:\n\n📌 Where do you come off talking to me like that?\n네가 무슨 자격으로 나한테 그런 식으로 말해?\n\n💡 뉘앙스\n상대의 자격과 태도를 정면으로 공격하는 매우 대립적인 표현이에요. 실제로 쓰기보다 미드에서 알아듣는 용도로 먼저 익히세요. 갈등을 낮추려면 Please don't speak to me like that이 안전합니다.\n\n🗣 \"Where do you come off telling me what to do?\"\n네가 뭔데 나한테 이래라저래라 해?"
       },
       {
         "index": 2,
@@ -566,8 +647,17 @@
     "day": 24,
     "card_id": "S03E03-32",
     "episode": "S03E03",
-    "phrase": "what do I care",
+    "phrase": "What do I care?",
     "meaning_ko": "내가 무슨 상관이야, 알 게 뭐야",
+    "hook_ko": "내 일이 아닌데 자꾸 끌어들일 때",
+    "context_ko": "관심 없거나 상관없다고 퉁명스럽게 말할 때",
+    "source_label": "SEINFELD S3E3 · 실제 대사",
+    "delayed_answer": true,
+    "quiz_ko": "그들이 누구를 고르든 내가 무슨 상관이야?",
+    "choice_a": "What do I care who they choose?",
+    "choice_b": "What am I care who they choose?",
+    "answer_choice": "A",
+    "answer_explanation_ko": "일반동사 care의 현재형 의문문이므로 do I care 어순을 씁니다.",
     "posts": [
       {
         "index": 1,
@@ -585,18 +675,27 @@
     "day": 25,
     "card_id": "S03E04-06",
     "episode": "S03E04",
-    "phrase": "Do you believe this?",
+    "phrase": "Can you believe this?",
     "meaning_ko": "이거 믿어져?/이럴 수가 있어?",
+    "hook_ko": "황당한 일이 또 벌어졌을 때",
+    "context_ko": "놀람·짜증을 상대와 공유할 때",
+    "source_label": "SEINFELD S3E4 · 자연스러운 대안",
+    "delayed_answer": true,
+    "quiz_ko": "이거 믿어져? 서버가 또 다운됐어.",
+    "choice_a": "Do you can believe this? The server crashed again.",
+    "choice_b": "Can you believe this? The server crashed again.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "'이게 믿어져?'라는 놀람의 반문에는 Can you believe this?가 자연스럽습니다.",
     "posts": [
       {
         "index": 1,
         "type": "main",
-        "text": "[미드 실전 영어 #Day025]\n📌 \"Do you believe this?\"\n(이거 믿어져?/이럴 수가 있어?)\n\n💡 원어민 뉘앙스\n대답을 기대하지 않는 수사적 질문으로, 놀랍거나 짜증나는 상황을 강조할 때 쓴다. 매우 캐주얼한 구어체이며 친한 사이나 동료 간 하소연에 적합하다.\n\n🔥 실전 예문:\n• \"Do you believe this? The vendor sent the wrong spec again.\"\n  (이거 믿어져? 벤더가 또 잘못된 사양서를 보냈어.)\n• \"Do you believe this? They want us to cut the timeline in half.\"\n  (믿어져? 일정을 반으로 줄이라네.)\n\n👇 발음·퀴즈는 답글에!"
+        "text": "황당한 일이 또 벌어져 누군가와 놀람을 나눌 때:\n\n📌 Can you believe this?\n이거 믿어져?\n\n💡 뉘앙스\n사실 여부를 진지하게 확인하기보다 '이게 말이 돼?'에 가까운 수사적 질문이에요. 놀람·짜증 모두에 쓸 수 있습니다.\n\n🗣 \"Can you believe this? They canceled again.\"\n이거 믿어져? 또 취소했대.\n\n최근에 이 말을 하고 싶었던 황당한 일이 있었나요?"
       },
       {
         "index": 2,
         "type": "sub",
-        "text": "🗣️ 발음 꿀팁:\n'believe this'는 빠르게 이어져 [bəˈliːv ðɪs]처럼 발음되며, believe에 강세가 온다. 'this'의 th는 혀를 이 사이에 살짝 물듯이 발음.\n\n✍️ 오늘의 1초 영작 퀴즈 (댓글로 써보세요!):\nQ. \"이거 믿어져? 서버가 또 다운됐어.\"\n(정답: Do you believe this? The server crashed again.)\n\n매일 아침 살아있는 원어민 표현을 배달합니다.\n[저장 🔖 & 팔로우] 해두고 실전 대화에 써보세요!"
+        "text": "🗣️ 발음 포인트\n\nCan you는 빠르게 /kənjə/처럼 약해질 수 있고, 놀람의 핵심인 believe에 강세를 둡니다. this의 /ð/는 혀끝을 이 사이에 가볍게 둡니다.\n\n✍️ 10초 복습\n\"이거 믿어져? 서버가 또 다운됐어.\"\n\nCan you believe this? The server crashed again."
       }
     ]
   },
@@ -604,18 +703,27 @@
     "day": 26,
     "card_id": "S03E04-09",
     "episode": "S03E04",
-    "phrase": "on a bender",
-    "meaning_ko": "술독에 빠져 며칠씩 놀다, 폭음하다",
+    "phrase": "He went on a bender.",
+    "meaning_ko": "그는 한동안 폭음했어.",
+    "hook_ko": "며칠째 술을 계속 마셨다고 할 때",
+    "context_ko": "폭음이 이어진 기간을 묘사하는 속어",
+    "source_label": "SEINFELD S3E4 · 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "그는 주말 내내 폭음했어.",
+    "choice_a": "He was in a bender all weekend.",
+    "choice_b": "He went on a bender all weekend.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "폭음하다는 go on a bender로 표현합니다. 전치사는 in이 아니라 on입니다.",
     "posts": [
       {
         "index": 1,
         "type": "main",
-        "text": "[미드 실전 영어 #Day026]\n📌 \"on a bender\"\n(술독에 빠져 며칠씩 놀다, 폭음하다)\n\n💡 원어민 뉘앙스\n매우 캐주얼한 속어로 격식 있는 자리에서는 피해야 한다. 비유적으로 '~에 몰두하다'는 유머러스한 의미로 확장해서 쓸 수도 있다.\n\n🔥 실전 예문:\n• \"I think the whole team's been on a coding bender all week.\"\n  (이번 주 내내 팀 전체가 코딩에 몰두해 있었던 것 같아.)\n• \"He's been on a research bender, reading papers nonstop.\"\n  (그는 논문만 계속 읽으며 연구에 몰두해 있었어.)\n\n👇 발음·퀴즈는 답글에!"
+        "text": "며칠 동안 술을 계속 마신 사람을 묘사할 때:\n\n📌 He went on a bender.\n그는 한동안 폭음했어.\n\n💡 뉘앙스\nbender는 한 번 많이 마셨다는 뜻보다 폭음이 일정 기간 이어졌다는 강한 속어예요. 가볍거나 긍정적인 표현이 아니며 격식 있는 자리에서는 피하세요. '코딩 폭주'처럼 아무 활동에나 붙이면 부자연스러울 수 있습니다.\n\n🗣 \"He went on a bender all weekend.\"\n그는 주말 내내 폭음했어."
       },
       {
         "index": 2,
         "type": "sub",
-        "text": "🗣️ 발음 꿀팁:\nbender는 첫음절에 강세 [ˈbɛndər], 'on a'는 빠르게 이어져 [ɑnə]처럼 들린다.\n\n✍️ 오늘의 1초 영작 퀴즈 (댓글로 써보세요!):\nQ. \"그는 요즘 야근 폭주 중이야.\"\n(정답: He's been on a work bender lately.)\n\n매일 아침 살아있는 원어민 표현을 배달합니다.\n[저장 🔖 & 팔로우] 해두고 실전 대화에 써보세요!"
+        "text": "🗣️ 발음 포인트\n\nbender /ˈbɛndər/는 첫 음절에 강세가 있습니다. on a는 빠르게 /ɑnə/처럼 이어질 수 있어요.\n\n✍️ 10초 복습\n\"그는 주말 내내 폭음했어.\"\n\nHe went on a bender all weekend."
       }
     ]
   },
@@ -623,18 +731,27 @@
     "day": 27,
     "card_id": "S03E04-11",
     "episode": "S03E04",
-    "phrase": "get [someone] out of my life",
-    "meaning_ko": "~을 내 인생에서 없애다/정리하다",
+    "phrase": "I want him out of my life.",
+    "meaning_ko": "그 사람이 내 인생에서 사라졌으면 해.",
+    "hook_ko": "관계를 완전히 정리하고 싶을 때",
+    "context_ko": "누군가와의 관계를 끊겠다고 강하게 말할 때",
+    "source_label": "SEINFELD S3E4 · 자연스러운 대안",
+    "delayed_answer": true,
+    "quiz_ko": "그 사람이 내 인생에서 사라졌으면 해.",
+    "choice_a": "I want him out of my life.",
+    "choice_b": "I want to him out of my life.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "want + 목적어 + out of는 그 대상이 사라지길 바란다는 구조입니다. want to him은 불가능합니다.",
     "posts": [
       {
         "index": 1,
         "type": "main",
-        "text": "[미드 실전 영어 #Day027]\n📌 \"get [someone] out of my life\"\n(~을 내 인생에서 없애다/정리하다)\n\n💡 원어민 뉘앙스\n감정적으로 강한 구어체 표현으로, 관계나 골칫거리를 끝내고 싶을 때 쓴다. 업무 맥락에서는 유머러스하게 프로젝트나 골칫거리에 대해 쓸 수 있다.\n\n🔥 실전 예문:\n• \"I just want to get this legacy code out of my life.\"\n  (이 레거시 코드를 내 인생에서 없애버리고 싶어.)\n• \"Let's get this vendor issue out of our lives once and for all.\"\n  (이 벤더 문제를 완전히 끝내버리자.)\n\n👇 발음·퀴즈는 답글에!"
+        "text": "관계를 완전히 끝내고 싶을 만큼 감정이 격할 때:\n\n📌 I want him out of my life.\n그 사람이 내 인생에서 사라졌으면 해.\n\n💡 뉘앙스\n단순히 잠시 만나기 싫다는 말보다 관계를 완전히 끊겠다는 강한 선언이에요. 사람에게 직접 말하면 상처가 크므로 사용 범위를 좁혀야 합니다.\n\n🗣 \"I want that negativity out of my life.\"\n내 삶에서 그런 부정적인 기운을 없애고 싶어."
       },
       {
         "index": 2,
         "type": "sub",
-        "text": "🗣️ 발음 꿀팁:\nget에 강세, 'out of'는 캐주얼하게 [ˈaʊɾə](outta)로 축약 발음된다.\n\n✍️ 오늘의 1초 영작 퀴즈 (댓글로 써보세요!):\nQ. \"난 이 프로젝트를 빨리 끝내버리고 싶어.\"\n(정답: I just want to get this project out of my life.)\n\n매일 아침 살아있는 원어민 표현을 배달합니다.\n[저장 🔖 & 팔로우] 해두고 실전 대화에 써보세요!"
+        "text": "🗣️ 발음 포인트\n\nwant him은 빠르게 /wɑntɪm/처럼 이어지고, out of는 /aʊɾə/처럼 약해질 수 있습니다.\n\n✍️ 10초 복습\n\"그 사람이 내 인생에서 사라졌으면 해.\"\n\nI want him out of my life."
       }
     ]
   },
@@ -642,18 +759,27 @@
     "day": 28,
     "card_id": "S03E04-12",
     "episode": "S03E04",
-    "phrase": "I can't believe someone hasn't [verb]ed her/him yet",
-    "meaning_ko": "~가 아직 안 당했다는 게 믿기지 않아",
+    "phrase": "I can't believe no one's fixed it yet.",
+    "meaning_ko": "아무도 아직 그걸 안 고쳤다니 믿기지 않아.",
+    "hook_ko": "문제가 뻔한데 아직 그대로일 때",
+    "context_ko": "해결되지 않은 상황에 놀람·답답함을 드러낼 때",
+    "source_label": "SEINFELD S3E4 · 실전 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "아무도 아직 이걸 안 고쳤다니 믿기지 않아.",
+    "choice_a": "I can't believe no one hasn't fixed it yet.",
+    "choice_b": "I can't believe no one's fixed it yet.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "표준 영어에서는 no one 자체가 부정이므로 hasn't를 또 쓰지 않습니다. no one's는 no one has의 축약입니다.",
     "posts": [
       {
         "index": 1,
         "type": "main",
-        "text": "[미드 실전 영어 #Day028]\n📌 \"I can't believe someone hasn't [verb]ed her/him yet\"\n(~가 아직 안 당했다는 게 믿기지 않아)\n\n💡 원어민 뉘앙스\n과장법을 이용한 유머/독설 표현으로 실제 의미보다는 상대가 얼마나 심한지 강조하는 농담이다. 친한 사이에서만 사용해야 하며 진지한 자리에서는 부적절하다.\n\n🔥 실전 예문:\n• \"That code is so bad, I can't believe someone hasn't rewritten it yet.\"\n  (그 코드가 너무 엉망이라 아무도 안 다시 짰다는 게 믿기지 않아.)\n• \"His documentation is so confusing, I can't believe someone hasn't complained yet.\"\n  (그의 문서가 너무 헷갈려서 아무도 항의 안 했다는 게 믿기지 않아.)\n\n👇 발음·퀴즈는 답글에!"
+        "text": "문제가 뻔한데 아직 그대로 남아 있을 때:\n\n📌 I can't believe no one's fixed it yet.\n아무도 아직 그걸 안 고쳤다니 믿기지 않아.\n\n💡 패턴\nI can't believe + 문장은 놀람이나 답답함을 강하게 드러냅니다. no one's는 no one has의 축약이고, fixed는 현재완료의 과거분사예요. yet은 아직 해결되지 않았다는 뜻을 보탭니다.\n\n🗣 \"I can't believe no one's called her yet.\"\n아무도 아직 그녀에게 전화하지 않았다니 믿기지 않아."
       },
       {
         "index": 2,
         "type": "sub",
-        "text": "🗣️ 발음 꿀팁:\n'hasn't'는 [ˈhæzənt]로 축약되고, believe에 강세가 온다.\n\n✍️ 오늘의 1초 영작 퀴즈 (댓글로 써보세요!):\nQ. \"그 매뉴얼이 너무 엉망이라 아무도 안 고쳤다는 게 믿기지 않아.\"\n(정답: This manual is so bad, I can't believe someone hasn't fixed it yet.)\n\n매일 아침 살아있는 원어민 표현을 배달합니다.\n[저장 🔖 & 팔로우] 해두고 실전 대화에 써보세요!"
+        "text": "🗣️ 발음 포인트\n\ncan't believe는 believe에 핵심 강세를 두고, no one's는 /noʊ wʌnz/처럼 이어집니다. fixed의 끝 /kst/는 짧게 묶어주세요.\n\n✍️ 10초 복습\n\"아무도 아직 이걸 안 고쳤다니 믿기지 않아.\"\n\nI can't believe no one's fixed it yet."
       }
     ]
   },
