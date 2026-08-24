@@ -44,7 +44,15 @@ def wrap_text(text: str, font: ImageFont.FreeTypeFont, max_width: int, draw: Ima
     return lines if lines else [text]
 
 
-def create_card_image(day_num: int, phrase: str, meaning_ko: str, output_path: Path):
+def create_card_image(
+    day_num: int,
+    phrase: str,
+    meaning_ko: str,
+    output_path: Path,
+    *,
+    hook_ko: str = "",
+    context_ko: str = "",
+):
     width, height = 1080, 1080
     img = Image.new("RGB", (width, height), color="#0F172A") # 딥 다크 네이비/차콜
     draw = ImageDraw.Draw(img)
@@ -54,6 +62,8 @@ def create_card_image(day_num: int, phrase: str, meaning_ko: str, output_path: P
     font_quote = ImageFont.truetype(FONT_PATH, 72)
     font_main = ImageFont.truetype(FONT_PATH, 54)
     font_meaning = ImageFont.truetype(FONT_PATH, 38)
+    font_hook = ImageFont.truetype(FONT_PATH, 42)
+    font_context = ImageFont.truetype(FONT_PATH, 28)
     font_footer = ImageFont.truetype(FONT_PATH, 24)
 
     # 1. 내부 카드 프레임 (모던 글래스모피즘 느낌의 라운드 사각형)
@@ -78,6 +88,20 @@ def create_card_image(day_num: int, phrase: str, meaning_ko: str, output_path: P
     )
     draw.text((bx, by - 2), badge_text, font=font_badge, fill="#FFFFFF")
 
+    # 획득형 카드는 먼저 사용 상황을 보여주고 표현을 보상으로 제시합니다.
+    if hook_ko:
+        hook_lines = wrap_text(hook_ko, font=font_hook, max_width=760, draw=draw)
+        hook_start_y = 245
+        for i, hook_line in enumerate(hook_lines):
+            hook_bbox = draw.textbbox((0, 0), hook_line, font=font_hook)
+            hook_width = hook_bbox[2] - hook_bbox[0]
+            draw.text(
+                ((width - hook_width) // 2, hook_start_y + (i * 58)),
+                hook_line,
+                font=font_hook,
+                fill="#FBBF24",
+            )
+
     # 3. 중앙 영어 메인 표현 (큰 따옴표 + 자동 줄바꿈)
     max_text_width = width - (card_margin * 2) - 120
     lines = wrap_text(f'"{phrase}"', font=font_main, max_width=max_text_width, draw=draw)
@@ -85,7 +109,8 @@ def create_card_image(day_num: int, phrase: str, meaning_ko: str, output_path: P
     # 줄 간격 계산 및 중앙 정렬
     line_height = 76
     total_main_height = len(lines) * line_height
-    start_y = 380 - (total_main_height // 2)
+    main_center_y = 500 if hook_ko else 380
+    start_y = main_center_y - (total_main_height // 2)
 
     for i, line in enumerate(lines):
         l_bbox = draw.textbbox((0, 0), line, font=font_main)
@@ -109,6 +134,18 @@ def create_card_image(day_num: int, phrase: str, meaning_ko: str, output_path: P
         mx = (width - mw) // 2
         my = m_start_y + (i * m_line_height)
         draw.text((mx, my), m_line, font=font_meaning, fill="#94A3B8")
+
+    if context_ko:
+        context_bbox = draw.textbbox((0, 0), context_ko, font=font_context)
+        context_width = context_bbox[2] - context_bbox[0]
+        context_x = (width - context_width) // 2
+        context_y = m_start_y + (len(meaning_lines) * m_line_height) + 45
+        draw.rounded_rectangle(
+            [context_x - 22, context_y - 10, context_x + context_width + 22, context_y + 40],
+            radius=18,
+            fill="#334155",
+        )
+        draw.text((context_x, context_y - 3), context_ko, font=font_context, fill="#CBD5E1")
 
     # 5. 하단 푸터 (@fluent93 • Seinfeld English)
     footer_text = "@fluent93  |  Daily English"
@@ -138,8 +175,17 @@ def generate_all():
         day = item.get("day")
         phrase = item.get("phrase", "")
         meaning = item.get("meaning_ko", "")
+        hook = item.get("hook_ko", "")
+        context = item.get("context_ko", "")
         img_path = IMAGES_DIR / f"day_{day:03d}.png"
-        create_card_image(day, phrase, meaning, img_path)
+        create_card_image(
+            day,
+            phrase,
+            meaning,
+            img_path,
+            hook_ko=hook,
+            context_ko=context,
+        )
 
     print(f"✅ 176개 카드뉴스 이미지 생성 완료! 위치: {IMAGES_DIR}")
 

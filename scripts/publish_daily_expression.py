@@ -15,6 +15,7 @@ from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
 from threads_client import ThreadsClient, load_env
+from content_validation import print_report, validate_item
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_env(BASE_DIR / ".env")
@@ -37,16 +38,26 @@ def load_state() -> dict:
         return {
             "last_published_day": 0,
             "last_published_at": None,
-            "history": []
+            "history": [],
+            "in_progress": None,
         }
     with open(STATE_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+        state = json.load(f)
+    state.setdefault("last_published_day", 0)
+    state.setdefault("last_published_at", None)
+    state.setdefault("history", [])
+    state.setdefault("in_progress", None)
+    return state
 
 
 def save_state(state: dict):
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(STATE_FILE, "w", encoding="utf-8") as f:
+    temporary_file = STATE_FILE.with_suffix(".json.tmp")
+    with open(temporary_file, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(temporary_file, STATE_FILE)
 
 
 def get_queue() -> list[dict]:
@@ -54,6 +65,90 @@ def get_queue() -> list[dict]:
         raise FileNotFoundError(f"큐 파일이 없습니다: {QUEUE_FILE}")
     with open(QUEUE_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def publish_item(
+    item: dict,
+    state: dict,
+    client: ThreadsClient,
+    image_url: str,
+    *,
+    now_kst: datetime,
+    save_callback=save_state,
+) -> tuple[str, str]:
+    """Publish or resume one item, saving progress after every external write."""
+    target_day = item["day"]
+    phrase = item["phrase"]
+    meaning = item["meaning_ko"]
+    main_post = next(p for p in item["posts"] if p.get("type") == "main")
+    sub_post = next(p for p in item["posts"] if p.get("type") == "sub")
+    now_iso = now_kst.isoformat()
+
+    progress = state.get("in_progress")
+    if progress and progress.get("day") != target_day:
+        raise RuntimeError(
+            f"Day {progress.get('day')} 게시가 미완료 상태라 Day {target_day}를 시작할 수 없습니다."
+        )
+    if not progress:
+        progress = {
+            "day": target_day,
+            "phrase": phrase,
+            "started_at": now_iso,
+            "image_url": image_url,
+            "main_thread_id": None,
+            "sub_thread_id": None,
+        }
+        state["in_progress"] = progress
+        save_callback(state)
+
+    main_thread_id = progress.get("main_thread_id")
+    if not main_thread_id:
+        alt_text = f"미드 실전 영어 Day {target_day}: {phrase}. 뜻: {meaning}"
+        topic_tag = os.environ.get("THREADS_TOPIC_TAG", "").strip() or None
+        print(f"[1/2] 메인 카드뉴스 이미지 포스팅 중... ({image_url})")
+        main_thread_id = client.post(
+            text=main_post["text"],
+            image_url=image_url,
+            alt_text=alt_text,
+            topic_tag=topic_tag,
+        )
+        progress["main_thread_id"] = main_thread_id
+        save_callback(state)
+        print(f"  ✅ 메인 글 발행 완료 (Thread ID: {main_thread_id})")
+    else:
+        print(f"[1/2] 기존 메인 글에서 재개합니다. (Thread ID: {main_thread_id})")
+
+    sub_thread_id = progress.get("sub_thread_id")
+    if not sub_thread_id:
+        print("[2/2] 발음 팁 & 영작 퀴즈 타래 답글 연결 중...")
+        sub_thread_id = client.post(
+            text=sub_post["text"],
+            reply_to_id=main_thread_id,
+        )
+        progress["sub_thread_id"] = sub_thread_id
+        save_callback(state)
+        print(f"  ✅ 타래 답글 발행 완료 (Thread ID: {sub_thread_id})")
+    else:
+        print(f"[2/2] 기존 답글을 확인했습니다. (Thread ID: {sub_thread_id})")
+
+    published_at = datetime.now(KST).isoformat()
+    state["last_published_day"] = target_day
+    state["last_published_at"] = published_at
+    if not any(
+        entry.get("day") == target_day and entry.get("main_thread_id") == main_thread_id
+        for entry in state["history"]
+    ):
+        state["history"].append({
+            "day": target_day,
+            "phrase": phrase,
+            "published_at": published_at,
+            "main_thread_id": main_thread_id,
+            "sub_thread_id": sub_thread_id,
+            "image_url": image_url,
+        })
+    state["in_progress"] = None
+    save_callback(state)
+    return main_thread_id, sub_thread_id
 
 
 def main():
@@ -79,12 +174,28 @@ def main():
         print(f" - 전체 큐: 총 {total_days}일치 준비됨 (이미지 176장 완비)")
         print(f" - 마지막 발행: Day {last_day} ({last_time})")
         print(f" - 다음 발행 예정: Day {next_day}")
+        if state.get("in_progress"):
+            progress = state["in_progress"]
+            print(
+                f" - 복구 대기: Day {progress.get('day')} "
+                f"(main={bool(progress.get('main_thread_id'))}, "
+                f"sub={bool(progress.get('sub_thread_id'))})"
+            )
         print("=" * 50)
         return
 
     # 타겟 Day 결정
+    progress = state.get("in_progress")
     if args.day:
         target_day = args.day
+        if progress and progress.get("day") != target_day:
+            print(
+                f"❌ Day {progress.get('day')} 게시가 미완료 상태입니다. "
+                "먼저 해당 게시를 복구해야 합니다."
+            )
+            sys.exit(1)
+    elif progress:
+        target_day = progress["day"]
     else:
         target_day = state.get("last_published_day", 0) + 1
 
@@ -100,6 +211,14 @@ def main():
 
     main_post = next((p for p in posts if p.get("type") == "main"), None)
     sub_post = next((p for p in posts if p.get("type") == "sub"), None)
+
+    validation_errors, validation_warnings = validate_item(item, images_dir=IMAGES_DIR)
+    if validation_warnings:
+        print_report([], validation_warnings)
+    if validation_errors:
+        print_report(validation_errors, [])
+        print("❌ 콘텐츠 검증 실패로 발행을 중단합니다.")
+        sys.exit(1)
 
     if args.dry_run or (not args.publish):
         print("=" * 60)
@@ -123,7 +242,13 @@ def main():
         today_str = now_kst.strftime("%Y-%m-%d")
 
         last_at = state.get("last_published_at")
-        if last_at and last_at.startswith(today_str) and not args.force and not args.day:
+        if (
+            last_at
+            and last_at.startswith(today_str)
+            and not args.force
+            and not args.day
+            and not state.get("in_progress")
+        ):
             print(f"⚠️ 오늘({today_str})은 이미 Day {state.get('last_published_day')} 표현이 발행되었습니다.")
             print("강제 발행을 원하시면 --force 옵션을 사용하세요.")
             sys.exit(0)
@@ -133,35 +258,13 @@ def main():
         print(f"👤 계정: @{me.get('username')} ({me.get('name')})")
         print(f"🚀 Day {target_day:03d} - \"{phrase}\" 카드뉴스 발행 시작...\n")
 
-        # 1. 메인 포스트 (카드 이미지 + 텍스트)
-        print(f"[1/2] 메인 카드뉴스 이미지 포스팅 중... ({image_url})")
-        main_thread_id = client.post(
-            text=main_post.get("text", "") if main_post else "",
-            image_url=image_url
+        publish_item(
+            item,
+            state,
+            client,
+            image_url,
+            now_kst=now_kst,
         )
-        print(f"  ✅ 메인 글 발행 완료 (Thread ID: {main_thread_id})")
-
-        # 2. 타래 답글 연결
-        print("[2/2] 발음 팁 & 영작 퀴즈 타래 답글 연결 중...")
-        sub_thread_id = client.post(
-            text=sub_post.get("text", "") if sub_post else "",
-            reply_to_id=main_thread_id
-        )
-        print(f"  ✅ 타래 답글 발행 완료 (Thread ID: {sub_thread_id})")
-
-        # State 업데이트
-        now_iso = now_kst.isoformat()
-        state["last_published_day"] = target_day
-        state["last_published_at"] = now_iso
-        state["history"].append({
-            "day": target_day,
-            "phrase": phrase,
-            "published_at": now_iso,
-            "main_thread_id": main_thread_id,
-            "sub_thread_id": sub_thread_id,
-            "image_url": image_url
-        })
-        save_state(state)
 
         print(f"\n🎉 [발행 성공] Day {target_day:03d} 카드뉴스가 정상 게시되었습니다!")
 
