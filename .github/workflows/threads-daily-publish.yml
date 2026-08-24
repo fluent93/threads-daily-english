@@ -1,10 +1,6 @@
-name: Daily Threads Expression Auto-Publisher
+name: Threads Content Review (Publishing Paused)
 
 on:
-  schedule:
-    # 정각 혼잡을 피해 KST 오전 08:07 문제, 오후 14:07 정답 공개
-    - cron: '7 23 * * *'
-    - cron: '7 5 * * *'
   workflow_dispatch:
     inputs:
       mode:
@@ -15,8 +11,6 @@ on:
         options:
           - validate
           - dry-run
-          - publish
-          - answer
 
 concurrency:
   group: threads-daily-publish
@@ -54,38 +48,7 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'dry-run'
         run: python scripts/publish_daily_expression.py --dry-run
 
-      - name: Check Threads account, permissions, and token expiry
-        if: github.event_name == 'schedule' || inputs.mode == 'publish' || inputs.mode == 'answer'
-        env:
-          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
-        run: python scripts/check_threads_access.py
-
-      - name: Publish Daily Expression to Threads
-        if: (github.event_name == 'schedule' && github.event.schedule == '7 23 * * *') || inputs.mode == 'publish'
-        env:
-          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
-          THREADS_TOPIC_TAG: ${{ vars.THREADS_TOPIC_TAG }}
-        run: python scripts/publish_daily_expression.py --publish
-
-      - name: Reveal due answers in their original threads
-        if: (github.event_name == 'schedule' && github.event.schedule == '7 5 * * *') || inputs.mode == 'answer'
-        env:
-          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
-        run: python scripts/publish_delayed_answer.py
-
-      - name: Commit and push state changes
-        if: always()
+      - name: Confirm publishing is paused
         run: |
-          if [[ ! -f data/threads_post_state.json ]]; then
-            exit 0
-          fi
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/threads_post_state.json
-          git diff --staged --quiet || (git commit -m "chore: update threads post state [skip ci]" && git push)
-
-      - name: Write failure summary
-        if: failure()
-        run: |
-          echo "## Threads 자동 게시 실패" >> "$GITHUB_STEP_SUMMARY"
-          echo "부분 게시 상태가 있으면 다음 실행에서 이어서 복구합니다." >> "$GITHUB_STEP_SUMMARY"
+          echo "## 자동 게시 중지 상태" >> "$GITHUB_STEP_SUMMARY"
+          echo "콘텐츠 전면 재검토가 끝날 때까지 예약·수동 게시 단계가 비활성화되어 있습니다." >> "$GITHUB_STEP_SUMMARY"
