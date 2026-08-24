@@ -47,6 +47,9 @@ jobs:
       - name: Validate all content and cards
         run: python scripts/validate_content.py
 
+      - name: Report content quality metrics
+        run: python scripts/report_content_quality.py
+
       - name: Preview next post
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'dry-run'
         run: python scripts/publish_daily_expression.py --dry-run

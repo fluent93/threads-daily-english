@@ -14,6 +14,8 @@ Threads(@fluent93)에 매일 오전 08:07 (KST) 정답 없는 실전 영어 퀴�
 3. **안전한 자동화 (GitHub Actions & Cron)**:
    - 매일 오전 08:07 문제, 오후 14:07 정답 자동 실행
    - 게시 전 500자·중복·오타·이미지 검증
+   - 176개 전 항목의 최종 편집 승인과 고유 상황형 훅 검증
+   - PNG 콘텐츠 지문으로 문안과 카드 이미지 불일치 차단
    - Meta 미디어 처리 상태 확인 및 일시 오류 재시도
    - 부분 실패 시 마지막 완료 단계부터 이어서 게시
    - 구형 큐도 영작 질문을 추출해 정답 비노출 형식으로 강제 전환
@@ -27,6 +29,8 @@ Threads(@fluent93)에 매일 오전 08:07 (KST) 정답 없는 실전 영어 퀴�
 - 해설은 A와 B가 각각 언제 맞는지 비교합니다.
 - 정답 위치는 A/B 한쪽으로 편향되지 않게 검증합니다.
 - 단순 문법형 문항은 전체 A/B 문항의 20%를 넘으면 검증에 실패합니다.
+- 억지 오답을 만들기 어려운 표현은 A/B 대신 자유 영작으로 발행합니다.
+- 모든 문항은 표현별 상황형 훅과 오후 지연 정답을 가져야 배포됩니다.
 
 ---
 
@@ -46,6 +50,9 @@ python3 scripts/publish_daily_expression.py --status
 
 # 전체 콘텐츠 및 카드 품질 검증
 python3 scripts/validate_content.py
+
+# 176일 라이브러리의 객관 지표 확인
+python3 scripts/report_content_quality.py
 
 # Threads 계정, 권한, 토큰 만료 점검
 python3 scripts/check_threads_access.py

@@ -7,8 +7,8 @@ Generate 1080x1080 Card News Images for Threads Daily Posts
 
 import json
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
-from content_validation import get_quiz_spec, uses_delayed_answer
+from PIL import Image, ImageDraw, ImageFont, PngImagePlugin
+from content_validation import card_fingerprint, get_quiz_spec, uses_delayed_answer
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 QUEUE_FILE = BASE_DIR / "data" / "threads_daily_queue.json"
@@ -59,6 +59,7 @@ def create_card_image(
     choice_a: str = "",
     choice_b: str = "",
     quiz_mode: str = "choice",
+    content_fingerprint: str = "",
 ):
     width, height = 1080, 1080
     img = Image.new("RGB", (width, height), color="#0F172A") # 딥 다크 네이비/차콜
@@ -212,7 +213,9 @@ def create_card_image(
             fill="#64748B",
         )
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        img.save(output_path, "PNG", quality=95)
+        png_info = PngImagePlugin.PngInfo()
+        png_info.add_text("content_fingerprint", content_fingerprint)
+        img.save(output_path, "PNG", quality=95, pnginfo=png_info)
         return
 
     # 획득형 카드는 먼저 사용 상황을 보여주고 표현을 보상으로 제시합니다.
@@ -284,7 +287,9 @@ def create_card_image(
 
     # 이미지 저장
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(output_path, "PNG", quality=95)
+    png_info = PngImagePlugin.PngInfo()
+    png_info.add_text("content_fingerprint", content_fingerprint)
+    img.save(output_path, "PNG", quality=95, pnginfo=png_info)
 
 
 def generate_all():
@@ -320,6 +325,7 @@ def generate_all():
             choice_a=quiz_spec.get("choice_a", ""),
             choice_b=quiz_spec.get("choice_b", ""),
             quiz_mode=quiz_spec.get("mode", "choice"),
+            content_fingerprint=card_fingerprint(item),
         )
 
     print(f"✅ 176개 카드뉴스 이미지 생성 완료! 위치: {IMAGES_DIR}")

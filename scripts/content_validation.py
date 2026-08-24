@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import hashlib
+import json
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -16,6 +18,10 @@ EXPECTED_IMAGE_SIZE = (1080, 1080)
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
 ALLOWED_QUIZ_FOCUS = {"context", "nuance", "register", "collocation", "grammar"}
 KNOWN_TYPO_TOKENS = ("쯙", "살짙", "초근무")
+GENERIC_HOOKS = {
+    "힌트 없이 먼저 떠올려보세요",
+    "이 상황, 영어로 어떻게 말할까요?",
+}
 PLACEHOLDER_RE = re.compile(
     r"\[[^\]]+\]|~(?:ing)?|\((?:someone|something|one's|my/your|it/that)[^)]*\)",
     re.IGNORECASE,
@@ -44,6 +50,14 @@ def get_quiz_spec(item: dict) -> dict:
             "quiz_ko": item["quiz_ko"],
             "choice_a": item["choice_a"],
             "choice_b": item["choice_b"],
+        }
+    if item.get("quiz_mode") == "free" and item.get("quiz_ko"):
+        return {
+            "mode": "free",
+            "hook_ko": item.get("hook_ko", "힌트 없이 먼저 떠올려보세요"),
+            "quiz_ko": item["quiz_ko"],
+            "choice_a": "",
+            "choice_b": "",
         }
 
     posts = item.get("posts") if isinstance(item.get("posts"), list) else []
@@ -91,12 +105,34 @@ def build_quiz_prompt(item: dict) -> str:
 def build_answer_post(item: dict, main_text: str) -> str:
     """Build the delayed answer reply with a diagnostic explanation."""
     if get_quiz_spec(item)["mode"] == "free":
-        return main_text
+        return f"✅ 정답 예시\n\n{main_text}"
     return (
         f"✅ 정답: {item['answer_choice']}\n"
         f"🔎 {item['answer_explanation_ko']}\n\n"
         f"{main_text}"
     )
+
+
+def card_fingerprint(item: dict) -> str:
+    """Hash every field that affects the rendered morning card."""
+    spec = get_quiz_spec(item) if uses_delayed_answer(item) else {}
+    payload = {
+        "day": item.get("day"),
+        "phrase": item.get("phrase", ""),
+        "meaning_ko": item.get("meaning_ko", ""),
+        "hook_ko": spec.get("hook_ko", item.get("hook_ko", "")),
+        "context_ko": item.get("context_ko", ""),
+        "source_label": item.get("source_label", ""),
+        "delayed_answer": uses_delayed_answer(item),
+        "quiz_ko": spec.get("quiz_ko", ""),
+        "choice_a": spec.get("choice_a", ""),
+        "choice_b": spec.get("choice_b", ""),
+        "quiz_mode": spec.get("mode", "choice"),
+    }
+    encoded = json.dumps(
+        payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def normalized_phrase(value: str) -> str:
@@ -154,7 +190,12 @@ def _validate_choice_quiz(item: dict, label: str, by_type: dict) -> list[str]:
     return errors
 
 
-def validate_item(item: object, images_dir: Path | None = None) -> tuple[list[str], list[str]]:
+def validate_item(
+    item: object,
+    images_dir: Path | None = None,
+    *,
+    require_card_fingerprint: bool = False,
+) -> tuple[list[str], list[str]]:
     """Validate one queue item and return (errors, warnings)."""
     errors: list[str] = []
     warnings: list[str] = []
@@ -235,6 +276,14 @@ def validate_item(item: object, images_dir: Path | None = None) -> tuple[list[st
                             f"{label}: 이미지 크기가 {image.size}입니다. "
                             f"예상 크기는 {EXPECTED_IMAGE_SIZE}입니다."
                         )
+                    if require_card_fingerprint:
+                        actual_fingerprint = image.info.get("content_fingerprint")
+                        expected_fingerprint = card_fingerprint(item)
+                        if actual_fingerprint != expected_fingerprint:
+                            errors.append(
+                                f"{label}: 카드 이미지가 현재 콘텐츠와 일치하지 않습니다. "
+                                "이미지를 다시 생성하세요."
+                            )
                     image.verify()
             except Exception as exc:
                 errors.append(f"{label}: 이미지를 열 수 없습니다: {exc}")
@@ -243,7 +292,10 @@ def validate_item(item: object, images_dir: Path | None = None) -> tuple[list[st
 
 
 def validate_queue(
-    queue: object, images_dir: Path | None = None
+    queue: object,
+    images_dir: Path | None = None,
+    *,
+    require_editorial_approval: bool = False,
 ) -> tuple[list[str], list[str]]:
     """Validate the complete publishing queue."""
     if not isinstance(queue, list) or not queue:
@@ -255,14 +307,32 @@ def validate_queue(
     phrases: dict[str, list[int]] = defaultdict(list)
     choice_answers: list[str] = []
     choice_focuses: list[str] = []
+    hooks: dict[str, list[int]] = defaultdict(list)
 
     for item in queue:
-        item_errors, item_warnings = validate_item(item, images_dir=images_dir)
+        item_errors, item_warnings = validate_item(
+            item,
+            images_dir=images_dir,
+            require_card_fingerprint=require_editorial_approval,
+        )
         errors.extend(item_errors)
         warnings.extend(item_warnings)
         if isinstance(item, dict) and isinstance(item.get("day"), int):
             day = item["day"]
             days.append(day)
+            if require_editorial_approval:
+                if item.get("quality_version") != 3:
+                    errors.append(f"Day {day}: 최종 편집 승인(quality_version 3)이 없습니다.")
+                hook = item.get("hook_ko")
+                context = item.get("context_ko")
+                if not isinstance(hook, str) or not hook.strip():
+                    errors.append(f"Day {day}: 상황형 훅이 비어 있습니다.")
+                elif hook.strip() in GENERIC_HOOKS:
+                    errors.append(f"Day {day}: 범용 훅 대신 표현별 상황형 훅이 필요합니다.")
+                else:
+                    hooks[hook.strip()].append(day)
+                if not isinstance(context, str) or not context.strip():
+                    errors.append(f"Day {day}: 사용 맥락이 비어 있습니다.")
             phrase = item.get("phrase")
             if isinstance(phrase, str) and phrase.strip():
                 phrases[normalized_phrase(phrase)].append(day)
@@ -282,6 +352,13 @@ def validate_queue(
             errors.append(
                 f"중복 표현이 있습니다: Day {', '.join(map(str, duplicate_days))}"
             )
+
+    if require_editorial_approval:
+        for hook, duplicate_days in hooks.items():
+            if len(duplicate_days) > 1:
+                errors.append(
+                    f"중복 훅이 있습니다: Day {', '.join(map(str, duplicate_days))} ({hook})"
+                )
 
     if choice_answers:
         answer_gap = abs(choice_answers.count("A") - choice_answers.count("B"))

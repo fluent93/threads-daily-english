@@ -21,7 +21,11 @@ def main() -> int:
         print(f"ERROR: 큐 파일을 읽을 수 없습니다: {exc}")
         return 1
 
-    errors, warnings = validate_queue(queue, images_dir=IMAGES_DIR)
+    errors, warnings = validate_queue(
+        queue,
+        images_dir=IMAGES_DIR,
+        require_editorial_approval=True,
+    )
     print_report(errors, warnings)
     return 1 if errors else 0
 

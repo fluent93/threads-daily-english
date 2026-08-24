@@ -8,7 +8,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from content_validation import build_quiz_prompt, get_quiz_spec, validate_queue
+from content_validation import build_quiz_prompt, card_fingerprint, get_quiz_spec, validate_queue
 
 
 def make_item(day: int, phrase: str = "Sounds good.", main_text: str = "Main") -> dict:
@@ -97,6 +97,34 @@ class ContentValidationTests(unittest.TestCase):
         item["answer_explanation_ko"] = "A가 맞습니다."
         errors, _ = validate_queue([item])
         self.assertIn("A와 B의 차이", "\n".join(errors))
+
+    def test_release_gate_requires_editorial_approval_and_specific_hooks(self):
+        item = make_delayed_item()
+        item["hook_ko"] = "힌트 없이 먼저 떠올려보세요"
+        errors, _ = validate_queue([item], require_editorial_approval=True)
+        report = "\n".join(errors)
+        self.assertIn("최종 편집 승인", report)
+        self.assertIn("범용 훅", report)
+
+        item["quality_version"] = 3
+        item["hook_ko"] = "추천받은 영화를 오늘 가볍게 확인해볼 때"
+        item["context_ko"] = "부담 없이 한번 살펴보겠다고 할 때"
+        errors, _ = validate_queue([item], require_editorial_approval=True)
+        self.assertEqual(errors, [])
+
+    def test_release_gate_rejects_stale_card(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            images_dir = Path(tmp)
+            item = make_delayed_item()
+            item["quality_version"] = 3
+            item["context_ko"] = "상대 제안에 동의할 때"
+            Image.new("RGB", (1080, 1080)).save(images_dir / "day_001.png")
+
+            errors, _ = validate_queue(
+                [item], images_dir, require_editorial_approval=True
+            )
+            self.assertIn("현재 콘텐츠와 일치하지 않습니다", "\n".join(errors))
+            self.assertEqual(len(card_fingerprint(item)), 64)
 
 
 if __name__ == "__main__":
