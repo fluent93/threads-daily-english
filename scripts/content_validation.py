@@ -19,16 +19,69 @@ PLACEHOLDER_RE = re.compile(
     r"\[[^\]]+\]|~(?:ing)?|\((?:someone|something|one's|my/your|it/that)[^)]*\)",
     re.IGNORECASE,
 )
+QUIZ_LINE_RE = re.compile(r"Q\.\s*(.+?)(?:\n|$)")
+
+
+def uses_delayed_answer(item: dict) -> bool:
+    """Delayed reveal is the service default; explicit false is legacy opt-out."""
+    return item.get("delayed_answer") is not False
+
+
+def _clean_quiz_text(value: str) -> str:
+    value = value.strip()
+    if value.startswith('""') and value.endswith('""'):
+        return value[1:-1]
+    return value.strip('"“”')
+
+
+def get_quiz_spec(item: dict) -> dict:
+    """Return explicit A/B quiz data or derive a free-response quiz from the sub post."""
+    if all(item.get(field) for field in ("quiz_ko", "choice_a", "choice_b")):
+        return {
+            "mode": "choice",
+            "hook_ko": item.get("hook_ko", "이 상황, 영어로 어떻게 말할까요?"),
+            "quiz_ko": item["quiz_ko"],
+            "choice_a": item["choice_a"],
+            "choice_b": item["choice_b"],
+        }
+
+    posts = item.get("posts") if isinstance(item.get("posts"), list) else []
+    sub_text = next(
+        (
+            post.get("text", "")
+            for post in posts
+            if isinstance(post, dict) and post.get("type") == "sub"
+        ),
+        "",
+    )
+    match = QUIZ_LINE_RE.search(sub_text)
+    quiz_ko = _clean_quiz_text(match.group(1)) if match else ""
+    return {
+        "mode": "free",
+        "hook_ko": item.get("hook_ko", "힌트 없이 먼저 떠올려보세요"),
+        "quiz_ko": quiz_ko,
+        "choice_a": "",
+        "choice_b": "",
+    }
 
 
 def build_quiz_prompt(item: dict) -> str:
     """Build the answer-free morning prompt for delayed-reveal lessons."""
+    spec = get_quiz_spec(item)
+    if spec["mode"] == "free":
+        return (
+            "🎬 오늘의 10초 미드 영어\n\n"
+            f"{spec['hook_ko']}\n\n"
+            f"Q. {spec['quiz_ko']}\n\n"
+            "영어 한 문장으로 댓글에 도전해보세요.\n"
+            "정답 예시·뉘앙스·발음은 오후 2:07에 이 타래에서 공개합니다."
+        )
     return (
         "🎬 오늘의 10초 미드 영어\n\n"
-        f"{item['hook_ko']}\n\n"
-        f"Q. {item['quiz_ko']}\n\n"
-        f"A. {item['choice_a']}\n"
-        f"B. {item['choice_b']}\n\n"
+        f"{spec['hook_ko']}\n\n"
+        f"Q. {spec['quiz_ko']}\n\n"
+        f"A. {spec['choice_a']}\n"
+        f"B. {spec['choice_b']}\n\n"
         "A/B만 댓글로 남겨도 좋아요. 이유나 다른 표현도 환영합니다.\n"
         "정답·뉘앙스·발음은 오후 2:07에 이 타래에서 공개합니다."
     )
@@ -36,6 +89,8 @@ def build_quiz_prompt(item: dict) -> str:
 
 def build_answer_post(item: dict, main_text: str) -> str:
     """Build the delayed answer reply with a diagnostic explanation."""
+    if get_quiz_spec(item)["mode"] == "free":
+        return main_text
     return (
         f"✅ 정답: {item['answer_choice']}\n"
         f"🔎 {item['answer_explanation_ko']}\n\n"
@@ -45,6 +100,47 @@ def build_answer_post(item: dict, main_text: str) -> str:
 
 def normalized_phrase(value: str) -> str:
     return re.sub(r"\W+", " ", value.casefold()).strip()
+
+
+def _validate_choice_quiz(item: dict, label: str, by_type: dict) -> list[str]:
+    errors: list[str] = []
+    for field in (
+        "hook_ko",
+        "quiz_ko",
+        "choice_a",
+        "choice_b",
+        "answer_explanation_ko",
+    ):
+        if not isinstance(item.get(field), str) or not item[field].strip():
+            errors.append(f"{label}: 지연 공개용 {field}가 비어 있습니다.")
+    answer_choice = item.get("answer_choice")
+    if answer_choice not in {"A", "B"}:
+        errors.append(f"{label}: answer_choice는 A 또는 B여야 합니다.")
+    required = all(
+        isinstance(item.get(field), str) and item[field].strip()
+        for field in ("hook_ko", "quiz_ko", "choice_a", "choice_b")
+    )
+    if required:
+        quiz_prompt = build_quiz_prompt(item)
+        if len(quiz_prompt) > MAX_POST_CHARS:
+            errors.append(
+                f"{label}: 오전 퀴즈가 {len(quiz_prompt)}자로 "
+                f"Threads 한도 {MAX_POST_CHARS}자를 초과합니다."
+            )
+    main_matches = by_type.get("main", [])
+    if (
+        len(main_matches) == 1
+        and answer_choice in {"A", "B"}
+        and isinstance(item.get("answer_explanation_ko"), str)
+        and item["answer_explanation_ko"].strip()
+    ):
+        answer_text = build_answer_post(item, main_matches[0].get("text", ""))
+        if len(answer_text) > MAX_POST_CHARS:
+            errors.append(
+                f"{label}: 오후 정답 글이 {len(answer_text)}자로 "
+                f"Threads 한도 {MAX_POST_CHARS}자를 초과합니다."
+            )
+    return errors
 
 
 def validate_item(item: object, images_dir: Path | None = None) -> tuple[list[str], list[str]]:
@@ -90,43 +186,20 @@ def validate_item(item: object, images_dir: Path | None = None) -> tuple[list[st
                 f"Threads 한도 {MAX_POST_CHARS}자를 초과합니다."
             )
 
-    if item.get("delayed_answer"):
-        for field in (
-            "hook_ko",
-            "quiz_ko",
-            "choice_a",
-            "choice_b",
-            "answer_explanation_ko",
-        ):
-            if not isinstance(item.get(field), str) or not item[field].strip():
-                errors.append(f"{label}: 지연 공개용 {field}가 비어 있습니다.")
-        answer_choice = item.get("answer_choice")
-        if answer_choice not in {"A", "B"}:
-            errors.append(f"{label}: answer_choice는 A 또는 B여야 합니다.")
-        required = all(
-            isinstance(item.get(field), str) and item[field].strip()
-            for field in ("hook_ko", "quiz_ko", "choice_a", "choice_b")
-        )
-        if required:
-            quiz_prompt = build_quiz_prompt(item)
-            if len(quiz_prompt) > MAX_POST_CHARS:
-                errors.append(
-                    f"{label}: 오전 퀴즈가 {len(quiz_prompt)}자로 "
-                    f"Threads 한도 {MAX_POST_CHARS}자를 초과합니다."
-                )
-        main_matches = by_type.get("main", [])
-        if (
-            len(main_matches) == 1
-            and answer_choice in {"A", "B"}
-            and isinstance(item.get("answer_explanation_ko"), str)
-            and item["answer_explanation_ko"].strip()
-        ):
-            answer_text = build_answer_post(item, main_matches[0].get("text", ""))
-            if len(answer_text) > MAX_POST_CHARS:
-                errors.append(
-                    f"{label}: 오후 정답 글이 {len(answer_text)}자로 "
-                    f"Threads 한도 {MAX_POST_CHARS}자를 초과합니다."
-                )
+    if uses_delayed_answer(item):
+        spec = get_quiz_spec(item)
+        if not spec["quiz_ko"]:
+            errors.append(f"{label}: 오전에 사용할 영작 질문을 추출할 수 없습니다.")
+        if spec["mode"] == "free":
+            if build_quiz_prompt(item) and len(build_quiz_prompt(item)) > MAX_POST_CHARS:
+                errors.append(f"{label}: 오전 자유 영작 퀴즈가 500자를 초과합니다.")
+            main_matches = by_type.get("main", [])
+            if len(main_matches) == 1:
+                answer_text = build_answer_post(item, main_matches[0].get("text", ""))
+                if len(answer_text) > MAX_POST_CHARS:
+                    errors.append(f"{label}: 오후 정답 글이 500자를 초과합니다.")
+        else:
+            errors.extend(_validate_choice_quiz(item, label, by_type))
 
     serialized = repr(item)
     for typo in KNOWN_TYPO_TOKENS:

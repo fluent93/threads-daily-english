@@ -13,6 +13,7 @@ def item() -> dict:
         "day": 1,
         "phrase": "Sounds good.",
         "meaning_ko": "좋아요.",
+        "delayed_answer": False,
         "posts": [
             {"type": "main", "text": "main"},
             {"type": "sub", "text": "sub"},
@@ -117,6 +118,28 @@ class PublishRecoveryTests(unittest.TestCase):
         if now >= expected:
             expected = now + timedelta(hours=6)
         self.assertEqual(state["history"][0]["answer_due_at"], expected.isoformat())
+
+    def test_delayed_reveal_is_default_for_legacy_queue_items(self):
+        legacy = item()
+        legacy.pop("delayed_answer")
+        legacy["posts"][1]["text"] = '퀴즈\nQ. "좋은 것 같아."\n(정답: Sounds good.)'
+        state = {
+            "last_published_day": 0,
+            "last_published_at": None,
+            "history": [],
+            "in_progress": None,
+        }
+        client = FakeClient()
+        publish_item(
+            legacy,
+            state,
+            client,
+            "https://example.com/day.png",
+            now_kst=datetime.now(timezone.utc),
+            save_callback=lambda _: None,
+        )
+        self.assertEqual(len(client.calls), 1)
+        self.assertNotIn("Sounds good.", client.calls[0]["text"])
 
 
 if __name__ == "__main__":

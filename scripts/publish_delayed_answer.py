@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from publish_daily_expression import KST, get_queue, load_state, save_state
-from content_validation import build_answer_post
+from content_validation import build_answer_post, uses_delayed_answer
 from threads_client import ThreadsClient
 
 
@@ -43,7 +43,7 @@ def publish_due_answers(
     for entry in due_entries:
         day = entry.get("day")
         item = items_by_day.get(day)
-        if not item or not item.get("delayed_answer"):
+        if not item or not uses_delayed_answer(item):
             raise RuntimeError(f"Day {day}의 지연 공개 콘텐츠를 찾을 수 없습니다.")
         root_thread_id = entry.get("main_thread_id")
         if not root_thread_id:

@@ -8,6 +8,7 @@ Generate 1080x1080 Card News Images for Threads Daily Posts
 import json
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
+from content_validation import get_quiz_spec, uses_delayed_answer
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 QUEUE_FILE = BASE_DIR / "data" / "threads_daily_queue.json"
@@ -57,6 +58,7 @@ def create_card_image(
     quiz_ko: str = "",
     choice_a: str = "",
     choice_b: str = "",
+    quiz_mode: str = "choice",
 ):
     width, height = 1080, 1080
     img = Image.new("RGB", (width, height), color="#0F172A") # 딥 다크 네이비/차콜
@@ -132,7 +134,8 @@ def create_card_image(
             )
 
         option_y = quiz_start_y + (len(quiz_lines) * 52) + 38
-        for label, option in (("A", choice_a), ("B", choice_b)):
+        options = (("A", choice_a), ("B", choice_b)) if quiz_mode == "choice" else ()
+        for label, option in options:
             option_lines = wrap_text(option, font=font_choice, max_width=720, draw=draw)
             box_height = max(94, 42 + (len(option_lines) * 39))
             draw.rounded_rectangle(
@@ -166,7 +169,29 @@ def create_card_image(
                 )
             option_y += box_height + 22
 
-        reveal_text = "A/B 댓글로  ·  정답은 오후 2:07"
+        if quiz_mode == "free":
+            draw.rounded_rectangle(
+                [175, option_y + 10, width - 175, option_y + 135],
+                radius=24,
+                fill="#27364A",
+                outline="#475569",
+                width=2,
+            )
+            response_text = "영어 한 문장으로 댓글 도전"
+            response_bbox = draw.textbbox((0, 0), response_text, font=font_quiz)
+            draw.text(
+                ((width - (response_bbox[2] - response_bbox[0])) // 2, option_y + 48),
+                response_text,
+                font=font_quiz,
+                fill="#E2E8F0",
+            )
+            option_y += 155
+
+        reveal_text = (
+            "A/B 댓글로  ·  정답은 오후 2:07"
+            if quiz_mode == "choice"
+            else "정답 예시는 오후 2:07"
+        )
         reveal_bbox = draw.textbbox((0, 0), reveal_text, font=font_reveal)
         reveal_width = reveal_bbox[2] - reveal_bbox[0]
         reveal_y = min(max(option_y + 18, 860), 915)
@@ -280,19 +305,21 @@ def generate_all():
         hook = item.get("hook_ko", "")
         context = item.get("context_ko", "")
         source_label = item.get("source_label", "")
+        quiz_spec = get_quiz_spec(item) if uses_delayed_answer(item) else {}
         img_path = IMAGES_DIR / f"day_{day:03d}.png"
         create_card_image(
             day,
             phrase,
             meaning,
             img_path,
-            hook_ko=hook,
+            hook_ko=quiz_spec.get("hook_ko", hook),
             context_ko=context,
             source_label=source_label,
-            delayed_answer=bool(item.get("delayed_answer")),
-            quiz_ko=item.get("quiz_ko", ""),
-            choice_a=item.get("choice_a", ""),
-            choice_b=item.get("choice_b", ""),
+            delayed_answer=uses_delayed_answer(item),
+            quiz_ko=quiz_spec.get("quiz_ko", ""),
+            choice_a=quiz_spec.get("choice_a", ""),
+            choice_b=quiz_spec.get("choice_b", ""),
+            quiz_mode=quiz_spec.get("mode", "choice"),
         )
 
     print(f"✅ 176개 카드뉴스 이미지 생성 완료! 위치: {IMAGES_DIR}")

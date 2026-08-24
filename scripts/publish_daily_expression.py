@@ -18,8 +18,10 @@ from threads_client import ThreadsClient, load_env
 from content_validation import (
     build_answer_post,
     build_quiz_prompt,
+    get_quiz_spec,
     print_report,
     validate_item,
+    uses_delayed_answer,
 )
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -95,7 +97,7 @@ def publish_item(
     meaning = item["meaning_ko"]
     main_post = next(p for p in item["posts"] if p.get("type") == "main")
     sub_post = next(p for p in item["posts"] if p.get("type") == "sub")
-    delayed_answer = bool(item.get("delayed_answer"))
+    delayed_answer = uses_delayed_answer(item)
     now_iso = now_kst.isoformat()
 
     progress = state.get("in_progress")
@@ -118,12 +120,17 @@ def publish_item(
     main_thread_id = progress.get("main_thread_id")
     if not main_thread_id:
         if delayed_answer:
+            quiz_spec = get_quiz_spec(item)
             post_text = build_quiz_prompt(item)
             alt_text = (
                 f"미드 실전 영어 Day {target_day} 퀴즈. "
-                f"질문: {item['quiz_ko']}. "
-                f"선택지 A: {item['choice_a']}. 선택지 B: {item['choice_b']}."
+                f"질문: {quiz_spec['quiz_ko']}."
             )
+            if quiz_spec["mode"] == "choice":
+                alt_text += (
+                    f" 선택지 A: {quiz_spec['choice_a']}."
+                    f" 선택지 B: {quiz_spec['choice_b']}."
+                )
         else:
             post_text = main_post["text"]
             alt_text = f"미드 실전 영어 Day {target_day}: {phrase}. 뜻: {meaning}"
@@ -258,7 +265,7 @@ def main():
         print(f"👀 [DRY-RUN] Day {target_day:03d} 카드뉴스 미리보기")
         print(f"🖼️ 카드 이미지 URL: {image_url}")
         print("=" * 60)
-        if item.get("delayed_answer"):
+        if uses_delayed_answer(item):
             print("\n[오전 08:07] 정답 없는 참여형 문제 (이미지 첨부):")
             print("-" * 50)
             print(build_quiz_prompt(item))
