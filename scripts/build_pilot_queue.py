@@ -14,7 +14,14 @@ COPY_FILE = BASE_DIR / "data" / "pilot_card_copy.json"
 OUTPUT_FILE = BASE_DIR / "data" / "pilot_threads_queue.json"
 
 
-def build_queue(selection: list[dict], copy_items: list[dict]) -> list[dict]:
+def build_queue(
+    selection: list[dict],
+    copy_items: list[dict],
+    *,
+    card_prefix: str = "PILOT",
+    quality_version: int = 0,
+    review_status: str = "pilot",
+) -> list[dict]:
     copy_by_day = {item["day"]: item for item in copy_items}
     queue: list[dict] = []
     for selected in selection:
@@ -35,7 +42,7 @@ def build_queue(selection: list[dict], copy_items: list[dict]) -> list[dict]:
         queue.append(
             {
                 "day": day,
-                "card_id": f"PILOT-{day:03d}",
+                "card_id": f"{card_prefix}-{day:03d}",
                 "episode": "REAL-LIFE",
                 "phrase": selected["phrase"],
                 "meaning_ko": selected["meaning_ko"],
@@ -47,11 +54,11 @@ def build_queue(selection: list[dict], copy_items: list[dict]) -> list[dict]:
                 "context_ko": selected["category"],
                 "source_label": "REAL-LIFE ENGLISH · 상황 기반",
                 "delayed_answer": True,
-                "quality_version": 0,
+                "quality_version": quality_version,
                 "quiz_mode": "free",
                 "quiz_ko": copy["quiz_ko"],
                 "answer_example_en": copy["answer_example_en"],
-                "review_status": "pilot",
+                "review_status": review_status,
             }
         )
     return queue

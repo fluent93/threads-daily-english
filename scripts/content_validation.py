@@ -310,10 +310,14 @@ def validate_queue(
     images_dir: Path | None = None,
     *,
     require_editorial_approval: bool = False,
+    require_card_fingerprint: bool | None = None,
 ) -> tuple[list[str], list[str]]:
     """Validate the complete publishing queue."""
     if not isinstance(queue, list) or not queue:
         return ["큐는 비어 있지 않은 배열이어야 합니다."], []
+
+    if require_card_fingerprint is None:
+        require_card_fingerprint = require_editorial_approval
 
     errors: list[str] = []
     warnings: list[str] = []
@@ -328,7 +332,7 @@ def validate_queue(
             item,
             images_dir=images_dir,
             require_editorial_approval=require_editorial_approval,
-            require_card_fingerprint=require_editorial_approval,
+            require_card_fingerprint=require_card_fingerprint,
         )
         errors.extend(item_errors)
         warnings.extend(item_warnings)
@@ -346,10 +350,11 @@ def validate_queue(
                 choice_answers.append(str(item.get("answer_choice")))
                 choice_focuses.append(str(item.get("quiz_focus")))
 
-    expected_days = list(range(1, len(queue) + 1))
+    first_expected_day = 1 if require_editorial_approval else (days[0] if days else 1)
+    expected_days = list(range(first_expected_day, first_expected_day + len(queue)))
     if days != expected_days:
         errors.append(
-            "day 번호는 파일 순서대로 1부터 연속이어야 합니다 "
+            f"day 번호는 파일 순서대로 {first_expected_day}부터 연속이어야 합니다 "
             f"(실제 {days[:5]}...{days[-5:] if days else []})."
         )
 

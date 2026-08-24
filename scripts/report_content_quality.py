@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Print reproducible release-readiness metrics for the 176-day library."""
+"""Print reproducible release-readiness metrics for the approved queue."""
 
 from __future__ import annotations
 
@@ -12,12 +12,10 @@ from content_validation import build_quiz_prompt, get_quiz_spec
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 QUEUE_FILE = BASE_DIR / "data" / "threads_daily_queue.json"
-EDITORIAL_FILE = BASE_DIR / "data" / "editorial_overrides.json"
 
 
 def main() -> None:
     queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
-    editorial = json.loads(EDITORIAL_FILE.read_text(encoding="utf-8"))
     specs = [get_quiz_spec(item) for item in queue]
     choice_items = [item for item, spec in zip(queue, specs) if spec["mode"] == "choice"]
     prompt_lengths = [(len(build_quiz_prompt(item)), item["day"]) for item in queue]
@@ -33,7 +31,6 @@ def main() -> None:
     print(f"- A/B 추천 위치 분포: {dict(Counter(item['answer_choice'] for item in choice_items))}")
     print(f"- A/B 초점 분포: {dict(Counter(item['quiz_focus'] for item in choice_items))}")
     print(f"- 고유 상황형 훅: {len({item['hook_ko'] for item in queue})}/{len(queue)}개")
-    print(f"- 전면 교체 문항: {len(editorial.get('items', {}))}개")
     longest_length, longest_day = max(prompt_lengths)
     print(f"- 최장 오전 게시물: Day {longest_day}, {longest_length}/500자")
 

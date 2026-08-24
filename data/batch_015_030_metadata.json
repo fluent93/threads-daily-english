@@ -1,0 +1,20 @@
+{
+  "batch": "Day 15-30",
+  "status": "review",
+  "publish_window_kst": {
+    "day_15": "2026-09-08",
+    "day_30": "2026-09-23"
+  },
+  "seasonal_arc": [
+    "9월 초 더위가 누그러지는 시기",
+    "추석을 앞둔 귀성·예약·업무 정리",
+    "연휴 직전 쇼핑·교통·출발 준비"
+  ],
+  "calendar_anchor": {
+    "event": "2026 Chuseok",
+    "holiday_dates": "2026-09-24 through 2026-09-26",
+    "chuseok_day": "2026-09-25",
+    "source": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=372&vcontsId=140038"
+  },
+  "release_policy": "사용자 승인 전에는 운영 큐에 병합하지 않음"
+}

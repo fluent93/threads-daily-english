@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 from pathlib import Path
@@ -71,12 +72,16 @@ def validate_copy(selection: object, copy_items: object) -> list[str]:
 
 
 def main() -> int:
-    selection = json.loads(SELECTION_FILE.read_text(encoding="utf-8"))
-    copy_items = json.loads(COPY_FILE.read_text(encoding="utf-8"))
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--selection", type=Path, default=SELECTION_FILE)
+    parser.add_argument("--copy", type=Path, default=COPY_FILE)
+    args = parser.parse_args()
+    selection = json.loads(args.selection.read_text(encoding="utf-8"))
+    copy_items = json.loads(args.copy.read_text(encoding="utf-8"))
     errors = validate_copy(selection, copy_items)
     for error in errors:
         print(f"ERROR: {error}")
-    print(f"파일럿 문안 검증: {len(copy_items)}개, 오류 {len(errors)}건")
+    print(f"카드 문안 검증: {len(copy_items)}개, 오류 {len(errors)}건")
     return 1 if errors else 0
 
 

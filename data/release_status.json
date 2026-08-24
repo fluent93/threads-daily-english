@@ -1,7 +1,9 @@
 {
-  "publishing_enabled": false,
-  "library_status": "rebuilding",
-  "reason": "기존 176일 콘텐츠를 실제 영미권 일상 회화 중심으로 전면 재검토 중",
+  "publishing_enabled": true,
+  "library_status": "approved_batch",
+  "approved_through_day": 14,
+  "scheduled_start_kst": "2026-08-25T08:07:00+09:00",
+  "reason": "사용자 검토를 통과한 Day 1-14만 운영 큐에 승인됨",
   "previous_queue_status": "deprecated",
-  "resume_condition": "새 176일 표현 선정, 문안 검증, 카드 시각 QA 및 사용자 확인 완료"
+  "next_batch_status": "Day 15-30은 별도 검토 후 승인 전까지 운영 큐에서 제외"
 }

@@ -21,6 +21,11 @@ def validate_selection(items: object) -> list[str]:
     if not isinstance(items, list) or not items:
         return ["선정 목록은 비어 있지 않은 배열이어야 합니다."]
 
+    first_day = items[0].get("day") if isinstance(items[0], dict) else None
+    if not isinstance(first_day, int) or first_day < 1:
+        errors.append("첫 day는 1 이상의 정수여야 합니다.")
+        first_day = 1
+
     seen: dict[str, int] = {}
     for index, item in enumerate(items, start=1):
         label = f"항목 {index}"
@@ -29,8 +34,11 @@ def validate_selection(items: object) -> list[str]:
             continue
         day = item.get("day")
         label = f"Day {day}" if isinstance(day, int) else label
-        if day != index:
-            errors.append(f"{label}: day는 파일 순서대로 1부터 연속이어야 합니다.")
+        expected_day = first_day + index - 1
+        if day != expected_day:
+            errors.append(
+                f"{label}: day는 파일 순서대로 Day {first_day}부터 연속이어야 합니다."
+            )
         for field in ("phrase", "meaning_ko", "category", "selection_reason", "register_note"):
             if not isinstance(item.get(field), str) or not item[field].strip():
                 errors.append(f"{label}: {field}가 비어 있습니다.")

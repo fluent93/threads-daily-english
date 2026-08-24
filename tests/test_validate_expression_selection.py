@@ -38,6 +38,17 @@ class SelectionValidationTests(unittest.TestCase):
         self.assertIn("빈도와 전이성", errors)
         self.assertIn("16/20 미만", errors)
 
+    def test_accepts_monthly_batch_starting_after_day_one(self):
+        first = make_item(day=15, phrase="Let's beat the traffic.")
+        second = make_item(day=16, phrase="We're cutting it close.")
+        self.assertEqual(validate_selection([first, second]), [])
+
+    def test_rejects_gap_inside_monthly_batch(self):
+        first = make_item(day=15, phrase="Let's beat the traffic.")
+        second = make_item(day=17, phrase="We're cutting it close.")
+        errors = "\n".join(validate_selection([first, second]))
+        self.assertIn("연속", errors)
+
 
 if __name__ == "__main__":
     unittest.main()

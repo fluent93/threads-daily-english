@@ -212,7 +212,7 @@ def main():
         next_day = last_day + 1
         print("=" * 50)
         print("📊 [Threads 1일 1표현 카드뉴스 발행 현황]")
-        print(f" - 전체 큐: 총 {total_days}일치 준비됨 (이미지 176장 완비)")
+        print(f" - 승인된 운영 큐: 총 {total_days}일치 (카드 이미지 {total_days}장)")
         print(f" - 마지막 발행: Day {last_day} ({last_time})")
         print(f" - 다음 발행 예정: Day {next_day}")
         if state.get("in_progress"):
