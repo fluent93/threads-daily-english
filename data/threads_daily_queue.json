@@ -8,6 +8,12 @@
     "hook_ko": "\"둘 다 비슷한 거 아니야?\"",
     "context_ko": "같은 것으로 퉁치는 상대에게",
     "source_label": "SEINFELD S3E1 · 실제 대사",
+    "delayed_answer": true,
+    "quiz_ko": "번역과 로컬라이제이션은 완전히 달라.",
+    "choice_a": "There's a big difference between translation and localization.",
+    "choice_b": "There's a big different between translation and localization.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "difference는 명사, different는 형용사예요. a 뒤에는 명사 difference가 와야 합니다.",
     "posts": [
       {
         "index": 1,
@@ -30,6 +36,12 @@
     "hook_ko": "\"이거 한번 봐줄래?\"",
     "context_ko": "추천·링크·상황을 살펴볼 때",
     "source_label": "SEINFELD S3E1 · 실제 대사",
+    "delayed_answer": true,
+    "quiz_ko": "링크 보내줘. 내가 한번 볼게.",
+    "choice_a": "Send me the link. I'll check out it.",
+    "choice_b": "Send me the link. I'll check it out.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "check out은 분리 가능한 구동사라 목적어가 대명사일 때 check it out 순서로 씁니다.",
     "posts": [
       {
         "index": 1,
@@ -52,6 +64,12 @@
     "hook_ko": "\"분명 여기 있었는데?\"",
     "context_ko": "과거 일을 확신 없이 추측할 때",
     "source_label": "SEINFELD S3E1 · 대사에서 추출",
+    "delayed_answer": true,
+    "quiz_ko": "그 사람이 내 메시지를 못 봤을 수도 있어.",
+    "choice_a": "They may have missed my message.",
+    "choice_b": "They may missed my message.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "과거 추측은 may have + 과거분사 형태예요. have를 빼고 may missed라고 할 수 없습니다.",
     "posts": [
       {
         "index": 1,
@@ -74,6 +92,12 @@
     "hook_ko": "\"걔가 정말 그런다고?\"",
     "context_ko": "누군가 그럴 모습을 상상하기 어려울 때",
     "source_label": "SEINFELD S3E1 · 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "그녀가 거짓말할 것 같지는 않아.",
+    "choice_a": "I can't see she lies.",
+    "choice_b": "I can't see her lying.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "이 패턴은 see + 목적격 + -ing예요. 따라서 her lying이 맞습니다.",
     "posts": [
       {
         "index": 1,
@@ -96,6 +120,12 @@
     "hook_ko": "\"질문이 왜 이렇게 많아?\"",
     "context_ko": "갑자기 전문가처럼 구는 친구를 놀릴 때",
     "source_label": "실전 회화 · 패턴 큐레이션",
+    "delayed_answer": true,
+    "quiz_ko": "너 갑자기 변호사라도 된 거야?",
+    "choice_a": "What are you, lawyer now?",
+    "choice_b": "What are you, a lawyer now?",
+    "answer_choice": "B",
+    "answer_explanation_ko": "lawyer는 셀 수 있는 단수 명사이므로 관사 a가 필요합니다.",
     "posts": [
       {
         "index": 1,
@@ -118,6 +148,12 @@
     "hook_ko": "말을 조금 부드럽게 고치고 싶을 때",
     "context_ko": "설명·정정·보충 전에 붙이는 말",
     "source_label": "SEINFELD S3E1 · 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "그러니까, 나쁜 아이디어는 아니야.",
+    "choice_a": "I mean, it's not a bad idea.",
+    "choice_b": "I meaning, it's not a bad idea.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "말을 정정·보충할 때 쓰는 고정 표현은 I mean입니다. I meaning은 문장이 되지 않습니다.",
     "posts": [
       {
         "index": 1,
@@ -140,6 +176,12 @@
     "hook_ko": "\"설마 확인 안 한 거야?\"",
     "context_ko": "이미 한 일을 당연하다고 답할 때",
     "source_label": "실전 회화 · 문법 교정 큐레이션",
+    "delayed_answer": true,
+    "quiz_ko": "파일 백업했어? / 당연히 했지.",
+    "choice_a": "Did you back up the file? / Of course I would.",
+    "choice_b": "Did you back up the file? / Of course I did.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "이미 했는지를 did로 물었으므로 답도 did로 받습니다. would는 의향·가정의 뜻입니다.",
     "posts": [
       {
         "index": 1,
@@ -162,6 +204,12 @@
     "hook_ko": "누가 옆에서 엉뚱한 말을 했을 때",
     "context_ko": "그 사람의 행동을 가볍게 무마할 때",
     "source_label": "SEINFELD S3E1 · 실제 대사",
+    "delayed_answer": true,
+    "quiz_ko": "그 사람은 신경 쓰지 마. 원래 농담을 많이 해.",
+    "choice_a": "Don't mind him. He jokes around a lot.",
+    "choice_b": "Don't care him. He jokes around a lot.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "'신경 쓰지 마'는 Don't mind + 사람입니다. care는 보통 care about처럼 씁니다.",
     "posts": [
       {
         "index": 1,
@@ -184,6 +232,12 @@
     "hook_ko": "\"내가 반대한다고 생각해?\"",
     "context_ko": "상대가 내 의도를 잘못 짚었을 때",
     "source_label": "SEINFELD S3E2 · 실제 대사",
+    "delayed_answer": true,
+    "quiz_ko": "내가 그 사람을 싫어한다고 생각한다면 완전히 오해야.",
+    "choice_a": "If you think I dislike him, you've got all wrong me.",
+    "choice_b": "If you think I dislike him, you've got me all wrong.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "'나를 완전히 오해하다'는 get me all wrong이라는 고정된 어순으로 씁니다.",
     "posts": [
       {
         "index": 1,
@@ -206,6 +260,12 @@
     "hook_ko": "문제가 한두 개가 아닐 때",
     "context_ko": "나쁜 것이 곳곳에 퍼져 있음을 강조",
     "source_label": "SEINFELD S3E2 · 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "그 앱은 버그투성이야.",
+    "choice_a": "The app is riddled with bugs.",
+    "choice_b": "The app is riddled of bugs.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "'~투성이다'는 be riddled with라는 결합으로 씁니다. 전치사는 of가 아니라 with입니다.",
     "posts": [
       {
         "index": 1,
@@ -228,6 +288,12 @@
     "hook_ko": "\"다 잘될 거야\" 같은 말 말고",
     "context_ko": "상투적인 말을 듣고 싶지 않을 때",
     "source_label": "실전 회화 · 자연스러운 대안",
+    "delayed_answer": true,
+    "quiz_ko": "뻔한 변명은 그만해.",
+    "choice_a": "Save me the excuses.",
+    "choice_b": "Spare me the excuses.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "Spare me the excuses는 '그 변명은 듣게 하지 마'라는 뜻입니다. save me는 이 문맥에 맞지 않습니다.",
     "posts": [
       {
         "index": 1,
@@ -250,6 +316,12 @@
     "hook_ko": "대답 하나 듣기가 너무 힘들 때",
     "context_ko": "상대의 협조를 얻기가 고통스러울 때",
     "source_label": "실전 회화 · 고빈도 관용구",
+    "delayed_answer": true,
+    "quiz_ko": "아이들에게 방을 치우게 하는 건 정말 힘들어.",
+    "choice_a": "Getting the kids to clean their room is like pulling teeth.",
+    "choice_b": "Getting the kids clean their room is like pulling tooth.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "get + 사람 + to부정사가 맞고, 관용구는 pulling teeth처럼 teeth를 복수로 씁니다.",
     "posts": [
       {
         "index": 1,
@@ -272,6 +344,12 @@
     "hook_ko": "끝났지만 서로 나쁜 감정은 없을 때",
     "context_ko": "연애·직장·협업 관계가 원만히 끝났을 때",
     "source_label": "SEINFELD S3E2 · 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "나는 이전 직장에서 좋게 퇴사했어.",
+    "choice_a": "I left my old job in good terms.",
+    "choice_b": "I left my old job on good terms.",
+    "answer_choice": "B",
+    "answer_explanation_ko": "'좋은 관계로'는 on good terms라는 고정 표현입니다. in good terms라고 하지 않습니다.",
     "posts": [
       {
         "index": 1,
@@ -294,6 +372,12 @@
     "hook_ko": "검소한 걸까, 인색한 걸까?",
     "context_ko": "평가보다 사실을 중립적으로 말할 때",
     "source_label": "SEINFELD S3E2 · 패턴 각색",
+    "delayed_answer": true,
+    "quiz_ko": "그녀는 돈을 아주 신중하게 써.",
+    "choice_a": "She's very careful with money.",
+    "choice_b": "She's very careful to money.",
+    "answer_choice": "A",
+    "answer_explanation_ko": "돈을 신중하게 쓴다는 뜻의 자연스러운 결합은 careful with money입니다.",
     "posts": [
       {
         "index": 1,

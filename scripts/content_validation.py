@@ -21,6 +21,28 @@ PLACEHOLDER_RE = re.compile(
 )
 
 
+def build_quiz_prompt(item: dict) -> str:
+    """Build the answer-free morning prompt for delayed-reveal lessons."""
+    return (
+        "🎬 오늘의 10초 미드 영어\n\n"
+        f"{item['hook_ko']}\n\n"
+        f"Q. {item['quiz_ko']}\n\n"
+        f"A. {item['choice_a']}\n"
+        f"B. {item['choice_b']}\n\n"
+        "A/B만 댓글로 남겨도 좋아요. 이유나 다른 표현도 환영합니다.\n"
+        "정답·뉘앙스·발음은 오후 2:07에 이 타래에서 공개합니다."
+    )
+
+
+def build_answer_post(item: dict, main_text: str) -> str:
+    """Build the delayed answer reply with a diagnostic explanation."""
+    return (
+        f"✅ 정답: {item['answer_choice']}\n"
+        f"🔎 {item['answer_explanation_ko']}\n\n"
+        f"{main_text}"
+    )
+
+
 def normalized_phrase(value: str) -> str:
     return re.sub(r"\W+", " ", value.casefold()).strip()
 
@@ -67,6 +89,44 @@ def validate_item(item: object, images_dir: Path | None = None) -> tuple[list[st
                 f"{label}: {post_type} text가 {len(text)}자로 "
                 f"Threads 한도 {MAX_POST_CHARS}자를 초과합니다."
             )
+
+    if item.get("delayed_answer"):
+        for field in (
+            "hook_ko",
+            "quiz_ko",
+            "choice_a",
+            "choice_b",
+            "answer_explanation_ko",
+        ):
+            if not isinstance(item.get(field), str) or not item[field].strip():
+                errors.append(f"{label}: 지연 공개용 {field}가 비어 있습니다.")
+        answer_choice = item.get("answer_choice")
+        if answer_choice not in {"A", "B"}:
+            errors.append(f"{label}: answer_choice는 A 또는 B여야 합니다.")
+        required = all(
+            isinstance(item.get(field), str) and item[field].strip()
+            for field in ("hook_ko", "quiz_ko", "choice_a", "choice_b")
+        )
+        if required:
+            quiz_prompt = build_quiz_prompt(item)
+            if len(quiz_prompt) > MAX_POST_CHARS:
+                errors.append(
+                    f"{label}: 오전 퀴즈가 {len(quiz_prompt)}자로 "
+                    f"Threads 한도 {MAX_POST_CHARS}자를 초과합니다."
+                )
+        main_matches = by_type.get("main", [])
+        if (
+            len(main_matches) == 1
+            and answer_choice in {"A", "B"}
+            and isinstance(item.get("answer_explanation_ko"), str)
+            and item["answer_explanation_ko"].strip()
+        ):
+            answer_text = build_answer_post(item, main_matches[0].get("text", ""))
+            if len(answer_text) > MAX_POST_CHARS:
+                errors.append(
+                    f"{label}: 오후 정답 글이 {len(answer_text)}자로 "
+                    f"Threads 한도 {MAX_POST_CHARS}자를 초과합니다."
+                )
 
     serialized = repr(item)
     for typo in KNOWN_TYPO_TOKENS:

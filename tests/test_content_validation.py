@@ -25,6 +25,22 @@ def make_item(day: int, phrase: str = "Sounds good.", main_text: str = "Main") -
     }
 
 
+def make_delayed_item(day: int = 1) -> dict:
+    value = make_item(day)
+    value.update(
+        {
+            "hook_ko": "이 둘 중 자연스러운 문장은?",
+            "delayed_answer": True,
+            "quiz_ko": "좋은 것 같아.",
+            "choice_a": "Sounds good.",
+            "choice_b": "Sounds well.",
+            "answer_choice": "A",
+            "answer_explanation_ko": "good은 형용사이고 well은 보통 부사입니다.",
+        }
+    )
+    return value
+
+
 class ContentValidationTests(unittest.TestCase):
     def test_valid_queue_and_image(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -49,6 +65,17 @@ class ContentValidationTests(unittest.TestCase):
         errors, warnings = validate_queue([make_item(1, "What does [someone] do?")])
         self.assertEqual(errors, [])
         self.assertEqual(len(warnings), 1)
+
+    def test_validates_delayed_quiz_fields_and_answer_length(self):
+        item = make_delayed_item()
+        item["answer_choice"] = "C"
+        errors, _ = validate_queue([item])
+        self.assertIn("answer_choice는 A 또는 B", "\n".join(errors))
+
+        item = make_delayed_item()
+        item["posts"][0]["text"] = "x" * 495
+        errors, _ = validate_queue([item])
+        self.assertIn("오후 정답 글", "\n".join(errors))
 
 
 if __name__ == "__main__":

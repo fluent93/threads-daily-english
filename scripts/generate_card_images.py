@@ -53,6 +53,10 @@ def create_card_image(
     hook_ko: str = "",
     context_ko: str = "",
     source_label: str = "",
+    delayed_answer: bool = False,
+    quiz_ko: str = "",
+    choice_a: str = "",
+    choice_b: str = "",
 ):
     width, height = 1080, 1080
     img = Image.new("RGB", (width, height), color="#0F172A") # 딥 다크 네이비/차콜
@@ -67,6 +71,9 @@ def create_card_image(
     font_context = ImageFont.truetype(FONT_PATH, 28)
     font_source = ImageFont.truetype(FONT_PATH, 22)
     font_footer = ImageFont.truetype(FONT_PATH, 24)
+    font_quiz = ImageFont.truetype(FONT_PATH, 38)
+    font_choice = ImageFont.truetype(FONT_PATH, 27)
+    font_reveal = ImageFont.truetype(FONT_PATH, 27)
 
     # 1. 내부 카드 프레임 (모던 글래스모피즘 느낌의 라운드 사각형)
     card_margin = 60
@@ -99,6 +106,89 @@ def create_card_image(
             font=font_source,
             fill="#64748B",
         )
+
+    # 오전 퀴즈 카드는 영어 정답과 한국어 뜻을 모두 숨깁니다.
+    if delayed_answer:
+        hook_lines = wrap_text(hook_ko, font=font_hook, max_width=780, draw=draw)
+        hook_start_y = 245
+        for i, line in enumerate(hook_lines):
+            bbox = draw.textbbox((0, 0), line, font=font_hook)
+            draw.text(
+                ((width - (bbox[2] - bbox[0])) // 2, hook_start_y + (i * 58)),
+                line,
+                font=font_hook,
+                fill="#FBBF24",
+            )
+
+        quiz_lines = wrap_text(f"Q. {quiz_ko}", font=font_quiz, max_width=790, draw=draw)
+        quiz_start_y = hook_start_y + (len(hook_lines) * 58) + 50
+        for i, line in enumerate(quiz_lines):
+            bbox = draw.textbbox((0, 0), line, font=font_quiz)
+            draw.text(
+                ((width - (bbox[2] - bbox[0])) // 2, quiz_start_y + (i * 52)),
+                line,
+                font=font_quiz,
+                fill="#F8FAFC",
+            )
+
+        option_y = quiz_start_y + (len(quiz_lines) * 52) + 38
+        for label, option in (("A", choice_a), ("B", choice_b)):
+            option_lines = wrap_text(option, font=font_choice, max_width=720, draw=draw)
+            box_height = max(94, 42 + (len(option_lines) * 39))
+            draw.rounded_rectangle(
+                [135, option_y, width - 135, option_y + box_height],
+                radius=22,
+                fill="#27364A",
+                outline="#475569",
+                width=2,
+            )
+            draw.rounded_rectangle(
+                [165, option_y + 24, 213, option_y + 72],
+                radius=14,
+                fill="#0284C7",
+            )
+            label_bbox = draw.textbbox((0, 0), label, font=font_choice)
+            draw.text(
+                (
+                    189 - ((label_bbox[2] - label_bbox[0]) // 2),
+                    option_y + 25,
+                ),
+                label,
+                font=font_choice,
+                fill="#FFFFFF",
+            )
+            for i, line in enumerate(option_lines):
+                draw.text(
+                    (240, option_y + 24 + (i * 39)),
+                    line,
+                    font=font_choice,
+                    fill="#E2E8F0",
+                )
+            option_y += box_height + 22
+
+        reveal_text = "A/B 댓글로  ·  정답은 오후 2:07"
+        reveal_bbox = draw.textbbox((0, 0), reveal_text, font=font_reveal)
+        reveal_width = reveal_bbox[2] - reveal_bbox[0]
+        reveal_y = min(max(option_y + 18, 860), 915)
+        draw.text(
+            ((width - reveal_width) // 2, reveal_y),
+            reveal_text,
+            font=font_reveal,
+            fill="#38BDF8",
+        )
+
+        footer_text = "@fluent93  |  Daily English"
+        footer_bbox = draw.textbbox((0, 0), footer_text, font=font_footer)
+        footer_width = footer_bbox[2] - footer_bbox[0]
+        draw.text(
+            ((width - footer_width) // 2, height - card_margin - 60),
+            footer_text,
+            font=font_footer,
+            fill="#64748B",
+        )
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        img.save(output_path, "PNG", quality=95)
+        return
 
     # 획득형 카드는 먼저 사용 상황을 보여주고 표현을 보상으로 제시합니다.
     if hook_ko:
@@ -199,6 +289,10 @@ def generate_all():
             hook_ko=hook,
             context_ko=context,
             source_label=source_label,
+            delayed_answer=bool(item.get("delayed_answer")),
+            quiz_ko=item.get("quiz_ko", ""),
+            choice_a=item.get("choice_a", ""),
+            choice_b=item.get("choice_b", ""),
         )
 
     print(f"✅ 176개 카드뉴스 이미지 생성 완료! 위치: {IMAGES_DIR}")

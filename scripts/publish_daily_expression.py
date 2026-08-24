@@ -15,7 +15,12 @@ from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
 from threads_client import ThreadsClient, load_env
-from content_validation import print_report, validate_item
+from content_validation import (
+    build_answer_post,
+    build_quiz_prompt,
+    print_report,
+    validate_item,
+)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_env(BASE_DIR / ".env")
@@ -31,6 +36,14 @@ GITHUB_IMAGE_BASE = os.environ.get(
 )
 
 KST = timezone(timedelta(hours=9))
+
+
+def get_answer_due_at(published_at: datetime) -> datetime:
+    """Use the daily reveal window, with a six-hour delay for late manual posts."""
+    reveal_window = published_at.replace(hour=14, minute=0, second=0, microsecond=0)
+    if published_at < reveal_window:
+        return reveal_window
+    return published_at + timedelta(hours=6)
 
 
 def load_state() -> dict:
@@ -82,6 +95,7 @@ def publish_item(
     meaning = item["meaning_ko"]
     main_post = next(p for p in item["posts"] if p.get("type") == "main")
     sub_post = next(p for p in item["posts"] if p.get("type") == "sub")
+    delayed_answer = bool(item.get("delayed_answer"))
     now_iso = now_kst.isoformat()
 
     progress = state.get("in_progress")
@@ -103,11 +117,20 @@ def publish_item(
 
     main_thread_id = progress.get("main_thread_id")
     if not main_thread_id:
-        alt_text = f"미드 실전 영어 Day {target_day}: {phrase}. 뜻: {meaning}"
+        if delayed_answer:
+            post_text = build_quiz_prompt(item)
+            alt_text = (
+                f"미드 실전 영어 Day {target_day} 퀴즈. "
+                f"질문: {item['quiz_ko']}. "
+                f"선택지 A: {item['choice_a']}. 선택지 B: {item['choice_b']}."
+            )
+        else:
+            post_text = main_post["text"]
+            alt_text = f"미드 실전 영어 Day {target_day}: {phrase}. 뜻: {meaning}"
         topic_tag = os.environ.get("THREADS_TOPIC_TAG", "").strip() or None
         print(f"[1/2] 메인 카드뉴스 이미지 포스팅 중... ({image_url})")
         main_thread_id = client.post(
-            text=main_post["text"],
+            text=post_text,
             image_url=image_url,
             alt_text=alt_text,
             topic_tag=topic_tag,
@@ -119,7 +142,9 @@ def publish_item(
         print(f"[1/2] 기존 메인 글에서 재개합니다. (Thread ID: {main_thread_id})")
 
     sub_thread_id = progress.get("sub_thread_id")
-    if not sub_thread_id:
+    if delayed_answer:
+        print("[2/2] 정답 지연 공개형: 오전에는 추가 답글을 게시하지 않습니다.")
+    elif not sub_thread_id:
         print("[2/2] 발음 팁 & 영작 퀴즈 타래 답글 연결 중...")
         sub_thread_id = client.post(
             text=sub_post["text"],
@@ -131,7 +156,8 @@ def publish_item(
     else:
         print(f"[2/2] 기존 답글을 확인했습니다. (Thread ID: {sub_thread_id})")
 
-    published_at = datetime.now(KST).isoformat()
+    published_at_dt = now_kst
+    published_at = published_at_dt.isoformat()
     state["last_published_day"] = target_day
     state["last_published_at"] = published_at
     if not any(
@@ -145,6 +171,13 @@ def publish_item(
             "main_thread_id": main_thread_id,
             "sub_thread_id": sub_thread_id,
             "image_url": image_url,
+            "answer_due_at": (
+                get_answer_due_at(published_at_dt).isoformat()
+                if delayed_answer
+                else None
+            ),
+            "answer_thread_id": None,
+            "answer_detail_thread_id": None,
         })
     state["in_progress"] = None
     save_callback(state)
@@ -225,14 +258,28 @@ def main():
         print(f"👀 [DRY-RUN] Day {target_day:03d} 카드뉴스 미리보기")
         print(f"🖼️ 카드 이미지 URL: {image_url}")
         print("=" * 60)
-        print("\n[1/2] 메인 포스트 (이미지 첨부):")
-        print("-" * 50)
-        print(main_post.get("text") if main_post else "")
-        print("-" * 50)
-        print("\n[2/2] 타래 답글 (발음 & 1초 영작 퀴즈):")
-        print("-" * 50)
-        print(sub_post.get("text") if sub_post else "")
-        print("-" * 50)
+        if item.get("delayed_answer"):
+            print("\n[오전 08:07] 정답 없는 참여형 문제 (이미지 첨부):")
+            print("-" * 50)
+            print(build_quiz_prompt(item))
+            print("-" * 50)
+            print("\n[오후 14:07] 같은 타래의 정답·뉘앙스:")
+            print("-" * 50)
+            print(build_answer_post(item, main_post.get("text", "")))
+            print("-" * 50)
+            print("\n[정답 상세 답글] 발음·복습:")
+            print("-" * 50)
+            print(sub_post.get("text") if sub_post else "")
+            print("-" * 50)
+        else:
+            print("\n[1/2] 메인 포스트 (이미지 첨부):")
+            print("-" * 50)
+            print(main_post.get("text") if main_post else "")
+            print("-" * 50)
+            print("\n[2/2] 타래 답글 (발음 & 1초 영작 퀴즈):")
+            print("-" * 50)
+            print(sub_post.get("text") if sub_post else "")
+            print("-" * 50)
         if not args.publish:
             print("\n💡 실제 발행 명령: python3 scripts/publish_daily_expression.py --publish")
         return
