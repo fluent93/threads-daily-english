@@ -36,7 +36,8 @@ def make_delayed_item(day: int = 1) -> dict:
             "choice_a": "Sounds good.",
             "choice_b": "Sounds well.",
             "answer_choice": "A",
-            "answer_explanation_ko": "good은 형용사이고 well은 보통 부사입니다.",
+            "quiz_focus": "nuance",
+            "answer_explanation_ko": "A는 평가를 말하고, B는 행동 방식을 말합니다.",
         }
     )
     return value
@@ -90,6 +91,12 @@ class ContentValidationTests(unittest.TestCase):
         self.assertNotIn("sample", build_quiz_prompt(item))
         errors, _ = validate_queue([item])
         self.assertEqual(errors, [])
+
+    def test_rejects_one_sided_choice_explanation(self):
+        item = make_delayed_item()
+        item["answer_explanation_ko"] = "A가 맞습니다."
+        errors, _ = validate_queue([item])
+        self.assertIn("A와 B의 차이", "\n".join(errors))
 
 
 if __name__ == "__main__":

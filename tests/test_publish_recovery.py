@@ -31,7 +31,8 @@ def delayed_item() -> dict:
             "choice_a": "Sounds good.",
             "choice_b": "Sounds well.",
             "answer_choice": "A",
-            "answer_explanation_ko": "good은 형용사입니다.",
+            "quiz_focus": "nuance",
+            "answer_explanation_ko": "A는 자연스럽고, B는 다른 뜻입니다.",
         }
     )
     return value

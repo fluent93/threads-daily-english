@@ -14,6 +14,7 @@ from PIL import Image
 MAX_POST_CHARS = 500
 EXPECTED_IMAGE_SIZE = (1080, 1080)
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
+ALLOWED_QUIZ_FOCUS = {"context", "nuance", "register", "collocation", "grammar"}
 KNOWN_TYPO_TOKENS = ("쯙", "살짙", "초근무")
 PLACEHOLDER_RE = re.compile(
     r"\[[^\]]+\]|~(?:ing)?|\((?:someone|something|one's|my/your|it/that)[^)]*\)",
@@ -116,6 +117,16 @@ def _validate_choice_quiz(item: dict, label: str, by_type: dict) -> list[str]:
     answer_choice = item.get("answer_choice")
     if answer_choice not in {"A", "B"}:
         errors.append(f"{label}: answer_choice는 A 또는 B여야 합니다.")
+    quiz_focus = item.get("quiz_focus")
+    if quiz_focus not in ALLOWED_QUIZ_FOCUS:
+        errors.append(
+            f"{label}: quiz_focus는 {', '.join(sorted(ALLOWED_QUIZ_FOCUS))} 중 하나여야 합니다."
+        )
+    explanation = item.get("answer_explanation_ko")
+    if isinstance(explanation, str) and not all(
+        marker in explanation for marker in ("A는", "B는")
+    ):
+        errors.append(f"{label}: 해설은 A와 B의 차이를 모두 설명해야 합니다.")
     required = all(
         isinstance(item.get(field), str) and item[field].strip()
         for field in ("hook_ko", "quiz_ko", "choice_a", "choice_b")
@@ -242,6 +253,8 @@ def validate_queue(
     warnings: list[str] = []
     days: list[int] = []
     phrases: dict[str, list[int]] = defaultdict(list)
+    choice_answers: list[str] = []
+    choice_focuses: list[str] = []
 
     for item in queue:
         item_errors, item_warnings = validate_item(item, images_dir=images_dir)
@@ -253,6 +266,9 @@ def validate_queue(
             phrase = item.get("phrase")
             if isinstance(phrase, str) and phrase.strip():
                 phrases[normalized_phrase(phrase)].append(day)
+            if get_quiz_spec(item)["mode"] == "choice":
+                choice_answers.append(str(item.get("answer_choice")))
+                choice_focuses.append(str(item.get("quiz_focus")))
 
     expected_days = list(range(1, len(queue) + 1))
     if days != expected_days:
@@ -265,6 +281,19 @@ def validate_queue(
         if normalized and len(duplicate_days) > 1:
             errors.append(
                 f"중복 표현이 있습니다: Day {', '.join(map(str, duplicate_days))}"
+            )
+
+    if choice_answers:
+        answer_gap = abs(choice_answers.count("A") - choice_answers.count("B"))
+        if answer_gap > 2:
+            errors.append(
+                "A/B 정답 위치가 편향되어 있습니다 "
+                f"(A {choice_answers.count('A')}개, B {choice_answers.count('B')}개)."
+            )
+        grammar_ratio = choice_focuses.count("grammar") / len(choice_focuses)
+        if len(choice_focuses) >= 10 and grammar_ratio > 0.2:
+            errors.append(
+                f"단순 문법형 A/B 문제가 {grammar_ratio:.0%}로 20%를 초과합니다."
             )
 
     return errors, warnings
