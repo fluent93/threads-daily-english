@@ -52,6 +52,7 @@ def create_card_image(
     *,
     hook_ko: str = "",
     context_ko: str = "",
+    source_label: str = "",
 ):
     width, height = 1080, 1080
     img = Image.new("RGB", (width, height), color="#0F172A") # 딥 다크 네이비/차콜
@@ -64,6 +65,7 @@ def create_card_image(
     font_meaning = ImageFont.truetype(FONT_PATH, 38)
     font_hook = ImageFont.truetype(FONT_PATH, 42)
     font_context = ImageFont.truetype(FONT_PATH, 28)
+    font_source = ImageFont.truetype(FONT_PATH, 22)
     font_footer = ImageFont.truetype(FONT_PATH, 24)
 
     # 1. 내부 카드 프레임 (모던 글래스모피즘 느낌의 라운드 사각형)
@@ -87,6 +89,16 @@ def create_card_image(
         fill="#0284C7" # 스카이블루 포인트
     )
     draw.text((bx, by - 2), badge_text, font=font_badge, fill="#FFFFFF")
+
+    if source_label:
+        source_bbox = draw.textbbox((0, 0), source_label, font=font_source)
+        source_width = source_bbox[2] - source_bbox[0]
+        draw.text(
+            ((width - source_width) // 2, by + bh + 34),
+            source_label,
+            font=font_source,
+            fill="#64748B",
+        )
 
     # 획득형 카드는 먼저 사용 상황을 보여주고 표현을 보상으로 제시합니다.
     if hook_ko:
@@ -177,6 +189,7 @@ def generate_all():
         meaning = item.get("meaning_ko", "")
         hook = item.get("hook_ko", "")
         context = item.get("context_ko", "")
+        source_label = item.get("source_label", "")
         img_path = IMAGES_DIR / f"day_{day:03d}.png"
         create_card_image(
             day,
@@ -185,6 +198,7 @@ def generate_all():
             img_path,
             hook_ko=hook,
             context_ko=context,
+            source_label=source_label,
         )
 
     print(f"✅ 176개 카드뉴스 이미지 생성 완료! 위치: {IMAGES_DIR}")
