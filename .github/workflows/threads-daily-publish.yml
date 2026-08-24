@@ -32,6 +32,9 @@ jobs:
       - name: Validate new pilot expression selection
         run: python scripts/validate_expression_selection.py
 
+      - name: Validate pilot card copy
+        run: python scripts/validate_pilot_copy.py
+
       - name: Confirm publishing is paused
         run: |
           echo "## 자동 게시 중지 상태" >> "$GITHUB_STEP_SUMMARY"

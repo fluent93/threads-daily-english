@@ -1,0 +1,394 @@
+[
+  {
+    "day": 1,
+    "card_id": "PILOT-001",
+    "episode": "REAL-LIFE",
+    "phrase": "It slipped my mind.",
+    "meaning_ko": "깜빡했어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 It slipped my mind.\n깜빡했어.\n\n💡 뉘앙스\nIt slipped my mind는 해야 할 일이나 약속을 의도치 않게 깜빡했을 때 쓴다. 책임을 없애주는 말은 아니므로 중요한 실수라면 사과와 해결책을 함께 말하는 것이 좋다.\n\n🗣 \"I was going to bring your book, but it slipped my mind.\"\n네 책을 가져오려고 했는데 깜빡했어.\n\n🔄 함께 가능한 표현\n\"Sorry, I completely forgot to reply.\"\n둘 다 자연스럽다. slipped my mind는 일부러 무시한 게 아니라 순간적으로 기억에서 빠졌다는 느낌을 더한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nslipped my는 빠르게 /slɪpt maɪ/로 이어지고, 깜빡한 사실을 강조하면 slipped에 힘을 준다.\n\n✍️ 10초 복습\n\"미안, 답장하려고 했는데 완전히 깜빡했어.\"\n\nSorry—I meant to reply, but it completely slipped my mind."
+      }
+    ],
+    "hook_ko": "답장하려고 했는데 완전히 잊어버렸을 때",
+    "context_ko": "기억·실수",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "미안, 답장하려고 했는데 완전히 깜빡했어.",
+    "answer_example_en": "Sorry—I meant to reply, but it completely slipped my mind.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 2,
+    "card_id": "PILOT-002",
+    "episode": "REAL-LIFE",
+    "phrase": "I'm not buying it.",
+    "meaning_ko": "난 그 말을 못 믿겠어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'm not buying it.\n난 그 말을 못 믿겠어.\n\n💡 뉘앙스\nbuy는 여기서 '사다'가 아니라 주장이나 이야기를 사실로 받아들인다는 뜻이다. 사람 전체보다 방금 들은 설명·핑계·주장을 못 믿겠다고 할 때 특히 자연스럽다.\n\n🗣 \"He says he forgot his own birthday? I'm not buying it.\"\n자기 생일을 잊었다고? 난 못 믿겠어.\n\n🔄 함께 가능한 표현\n\"I don't believe his excuse.\"\n둘 다 불신을 나타낸다. I'm not buying it은 상대가 내놓은 설명이나 핑계를 받아들이지 않겠다는 더 구어적이고 말맛 있는 반응이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nbuying it은 /ˈbaɪɪŋɪt/처럼 모음이 이어진다. 불신을 강조하려면 not과 buying에 힘을 준다.\n\n✍️ 10초 복습\n\"교통 체증 때문에 세 시간이나 늦었다고? 난 그 말 못 믿겠어.\"\n\nTraffic made him three hours late? I'm not buying it."
+      }
+    ],
+    "hook_ko": "상대의 핑계가 도저히 믿기지 않을 때",
+    "context_ko": "판단·불신",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "교통 체증 때문에 세 시간이나 늦었다고? 난 그 말 못 믿겠어.",
+    "answer_example_en": "Traffic made him three hours late? I'm not buying it.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 3,
+    "card_id": "PILOT-003",
+    "episode": "REAL-LIFE",
+    "phrase": "I'll keep you posted.",
+    "meaning_ko": "계속 진행 상황 알려줄게.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'll keep you posted.\n계속 진행 상황 알려줄게.\n\n💡 뉘앙스\nkeep someone posted는 한 번 알려주고 끝내는 것이 아니라 새 소식이 생길 때마다 계속 공유하겠다는 뜻이다. 결과를 기다리는 사람을 안심시킬 때 유용하다.\n\n🗣 \"We're still waiting for approval, but I'll keep you posted.\"\n아직 승인을 기다리고 있지만 계속 상황 알려줄게.\n\n🔄 함께 가능한 표현\n\"I'll keep you updated.\"\n둘 다 자연스럽다. keep you posted는 대화에서 더 친근하고, keep you updated는 업무에서도 무난한 중립 표현이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nposted는 /ˈpoʊstɪd/로 첫 음절에 강세가 오며, keep you는 /kiːp jə/처럼 이어진다.\n\n✍️ 10초 복습\n\"진행 상황이 바뀌면 계속 알려줄게.\"\n\nI'll keep you posted as things develop."
+      }
+    ],
+    "hook_ko": "결과가 나올 때마다 계속 알려주겠다고 할 때",
+    "context_ko": "연락·업데이트",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "진행 상황이 바뀌면 계속 알려줄게.",
+    "answer_example_en": "I'll keep you posted as things develop.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 4,
+    "card_id": "PILOT-004",
+    "episode": "REAL-LIFE",
+    "phrase": "Something came up.",
+    "meaning_ko": "갑자기 일이 생겼어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Something came up.\n갑자기 일이 생겼어.\n\n💡 뉘앙스\nSomething came up은 예상하지 못한 일 때문에 원래 계획을 지키기 어려워졌다는 뜻이다. 편리하지만 상습적으로 이유를 숨기듯 쓰면 성의 없어 보일 수 있다.\n\n🗣 \"I can't make the meeting—something came up at home.\"\n회의에 못 갈 것 같아. 집에 갑자기 일이 생겼어.\n\n🔄 함께 가능한 표현\n\"Sorry, an unexpected issue came up.\"\nSomething came up은 이유를 자세히 밝히지 않는 일상적인 말이다. unexpected issue는 조금 더 업무적인 느낌이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\ncame up은 /keɪm ʌp/으로 자연스럽게 이어지고, 갑작스러운 일을 강조하면 something에 힘을 준다.\n\n✍️ 10초 복습\n\"미안, 갑자기 일이 생겼어. 저녁 약속 내일로 옮길 수 있을까?\"\n\nSorry, something came up. Could we do dinner tomorrow instead?"
+      }
+    ],
+    "hook_ko": "갑자기 일이 생겨 약속을 바꿔야 할 때",
+    "context_ko": "약속·일정",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "미안, 갑자기 일이 생겼어. 저녁 약속 내일로 옮길 수 있을까?",
+    "answer_example_en": "Sorry, something came up. Could we do dinner tomorrow instead?",
+    "review_status": "pilot"
+  },
+  {
+    "day": 5,
+    "card_id": "PILOT-005",
+    "episode": "REAL-LIFE",
+    "phrase": "Let's sleep on it.",
+    "meaning_ko": "하룻밤 생각해보고 결정하자.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Let's sleep on it.\n하룻밤 생각해보고 결정하자.\n\n💡 뉘앙스\nsleep on something은 결정을 회피하는 것이 아니라 적어도 하룻밤 더 생각한 뒤 판단하자는 뜻이다. 즉시 답을 요구받을 때 부드럽게 시간을 확보할 수 있다.\n\n🗣 \"It's a big offer. Can I sleep on it?\"\n큰 제안이라서요. 하룻밤 생각해봐도 될까요?\n\n🔄 함께 가능한 표현\n\"Let's think it over and decide tomorrow.\"\n둘 다 결정을 미룬다. sleep on it은 하룻밤 거리를 두면 생각이 정리될 거라는 자연스러운 비유다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nsleep on it은 /sliːp ɑn ɪt/으로 세 단어를 부드럽게 연결하고 sleep에 강세를 준다.\n\n✍️ 10초 복습\n\"오늘 밤 결정할 필요는 없어. 하룻밤 생각해보자.\"\n\nWe don't have to decide tonight. Let's sleep on it."
+      }
+    ],
+    "hook_ko": "중요한 결정을 오늘 당장 내리고 싶지 않을 때",
+    "context_ko": "결정·제안",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "오늘 밤 결정할 필요는 없어. 하룻밤 생각해보자.",
+    "answer_example_en": "We don't have to decide tonight. Let's sleep on it.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 6,
+    "card_id": "PILOT-006",
+    "episode": "REAL-LIFE",
+    "phrase": "That caught me off guard.",
+    "meaning_ko": "그건 정말 뜻밖이라 당황했어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 That caught me off guard.\n그건 정말 뜻밖이라 당황했어.\n\n💡 뉘앙스\ncatch someone off guard는 예상하지 못한 말·행동·소식 때문에 즉시 대응할 준비가 없었다는 뜻이다. 단순한 surprise보다 당황과 무방비 상태가 함께 담긴다.\n\n🗣 \"Her resignation caught everyone off guard.\"\n그녀의 사직은 모두를 뜻밖에 놀라게 했다.\n\n🔄 함께 가능한 표현\n\"I wasn't prepared for that question.\"\n둘 다 자연스럽다. caught me off guard는 준비가 안 된 틈을 찔려 순간적으로 당황했다는 느낌을 더 생생하게 전달한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\ncaught me는 /kɔːt mi/로 이어지고, 핵심 덩어리인 off guard에 강세를 준다.\n\n✍️ 10초 복습\n\"그 질문은 전혀 예상 못 해서 좀 당황했어.\"\n\nThat question caught me off guard."
+      }
+    ],
+    "hook_ko": "예상 못 한 질문이나 소식에 준비 없이 당황했을 때",
+    "context_ko": "놀람·감정",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "그 질문은 전혀 예상 못 해서 좀 당황했어.",
+    "answer_example_en": "That question caught me off guard.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 7,
+    "card_id": "PILOT-007",
+    "episode": "REAL-LIFE",
+    "phrase": "I'm on the fence.",
+    "meaning_ko": "아직 결정을 못 했어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'm on the fence.\n아직 결정을 못 했어.\n\n💡 뉘앙스\nbe on the fence는 선택지가 있는데도 아직 어느 쪽을 지지하거나 고를지 결정하지 못했다는 뜻이다. 정보가 전혀 없다는 말이 아니라 장단점 사이에서 망설이는 상태다.\n\n🗣 \"I'm on the fence about going to the wedding.\"\n그 결혼식에 갈지 아직 고민 중이야.\n\n🔄 함께 가능한 표현\n\"I still can't decide between the two apartments.\"\n둘 다 정확하다. on the fence는 양쪽 사이에 걸터앉아 어느 편으로도 내려가지 못한 상태를 비유적으로 보여준다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\non the는 /ɑn ðə/로 약하게 이어지고, 결정을 못 한 상태를 강조하는 fence에 힘을 준다.\n\n✍️ 10초 복습\n\"두 아파트 중 어디로 갈지 아직 결정을 못 했어.\"\n\nI'm still on the fence about which apartment to choose."
+      }
+    ],
+    "hook_ko": "두 선택지 사이에서 아직 마음을 못 정했을 때",
+    "context_ko": "결정·망설임",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "두 아파트 중 어디로 갈지 아직 결정을 못 했어.",
+    "answer_example_en": "I'm still on the fence about which apartment to choose.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 8,
+    "card_id": "PILOT-008",
+    "episode": "REAL-LIFE",
+    "phrase": "I didn't mean it that way.",
+    "meaning_ko": "그런 뜻으로 말한 게 아니야.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I didn't mean it that way.\n그런 뜻으로 말한 게 아니야.\n\n💡 뉘앙스\nmean it that way는 같은 말이라도 의도나 뉘앙스가 다르게 전달됐음을 설명한다. 이 문장만 반복하기보다 실제 의도와 필요한 사과를 이어 말해야 관계 회복에 도움이 된다.\n\n🗣 \"I was trying to help. I didn't mean it that way.\"\n도와주려던 거야. 그런 뜻으로 말한 게 아니야.\n\n🔄 함께 가능한 표현\n\"That's not what I meant.\"\n둘 다 오해를 바로잡는다. I didn't mean it that way는 상대가 받아들인 방식이 내 의도와 달랐다는 점에 초점을 둔다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nmean it은 /miːnɪt/으로 이어지고, 오해된 방식과 대비되는 that way에 강세를 준다.\n\n✍️ 10초 복습\n\"널 비난한 게 아니야. 그런 뜻으로 말한 게 아니었어.\"\n\nI wasn't criticizing you. I didn't mean it that way."
+      }
+    ],
+    "hook_ko": "내 말이 의도와 다르게 받아들여졌을 때",
+    "context_ko": "오해·관계 회복",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "널 비난한 게 아니야. 그런 뜻으로 말한 게 아니었어.",
+    "answer_example_en": "I wasn't criticizing you. I didn't mean it that way.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 9,
+    "card_id": "PILOT-009",
+    "episode": "REAL-LIFE",
+    "phrase": "No rush.",
+    "meaning_ko": "급하지 않아, 천천히 해.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 No rush.\n급하지 않아, 천천히 해.\n\n💡 뉘앙스\nNo rush는 요청 자체를 취소하지 않으면서 즉시 할 필요는 없다고 배려하는 표현이다. 실제 마감이 있다면 오해가 없도록 구체적인 날짜를 함께 알려야 한다.\n\n🗣 \"No rush, but could you look at this by Friday?\"\n급한 건 아니지만 금요일까지 이것 좀 봐줄래?\n\n🔄 함께 가능한 표현\n\"Take your time. I don't need it right away.\"\n둘 다 시간 압박을 낮춘다. No rush는 짧게 '급하지 않아'라고 하고, Take your time은 서두르지 말고 충분히 시간을 쓰라는 느낌이 더 강하다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nrush의 /ʃ/를 분명히 내고, 편안하게 안심시키려면 낮고 짧은 억양으로 말한다.\n\n✍️ 10초 복습\n\"급한 건 아니니까 시간 될 때 보내줘.\"\n\nNo rush—send it whenever you have time."
+      }
+    ],
+    "hook_ko": "부탁은 있지만 상대를 재촉하고 싶지 않을 때",
+    "context_ko": "배려·요청",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "급한 건 아니니까 시간 될 때 보내줘.",
+    "answer_example_en": "No rush—send it whenever you have time.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 10,
+    "card_id": "PILOT-010",
+    "episode": "REAL-LIFE",
+    "phrase": "It doesn't add up.",
+    "meaning_ko": "앞뒤가 안 맞아.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 It doesn't add up.\n앞뒤가 안 맞아.\n\n💡 뉘앙스\nadd up은 숫자의 합이 맞는다는 뜻에서 확장되어 사실·증거·설명이 서로 일관된다는 뜻으로 쓰인다. It doesn't add up은 곧바로 거짓말이라고 단정하지 않으면서 의문을 제기한다.\n\n🗣 \"She said she was home, but her car wasn't there. It doesn't add up.\"\n그녀는 집에 있었다고 했는데 차가 없었어. 앞뒤가 안 맞아.\n\n🔄 함께 가능한 표현\n\"His story doesn't make sense.\"\n둘 다 논리가 맞지 않는다는 뜻이다. doesn't add up은 여러 사실을 맞춰봤는데 합계가 나오지 않는 듯한 의심을 더한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\ndoesn't add up은 /ˈdʌzənt æd ʌp/으로 이어지고, 결론인 add up에 강세를 준다.\n\n✍️ 10초 복습\n\"그 사람 이야기는 시간 순서가 앞뒤가 안 맞아.\"\n\nThe timeline in his story doesn't add up."
+      }
+    ],
+    "hook_ko": "설명이나 숫자가 서로 맞지 않아 의심스러울 때",
+    "context_ko": "판단·의심",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "그 사람 이야기는 시간 순서가 앞뒤가 안 맞아.",
+    "answer_example_en": "The timeline in his story doesn't add up.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 11,
+    "card_id": "PILOT-011",
+    "episode": "REAL-LIFE",
+    "phrase": "I owe you one.",
+    "meaning_ko": "이번 신세는 꼭 갚을게.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I owe you one.\n이번 신세는 꼭 갚을게.\n\n💡 뉘앙스\nI owe you one은 도움 하나를 빚졌으니 다음 기회에 갚겠다는 뜻이다. 실제 돈을 빚졌다는 말이 아니며, 큰 희생에 대한 공식 감사보다는 작은 호의에 잘 어울린다.\n\n🗣 \"You saved me a seat? I owe you one.\"\n내 자리 맡아줬어? 신세 하나 졌네.\n\n🔄 함께 가능한 표현\n\"Thanks. I'll return the favor.\"\n둘 다 보답을 약속한다. I owe you one은 친구나 동료 사이에서 훨씬 가볍고 친근한 말맛이 있다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nowe는 /oʊ/ 한 음절이며, owe you는 /oʊ ju/로 자연스럽게 이어진다.\n\n✍️ 10초 복습\n\"내 근무 대신해줘서 고마워. 이번 신세는 꼭 갚을게.\"\n\nThanks for covering my shift. I owe you one."
+      }
+    ],
+    "hook_ko": "도움을 받아 다음에는 내가 보답하겠다고 할 때",
+    "context_ko": "감사·관계",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "내 근무 대신해줘서 고마워. 이번 신세는 꼭 갚을게.",
+    "answer_example_en": "Thanks for covering my shift. I owe you one.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 12,
+    "card_id": "PILOT-012",
+    "episode": "REAL-LIFE",
+    "phrase": "I'm not up for it.",
+    "meaning_ko": "지금은 그럴 기분이나 기운이 없어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'm not up for it.\n지금은 그럴 기분이나 기운이 없어.\n\n💡 뉘앙스\nbe up for something은 그것을 할 의향·기운이 있다는 뜻이다. 부정형은 상대의 제안 자체가 나쁘다기보다 지금 내 상태가 따라주지 않는다는 부드러운 거절로 쓸 수 있다.\n\n🗣 \"I'm exhausted. I'm not up for another meeting.\"\n너무 지쳤어. 회의를 하나 더 할 기운이 없어.\n\n🔄 함께 가능한 표현\n\"I don't feel like going out tonight.\"\n둘 다 자연스럽다. not up for it은 현재 에너지나 의욕이 부족하다는 느낌이고, don't feel like는 단순히 내키지 않는다는 뜻으로 더 직접적이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nup for는 /ʌp fər/로 가볍게 이어지고, 부정 의사를 살리려면 not에 힘을 준다.\n\n✍️ 10초 복습\n\"고맙지만 오늘 밤은 밖에 나갈 기분이 별로 없어.\"\n\nThanks, but I'm not really up for going out tonight."
+      }
+    ],
+    "hook_ko": "제안은 고맙지만 지금은 기분이나 기운이 없을 때",
+    "context_ko": "거절·컨디션",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "고맙지만 오늘 밤은 밖에 나갈 기분이 별로 없어.",
+    "answer_example_en": "Thanks, but I'm not really up for going out tonight.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 13,
+    "card_id": "PILOT-013",
+    "episode": "REAL-LIFE",
+    "phrase": "That rings a bell.",
+    "meaning_ko": "그거 어렴풋이 들어본 것 같아.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 That rings a bell.\n그거 어렴풋이 들어본 것 같아.\n\n💡 뉘앙스\nring a bell은 완전히 기억난다는 뜻이 아니라 익숙한 느낌이나 희미한 기억이 있다는 뜻이다. 이름·얼굴·장소·아이디어에 모두 쓸 수 있다.\n\n🗣 \"Does the name Olivia Chen ring a bell?\"\n올리비아 첸이라는 이름이 낯익어?\n\n🔄 함께 가능한 표현\n\"That name sounds familiar.\"\n둘 다 어렴풋한 기억을 말한다. rings a bell은 머릿속에서 종이 울리듯 기억을 건드린다는 더 생생한 표현이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nrings a는 /rɪŋzə/로 이어지고, 기억을 건드리는 핵심 이미지인 bell에 강세를 준다.\n\n✍️ 10초 복습\n\"그 이름 어렴풋이 들어본 것 같은데 어디서였는지 기억이 안 나.\"\n\nThat name rings a bell, but I can't remember where I heard it."
+      }
+    ],
+    "hook_ko": "이름은 익숙한데 정확히 어디서 들었는지 모를 때",
+    "context_ko": "기억·대화",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "그 이름 어렴풋이 들어본 것 같은데 어디서였는지 기억이 안 나.",
+    "answer_example_en": "That name rings a bell, but I can't remember where I heard it.",
+    "review_status": "pilot"
+  },
+  {
+    "day": 14,
+    "card_id": "PILOT-014",
+    "episode": "REAL-LIFE",
+    "phrase": "Let's call it a day.",
+    "meaning_ko": "오늘은 이쯤에서 마치자.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Let's call it a day.\n오늘은 이쯤에서 마치자.\n\n💡 뉘앙스\ncall it a day는 하루 전체가 아니라 함께 하던 일·연습·회의를 오늘은 그만하자는 표현이다. 일을 포기한다는 뜻이 아니라 적절한 지점에서 마무리한다는 뜻이다.\n\n🗣 \"We're not going to solve this tonight. Let's call it a day.\"\n오늘 밤 이걸 해결하긴 어렵겠어. 오늘은 이쯤에서 끝내자.\n\n🔄 함께 가능한 표현\n\"Let's stop here for today.\"\n둘 다 오늘 작업을 끝내자는 뜻이다. call it a day는 충분히 했다는 느낌과 함께 자연스럽게 마무리를 제안한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\ncall it은 /kɔːlɪt/으로 이어지고, 마무리 제안의 핵심인 day에 강세를 준다.\n\n✍️ 10초 복습\n\"오늘 많이 했으니 이쯤에서 마치자.\"\n\nWe've done a lot today. Let's call it a day."
+      }
+    ],
+    "hook_ko": "오늘 할 만큼 했으니 일을 마무리하자고 할 때",
+    "context_ko": "마무리·제안",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 0,
+    "quiz_mode": "free",
+    "quiz_ko": "오늘 많이 했으니 이쯤에서 마치자.",
+    "answer_example_en": "We've done a lot today. Let's call it a day.",
+    "review_status": "pilot"
+  }
+]

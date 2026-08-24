@@ -5,6 +5,7 @@ Generate 1080x1080 Card News Images for Threads Daily Posts
 - 176개 전체 일괄 생성 및 개별 생성 지원
 """
 
+import argparse
 import json
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, PngImagePlugin
@@ -191,7 +192,7 @@ def create_card_image(
         reveal_text = (
             "A/B 선택  ·  뉘앙스는 오후 2:07"
             if quiz_mode == "choice"
-            else "정답 예시는 오후 2:07"
+            else "추천 답안은 오후 2:07"
         )
         reveal_bbox = draw.textbbox((0, 0), reveal_text, font=font_reveal)
         reveal_width = reveal_bbox[2] - reveal_bbox[0]
@@ -292,15 +293,15 @@ def create_card_image(
     img.save(output_path, "PNG", quality=95, pnginfo=png_info)
 
 
-def generate_all():
-    if not QUEUE_FILE.exists():
-        print(f"❌ 큐 파일을 찾을 수 없습니다: {QUEUE_FILE}")
+def generate_all(queue_file: Path = QUEUE_FILE, images_dir: Path = IMAGES_DIR):
+    if not queue_file.exists():
+        print(f"❌ 큐 파일을 찾을 수 없습니다: {queue_file}")
         return
 
-    with open(QUEUE_FILE, "r", encoding="utf-8") as f:
+    with open(queue_file, "r", encoding="utf-8") as f:
         queue = json.load(f)
 
-    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+    images_dir.mkdir(parents=True, exist_ok=True)
     print(f"🎨 총 {len(queue)}개의 카드뉴스 이미지 생성을 시작합니다...")
 
     for item in queue:
@@ -311,7 +312,7 @@ def generate_all():
         context = item.get("context_ko", "")
         source_label = item.get("source_label", "")
         quiz_spec = get_quiz_spec(item) if uses_delayed_answer(item) else {}
-        img_path = IMAGES_DIR / f"day_{day:03d}.png"
+        img_path = images_dir / f"day_{day:03d}.png"
         create_card_image(
             day,
             phrase,
@@ -328,8 +329,12 @@ def generate_all():
             content_fingerprint=card_fingerprint(item),
         )
 
-    print(f"✅ 176개 카드뉴스 이미지 생성 완료! 위치: {IMAGES_DIR}")
+    print(f"✅ {len(queue)}개 카드뉴스 이미지 생성 완료! 위치: {images_dir}")
 
 
 if __name__ == "__main__":
-    generate_all()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--queue", type=Path, default=QUEUE_FILE)
+    parser.add_argument("--output-dir", type=Path, default=IMAGES_DIR)
+    arguments = parser.parse_args()
+    generate_all(arguments.queue, arguments.output_dir)

@@ -89,7 +89,7 @@ def build_quiz_prompt(item: dict) -> str:
             f"{spec['hook_ko']}\n\n"
             f"Q. {spec['quiz_ko']}\n\n"
             "영어 한 문장으로 댓글에 도전해보세요.\n"
-            "정답 예시·뉘앙스·발음은 오후 2:07에 이 타래에서 공개합니다."
+            "추천 답안·뉘앙스·발음은 오후 2:07에 이 타래에서 공개합니다."
         )
     return (
         "🎬 오늘의 10초 미드 영어\n\n"
@@ -105,7 +105,8 @@ def build_quiz_prompt(item: dict) -> str:
 def build_answer_post(item: dict, main_text: str) -> str:
     """Build the delayed answer reply with a diagnostic explanation."""
     if get_quiz_spec(item)["mode"] == "free":
-        return f"✅ 정답 예시\n\n{main_text}"
+        answer_example = item.get("answer_example_en", "").strip()
+        return f"✅ 추천 답안\n{answer_example}\n\n{main_text}"
     return (
         f"✅ 이 상황의 추천: {item['answer_choice']}\n"
         f"🔎 {item['answer_explanation_ko']}\n\n"
