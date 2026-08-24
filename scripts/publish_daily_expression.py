@@ -15,6 +15,7 @@ from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
 from threads_client import ThreadsClient, load_env
+from release_control import require_publishing_enabled
 from content_validation import (
     build_answer_post,
     build_quiz_prompt,
@@ -297,6 +298,11 @@ def main():
         return
 
     if args.publish:
+        try:
+            require_publishing_enabled()
+        except RuntimeError as exc:
+            print(f"❌ {exc}")
+            sys.exit(1)
         now_kst = datetime.now(KST)
         today_str = now_kst.strftime("%Y-%m-%d")
 

@@ -30,7 +30,7 @@ def main() -> None:
     )
     print(f"- 정답 지연 공개: {sum(item.get('delayed_answer') is True for item in queue)}/{len(queue)}개")
     print(f"- 문항 구성: A/B {len(choice_items)}개, 자유 영작 {len(queue) - len(choice_items)}개")
-    print(f"- A/B 정답 분포: {dict(Counter(item['answer_choice'] for item in choice_items))}")
+    print(f"- A/B 추천 위치 분포: {dict(Counter(item['answer_choice'] for item in choice_items))}")
     print(f"- A/B 초점 분포: {dict(Counter(item['quiz_focus'] for item in choice_items))}")
     print(f"- 고유 상황형 훅: {len({item['hook_ko'] for item in queue})}/{len(queue)}개")
     print(f"- 전면 교체 문항: {len(editorial.get('items', {}))}개")

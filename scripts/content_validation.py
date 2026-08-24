@@ -97,8 +97,8 @@ def build_quiz_prompt(item: dict) -> str:
         f"Q. {spec['quiz_ko']}\n\n"
         f"A. {spec['choice_a']}\n"
         f"B. {spec['choice_b']}\n\n"
-        "A/B만 댓글로 남겨도 좋아요. 이유나 다른 표현도 환영합니다.\n"
-        "정답·뉘앙스·발음은 오후 2:07에 이 타래에서 공개합니다."
+        "이 상황에 더 자연스러운 쪽은 A/B 중 어느 쪽일까요?\n"
+        "둘 다 가능한 맥락과 뉘앙스는 오후 2:07에 공개합니다."
     )
 
 
@@ -107,7 +107,7 @@ def build_answer_post(item: dict, main_text: str) -> str:
     if get_quiz_spec(item)["mode"] == "free":
         return f"✅ 정답 예시\n\n{main_text}"
     return (
-        f"✅ 정답: {item['answer_choice']}\n"
+        f"✅ 이 상황의 추천: {item['answer_choice']}\n"
         f"🔎 {item['answer_explanation_ko']}\n\n"
         f"{main_text}"
     )

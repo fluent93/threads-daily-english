@@ -1,0 +1,128 @@
+[
+  {
+    "day": 1,
+    "phrase": "It slipped my mind.",
+    "meaning_ko": "깜빡했어.",
+    "category": "기억·실수",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "약속·답장·준비물을 고의가 아니라 깜빡했다는 뜻으로 짧게 설명할 수 있다.",
+    "register_note": "일상적이고 중립적. 사과와 함께 쓰면 업무 대화에도 자연스럽다."
+  },
+  {
+    "day": 2,
+    "phrase": "I'm not buying it.",
+    "meaning_ko": "난 그 말을 못 믿겠어.",
+    "category": "판단·불신",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "buy를 '사다'가 아니라 주장·핑계를 믿고 받아들인다는 뜻으로 쓰는 기억성 높은 표현이다.",
+    "register_note": "캐주얼하고 단호하다. 공식적인 자리에서는 I'm not convinced가 더 부드럽다."
+  },
+  {
+    "day": 3,
+    "phrase": "I'll keep you posted.",
+    "meaning_ko": "계속 진행 상황 알려줄게.",
+    "category": "연락·업데이트",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 4, "memorability": 4},
+    "selection_reason": "약속·배송·지원 결과·업무 진행 등 변화가 생길 때마다 알려주겠다는 뜻으로 활용 범위가 넓다.",
+    "register_note": "친구와 동료 모두에게 자연스러운 중립적 회화 표현이다."
+  },
+  {
+    "day": 4,
+    "phrase": "Something came up.",
+    "meaning_ko": "갑자기 일이 생겼어.",
+    "category": "약속·일정",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "구체적인 사정을 길게 말하지 않고 약속 변경이나 지각 이유를 설명할 때 매우 자주 쓴다.",
+    "register_note": "자연스럽지만 설명을 완전히 피하는 말이므로 중요한 약속에는 짧은 사과를 덧붙인다."
+  },
+  {
+    "day": 5,
+    "phrase": "Let's sleep on it.",
+    "meaning_ko": "하룻밤 생각해보고 결정하자.",
+    "category": "결정·제안",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "결정을 거절하지 않으면서 시간을 갖자고 말하는 비유적이고 활용도 높은 표현이다.",
+    "register_note": "일상과 업무 대화 모두 가능하지만 실제로 다음 날까지 생각한다는 여운이 있다."
+  },
+  {
+    "day": 6,
+    "phrase": "That caught me off guard.",
+    "meaning_ko": "그건 정말 뜻밖이라 당황했어.",
+    "category": "놀람·감정",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "질문·소식·반응을 예상하지 못해 준비 없이 당황했다는 미묘한 감정을 정확하게 표현한다.",
+    "register_note": "중립적이며 친구·인터뷰·회의 회고 등 여러 장면에 쓸 수 있다."
+  },
+  {
+    "day": 7,
+    "phrase": "I'm on the fence.",
+    "meaning_ko": "아직 결정을 못 했어.",
+    "category": "결정·망설임",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "두 선택지 사이에서 어느 쪽으로도 기울지 못한 상태를 그림처럼 기억할 수 있다.",
+    "register_note": "캐주얼하지만 대부분의 일상·업무 대화에서 무난하다."
+  },
+  {
+    "day": 8,
+    "phrase": "I didn't mean it that way.",
+    "meaning_ko": "그런 뜻으로 말한 게 아니야.",
+    "category": "오해·관계 회복",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "말의 사실 여부가 아니라 상대가 받아들인 의도를 바로잡아 관계를 회복할 때 유용하다.",
+    "register_note": "방어적으로만 말하지 말고 미안함이나 실제 의도를 이어 말하는 것이 좋다."
+  },
+  {
+    "day": 9,
+    "phrase": "No rush.",
+    "meaning_ko": "급하지 않아, 천천히 해.",
+    "category": "배려·요청",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 4, "memorability": 5},
+    "selection_reason": "부탁은 유지하면서 상대에게 시간 압박은 주지 않는 짧고 실용적인 표현이다.",
+    "register_note": "매우 자연스럽고 친절하지만 실제 마감이 있다면 구체적인 시각도 함께 말한다."
+  },
+  {
+    "day": 10,
+    "phrase": "It doesn't add up.",
+    "meaning_ko": "앞뒤가 안 맞아.",
+    "category": "판단·의심",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "숫자 계산뿐 아니라 이야기·증거·설명의 논리가 맞지 않을 때까지 넓게 쓸 수 있다.",
+    "register_note": "상대가 거짓말한다고 단정하기보다 정보가 일관되지 않는다고 지적하는 표현이다."
+  },
+  {
+    "day": 11,
+    "phrase": "I owe you one.",
+    "meaning_ko": "이번 신세는 꼭 갚을게.",
+    "category": "감사·관계",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "단순한 thank you보다 상대가 해준 도움을 기억하고 보답하겠다는 친근한 말맛이 있다.",
+    "register_note": "친구·동료 사이에 자연스럽고, 큰 호의나 공식 감사에는 더 충분한 표현이 필요하다."
+  },
+  {
+    "day": 12,
+    "phrase": "I'm not up for it.",
+    "meaning_ko": "지금은 그럴 기분이나 기운이 없어.",
+    "category": "거절·컨디션",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "하기 싫다는 단순 거절보다 현재 에너지·기분이 따라주지 않는다는 부드러운 차이를 전달한다.",
+    "register_note": "캐주얼하며 제안을 거절할 때 sorry나 maybe another time을 붙이면 더 부드럽다."
+  },
+  {
+    "day": 13,
+    "phrase": "That rings a bell.",
+    "meaning_ko": "그거 어렴풋이 들어본 것 같아.",
+    "category": "기억·대화",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "정확히 기억나지는 않지만 이름·장소·이야기가 익숙하게 느껴질 때 쓰는 생생한 비유다.",
+    "register_note": "일상적이고 중립적이며 사람 이름부터 아이디어까지 폭넓게 쓸 수 있다."
+  },
+  {
+    "day": 14,
+    "phrase": "Let's call it a day.",
+    "meaning_ko": "오늘은 이쯤에서 마치자.",
+    "category": "마무리·제안",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "업무뿐 아니라 청소·연습·작업을 충분히 했으니 오늘은 끝내자는 자연스러운 마무리 표현이다.",
+    "register_note": "함께 하던 일을 마치자는 제안이며 단순히 퇴근한다는 말과는 다르다."
+  }
+]

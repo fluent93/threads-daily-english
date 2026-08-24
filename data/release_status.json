@@ -1,0 +1,7 @@
+{
+  "publishing_enabled": false,
+  "library_status": "rebuilding",
+  "reason": "기존 176일 콘텐츠를 실제 영미권 일상 회화 중심으로 전면 재검토 중",
+  "previous_queue_status": "deprecated",
+  "resume_condition": "새 176일 표현 선정, 문안 검증, 카드 시각 QA 및 사용자 확인 완료"
+}

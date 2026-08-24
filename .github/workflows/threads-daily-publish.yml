@@ -2,15 +2,6 @@ name: Threads Content Review (Publishing Paused)
 
 on:
   workflow_dispatch:
-    inputs:
-      mode:
-        description: 실행 모드
-        required: true
-        default: validate
-        type: choice
-        options:
-          - validate
-          - dry-run
 
 concurrency:
   group: threads-daily-publish
@@ -38,15 +29,8 @@ jobs:
       - name: Run tests
         run: python -m unittest discover -s tests -v
 
-      - name: Validate all content and cards
-        run: python scripts/validate_content.py
-
-      - name: Report content quality metrics
-        run: python scripts/report_content_quality.py
-
-      - name: Preview next post
-        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'dry-run'
-        run: python scripts/publish_daily_expression.py --dry-run
+      - name: Validate new pilot expression selection
+        run: python scripts/validate_expression_selection.py
 
       - name: Confirm publishing is paused
         run: |

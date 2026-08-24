@@ -189,7 +189,7 @@ def create_card_image(
             option_y += 155
 
         reveal_text = (
-            "A/B 댓글로  ·  정답은 오후 2:07"
+            "A/B 선택  ·  뉘앙스는 오후 2:07"
             if quiz_mode == "choice"
             else "정답 예시는 오후 2:07"
         )

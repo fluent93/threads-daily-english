@@ -6,6 +6,7 @@ from __future__ import annotations
 from datetime import datetime
 from publish_daily_expression import KST, get_queue, load_state, save_state
 from content_validation import build_answer_post, uses_delayed_answer
+from release_control import require_publishing_enabled
 from threads_client import ThreadsClient
 
 
@@ -82,6 +83,7 @@ def publish_due_answers(
 
 
 def main() -> None:
+    require_publishing_enabled()
     state = load_state()
     queue = get_queue()
     client = ThreadsClient()
