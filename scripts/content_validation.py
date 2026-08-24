@@ -194,6 +194,7 @@ def validate_item(
     item: object,
     images_dir: Path | None = None,
     *,
+    require_editorial_approval: bool = False,
     require_card_fingerprint: bool = False,
 ) -> tuple[list[str], list[str]]:
     """Validate one queue item and return (errors, warnings)."""
@@ -207,6 +208,18 @@ def validate_item(
     label = f"Day {day}" if isinstance(day, int) else "Day ?"
     if not isinstance(day, int) or day < 1:
         errors.append(f"{label}: day는 1 이상의 정수여야 합니다.")
+
+    if require_editorial_approval:
+        if item.get("quality_version") != 3:
+            errors.append(f"{label}: 최종 편집 승인(quality_version 3)이 없습니다.")
+        hook = item.get("hook_ko")
+        context = item.get("context_ko")
+        if not isinstance(hook, str) or not hook.strip():
+            errors.append(f"{label}: 상황형 훅이 비어 있습니다.")
+        elif hook.strip() in GENERIC_HOOKS:
+            errors.append(f"{label}: 범용 훅 대신 표현별 상황형 훅이 필요합니다.")
+        if not isinstance(context, str) or not context.strip():
+            errors.append(f"{label}: 사용 맥락이 비어 있습니다.")
 
     for field in ("card_id", "episode", "phrase", "meaning_ko"):
         if not isinstance(item.get(field), str) or not item[field].strip():
@@ -313,6 +326,7 @@ def validate_queue(
         item_errors, item_warnings = validate_item(
             item,
             images_dir=images_dir,
+            require_editorial_approval=require_editorial_approval,
             require_card_fingerprint=require_editorial_approval,
         )
         errors.extend(item_errors)
@@ -321,18 +335,9 @@ def validate_queue(
             day = item["day"]
             days.append(day)
             if require_editorial_approval:
-                if item.get("quality_version") != 3:
-                    errors.append(f"Day {day}: 최종 편집 승인(quality_version 3)이 없습니다.")
                 hook = item.get("hook_ko")
-                context = item.get("context_ko")
-                if not isinstance(hook, str) or not hook.strip():
-                    errors.append(f"Day {day}: 상황형 훅이 비어 있습니다.")
-                elif hook.strip() in GENERIC_HOOKS:
-                    errors.append(f"Day {day}: 범용 훅 대신 표현별 상황형 훅이 필요합니다.")
-                else:
+                if isinstance(hook, str) and hook.strip() and hook.strip() not in GENERIC_HOOKS:
                     hooks[hook.strip()].append(day)
-                if not isinstance(context, str) or not context.strip():
-                    errors.append(f"Day {day}: 사용 맥락이 비어 있습니다.")
             phrase = item.get("phrase")
             if isinstance(phrase, str) and phrase.strip():
                 phrases[normalized_phrase(phrase)].append(day)

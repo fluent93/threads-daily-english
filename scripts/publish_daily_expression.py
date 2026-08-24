@@ -252,7 +252,12 @@ def main():
     main_post = next((p for p in posts if p.get("type") == "main"), None)
     sub_post = next((p for p in posts if p.get("type") == "sub"), None)
 
-    validation_errors, validation_warnings = validate_item(item, images_dir=IMAGES_DIR)
+    validation_errors, validation_warnings = validate_item(
+        item,
+        images_dir=IMAGES_DIR,
+        require_editorial_approval=True,
+        require_card_fingerprint=True,
+    )
     if validation_warnings:
         print_report([], validation_warnings)
     if validation_errors:
