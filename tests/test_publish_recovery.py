@@ -115,7 +115,7 @@ class PublishRecoveryTests(unittest.TestCase):
         self.assertEqual(len(client.calls), 1)
         self.assertNotIn("정답", client.calls[0]["alt_text"])
         self.assertNotIn("main", client.calls[0]["text"])
-        expected = now.replace(hour=14, minute=0, second=0, microsecond=0)
+        expected = now.replace(hour=14, minute=7, second=0, microsecond=0)
         if now >= expected:
             expected = now + timedelta(hours=6)
         self.assertEqual(state["history"][0]["answer_due_at"], expected.isoformat())

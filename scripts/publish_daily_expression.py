@@ -11,6 +11,7 @@ import os
 import sys
 import json
 import argparse
+import time
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
@@ -43,7 +44,7 @@ KST = timezone(timedelta(hours=9))
 
 def get_answer_due_at(published_at: datetime) -> datetime:
     """Use the daily reveal window, with a six-hour delay for late manual posts."""
-    reveal_window = published_at.replace(hour=14, minute=0, second=0, microsecond=0)
+    reveal_window = published_at.replace(hour=14, minute=7, second=0, microsecond=0)
     if published_at < reveal_window:
         return reveal_window
     return published_at + timedelta(hours=6)
@@ -199,6 +200,11 @@ def main():
     parser.add_argument("--day", type=int, help="특정 Day 번호를 지정하여 발행 (예: --day 1)")
     parser.add_argument("--force", action="store_true", help="당일 중복 발행 제한 무시하고 강제 발행")
     parser.add_argument("--status", action="store_true", help="현재 발행 현황 및 다음 예정 Day 확인")
+    parser.add_argument(
+        "--not-before",
+        metavar="HH:MM",
+        help="KST 기준 이 시각 전에는 게시하지 않고 대기합니다 (예약 실행용).",
+    )
 
     args = parser.parse_args()
 
@@ -304,6 +310,26 @@ def main():
             print(f"❌ {exc}")
             sys.exit(1)
         now_kst = datetime.now(KST)
+        if args.not_before:
+            try:
+                hour, minute = (int(value) for value in args.not_before.split(":"))
+                not_before = now_kst.replace(
+                    hour=hour, minute=minute, second=0, microsecond=0
+                )
+            except (TypeError, ValueError):
+                print("❌ --not-before는 HH:MM 형식의 KST 시각이어야 합니다.")
+                sys.exit(1)
+            if not 0 <= hour <= 23 or not 0 <= minute <= 59:
+                print("❌ --not-before는 유효한 KST 시각이어야 합니다.")
+                sys.exit(1)
+            if now_kst < not_before:
+                wait_seconds = (not_before - now_kst).total_seconds()
+                print(
+                    f"⏳ 예약 시각({args.not_before} KST)까지 "
+                    f"{wait_seconds:.0f}초 대기합니다."
+                )
+                time.sleep(wait_seconds)
+                now_kst = datetime.now(KST)
         today_str = now_kst.strftime("%Y-%m-%d")
 
         last_at = state.get("last_published_at")

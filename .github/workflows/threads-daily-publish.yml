@@ -2,8 +2,14 @@ name: Daily Threads Expression Auto-Publisher
 
 on:
   schedule:
-    # KST 오전 08:07 문제, 오후 14:07 추천 답안 공개
+    # GitHub 예약 지연을 흡수하기 위해 KST 목표 시각보다 먼저 실행해 내부에서 대기한다.
+    # 오전 08:07 문제
+    - cron: '35 22 * * *'
+    - cron: '50 22 * * *'
     - cron: '7 23 * * *'
+    # 오후 14:07 추천 답안
+    - cron: '35 4 * * *'
+    - cron: '50 4 * * *'
     - cron: '7 5 * * *'
   workflow_dispatch:
     inputs:
@@ -25,7 +31,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 50
     permissions:
       contents: write
     steps:
@@ -78,17 +84,17 @@ jobs:
         run: python scripts/check_threads_access.py
 
       - name: Publish daily question to Threads
-        if: (github.event_name == 'schedule' && github.event.schedule == '7 23 * * *') || inputs.mode == 'publish'
+        if: (github.event_name == 'schedule' && (github.event.schedule == '35 22 * * *' || github.event.schedule == '50 22 * * *' || github.event.schedule == '7 23 * * *')) || inputs.mode == 'publish'
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_TOPIC_TAG: ${{ vars.THREADS_TOPIC_TAG }}
-        run: python scripts/publish_daily_expression.py --publish
+        run: python scripts/publish_daily_expression.py --publish --not-before 08:07
 
       - name: Reveal due recommendations in their original threads
-        if: (github.event_name == 'schedule' && github.event.schedule == '7 5 * * *') || inputs.mode == 'answer'
+        if: (github.event_name == 'schedule' && (github.event.schedule == '35 4 * * *' || github.event.schedule == '50 4 * * *' || github.event.schedule == '7 5 * * *')) || inputs.mode == 'answer'
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
-        run: python scripts/publish_delayed_answer.py
+        run: python scripts/publish_delayed_answer.py --wait-until-due
 
       - name: Commit and push state changes
         if: always()

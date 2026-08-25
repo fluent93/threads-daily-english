@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import argparse
+import time
 from datetime import datetime
 from publish_daily_expression import KST, get_queue, load_state, save_state
 from content_validation import build_answer_post, uses_delayed_answer
@@ -15,6 +17,18 @@ def _parse_datetime(value: str) -> datetime:
     if parsed.tzinfo is None:
         raise ValueError(f"시간대가 없는 시각은 사용할 수 없습니다: {value}")
     return parsed
+
+
+def next_pending_due_at(state: dict, *, now_kst: datetime) -> datetime | None:
+    """Return the nearest unanswered reveal time that is still in the future."""
+    due_times = []
+    for entry in state.get("history", []):
+        due_at = entry.get("answer_due_at")
+        if due_at and not entry.get("answer_detail_thread_id"):
+            parsed = _parse_datetime(due_at)
+            if parsed > now_kst:
+                due_times.append(parsed)
+    return min(due_times) if due_times else None
 
 
 def publish_due_answers(
@@ -83,9 +97,23 @@ def publish_due_answers(
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--wait-until-due",
+        action="store_true",
+        help="공개 시각 전에 시작된 예약 실행은 답글 공개 시각까지 대기합니다.",
+    )
+    args = parser.parse_args()
     require_publishing_enabled()
     state = load_state()
     queue = get_queue()
+    now_kst = datetime.now(KST)
+    if args.wait_until_due:
+        due_at = next_pending_due_at(state, now_kst=now_kst)
+        if due_at:
+            wait_seconds = (due_at - now_kst).total_seconds()
+            print(f"⏳ 답글 공개 시각({due_at.isoformat()})까지 {wait_seconds:.0f}초 대기합니다.")
+            time.sleep(wait_seconds)
     client = ThreadsClient()
     me = client.get_me()
     print(f"👤 계정: @{me.get('username')} ({me.get('name')})")

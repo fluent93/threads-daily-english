@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from publish_delayed_answer import publish_due_answers
+from publish_delayed_answer import next_pending_due_at, publish_due_answers
 
 
 def queue_item() -> dict:
@@ -92,6 +92,15 @@ class DelayedAnswerTests(unittest.TestCase):
         )
         self.assertEqual(completed, 0)
         self.assertEqual(client.calls, [])
+
+    def test_finds_nearest_future_reveal_for_early_scheduled_run(self):
+        now = datetime(2026, 8, 24, 13, 40, tzinfo=timezone(timedelta(hours=9)))
+        state = state_entry(now)
+        state["history"][0]["answer_due_at"] = (now + timedelta(minutes=27)).isoformat()
+        self.assertEqual(
+            next_pending_due_at(state, now_kst=now),
+            now + timedelta(minutes=27),
+        )
 
 
 if __name__ == "__main__":
