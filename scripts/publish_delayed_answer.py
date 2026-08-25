@@ -64,6 +64,10 @@ def publish_due_answers(
         if not root_thread_id:
             raise RuntimeError(f"Day {day}의 오전 원글 ID가 없습니다.")
 
+        root_thread = client.get_thread(str(root_thread_id))
+        if str(root_thread.get("id")) != str(root_thread_id):
+            raise RuntimeError(f"Day {day}의 오전 원글을 확인할 수 없습니다.")
+
         main_post = next(post for post in item["posts"] if post.get("type") == "main")
         sub_post = next(post for post in item["posts"] if post.get("type") == "sub")
         answer_thread_id = entry.get("answer_thread_id")

@@ -38,6 +38,11 @@ def state_entry(now: datetime) -> dict:
 class FakeClient:
     def __init__(self):
         self.calls = []
+        self.checked_thread_ids = []
+
+    def get_thread(self, thread_id):
+        self.checked_thread_ids.append(thread_id)
+        return {"id": thread_id}
 
     def post(self, **kwargs):
         self.calls.append(kwargs)
@@ -58,6 +63,7 @@ class DelayedAnswerTests(unittest.TestCase):
             save_callback=lambda value: snapshots.append(repr(value)),
         )
         self.assertEqual(completed, 1)
+        self.assertEqual(client.checked_thread_ids, ["morning-root"])
         self.assertEqual(len(client.calls), 2)
         self.assertEqual(client.calls[0]["reply_to_id"], "morning-root")
         self.assertEqual(client.calls[1]["reply_to_id"], "answer-1")
