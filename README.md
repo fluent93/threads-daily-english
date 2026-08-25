@@ -28,6 +28,13 @@
    - 토큰 권한과 만료일 사전 점검
    - 발행 이력 자동 관리 (`data/threads_post_state.json`)
 
+### 운영 스케줄러
+
+정시 트리거는 Google Cloud Scheduler가 GitHub `workflow_dispatch`를 호출하는
+방식으로 전환한다. 오전 문제와 오후 답안 두 작업만 사용하며, 기존 성경 알림
+작업과 합쳐 결제 계정의 무료 작업 세 개 범위에 맞춘다. 생성·전환 절차는
+[`docs/google-cloud-scheduler.md`](docs/google-cloud-scheduler.md)를 참고한다.
+
 ### A/B 문항 품질 원칙
 
 - 두 선택지 모두 실제로 성립하는 자연스러운 영어를 사용합니다.
