@@ -110,6 +110,14 @@ class ThreadsClient:
     def get_me(self) -> dict:
         return self._request("GET", "/me", params={"fields": "id,username,name,threads_profile_picture_url"})
 
+    def get_thread(self, thread_id: str) -> dict:
+        """Return a published Threads post owned by, or visible to, this token."""
+        return self._request(
+            "GET",
+            f"/{thread_id}",
+            params={"fields": "id,permalink,timestamp"},
+        )
+
     def debug_access_token(self) -> dict:
         result = self._request(
             "GET",
