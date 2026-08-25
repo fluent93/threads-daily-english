@@ -1,6 +1,6 @@
 {
-  "last_published_day": 1,
-  "last_published_at": "2026-08-25T08:32:11.688023+09:00",
+  "last_published_day": 2,
+  "last_published_at": "2026-08-26T08:07:00.000160+09:00",
   "history": [
     {
       "day": 1,
@@ -13,6 +13,17 @@
       "answer_thread_id": "18004336412994258",
       "answer_detail_thread_id": "18423869551180196",
       "answer_published_at": "2026-08-25T14:16:56.578035+09:00"
+    },
+    {
+      "day": 2,
+      "phrase": "I'm not buying it.",
+      "published_at": "2026-08-26T08:07:00.000160+09:00",
+      "main_thread_id": "18212080633332755",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_002.png",
+      "answer_due_at": "2026-08-26T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
