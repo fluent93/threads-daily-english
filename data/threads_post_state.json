@@ -1,6 +1,6 @@
 {
-  "last_published_day": 3,
-  "last_published_at": "2026-08-27T08:07:13.738118+09:00",
+  "last_published_day": 4,
+  "last_published_at": "2026-08-28T08:07:14.587882+09:00",
   "history": [
     {
       "day": 1,
@@ -37,6 +37,17 @@
       "answer_thread_id": "17955374391239063",
       "answer_detail_thread_id": "18134478346621214",
       "answer_published_at": "2026-08-27T14:07:16.037671+09:00"
+    },
+    {
+      "day": 4,
+      "phrase": "Something came up.",
+      "published_at": "2026-08-28T08:07:14.587882+09:00",
+      "main_thread_id": "18126063556763343",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_004.png",
+      "answer_due_at": "2026-08-28T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
