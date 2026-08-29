@@ -1,6 +1,6 @@
 {
-  "last_published_day": 5,
-  "last_published_at": "2026-08-29T08:07:16.338127+09:00",
+  "last_published_day": 6,
+  "last_published_at": "2026-08-30T08:07:15.223518+09:00",
   "history": [
     {
       "day": 1,
@@ -61,6 +61,17 @@
       "answer_thread_id": "18085320821388394",
       "answer_detail_thread_id": "18011263589752756",
       "answer_published_at": "2026-08-29T14:07:16.798597+09:00"
+    },
+    {
+      "day": 6,
+      "phrase": "That caught me off guard.",
+      "published_at": "2026-08-30T08:07:15.223518+09:00",
+      "main_thread_id": "18131584030571445",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_006.png",
+      "answer_due_at": "2026-08-30T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
