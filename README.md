@@ -1,12 +1,12 @@
 # Threads Daily English (미드 실전 영어 1일 1카드 자동 발행 봇)
 
-> **현재 운영 범위:** 사용자 검토를 통과한 Day 1-14만 자동 게시 큐에 있습니다. Day 15 이후는 월 단위로 제작·검토하며, 승인 전에는 운영 큐에 들어가지 않습니다.
+> **현재 운영 범위:** 사용자 검토를 통과한 Day 1-30이 자동 게시 큐에 있습니다. 이후 배치는 월 단위로 제작·검토하며, 승인 전에는 운영 큐에 들어가지 않습니다.
 
 검증 완료 후 Threads(@fluent93)에 매일 오전 08:07 (KST) 답이 보이지 않는 실전 영어 퀴즈를 올리고, 오후 14:07 같은 타래에 추천 답안·뉘앙스·발음을 공개하는 것을 목표로 합니다.
 
-- 운영 큐: `data/threads_daily_queue.json` (현재 Day 1-14)
-- 다음 검토 큐: `data/batch_015_030_review_queue.json`
-- 다음 카드 미리보기: `review_images/batch_015_030/`
+- 운영 큐: `data/threads_daily_queue.json` (현재 Day 1-30)
+- 최근 승인 배치: `data/batch_015_030_review_queue.json`
+- 최근 승인 카드: `review_images/batch_015_030/`
 
 ---
 
