@@ -1,6 +1,6 @@
 {
-  "last_published_day": 14,
-  "last_published_at": "2026-09-07T08:07:18.719897+09:00",
+  "last_published_day": 15,
+  "last_published_at": "2026-09-08T08:35:25.874684+09:00",
   "history": [
     {
       "day": 1,
@@ -169,6 +169,17 @@
       "answer_thread_id": "18423196234144306",
       "answer_detail_thread_id": "17865486099662511",
       "answer_published_at": "2026-09-07T14:07:15.708844+09:00"
+    },
+    {
+      "day": 15,
+      "phrase": "It's starting to cool down.",
+      "published_at": "2026-09-08T08:35:25.874684+09:00",
+      "main_thread_id": "18097362836172002",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_015.png",
+      "answer_due_at": "2026-09-08T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
