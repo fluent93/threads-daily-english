@@ -1,6 +1,6 @@
 {
-  "last_published_day": 16,
-  "last_published_at": "2026-09-09T08:07:12.043171+09:00",
+  "last_published_day": 17,
+  "last_published_at": "2026-09-10T08:07:14.409664+09:00",
   "history": [
     {
       "day": 1,
@@ -193,6 +193,17 @@
       "answer_thread_id": "18392554735207568",
       "answer_detail_thread_id": "18133343464645365",
       "answer_published_at": "2026-09-09T14:07:22.292334+09:00"
+    },
+    {
+      "day": 17,
+      "phrase": "Are you heading home for Chuseok?",
+      "published_at": "2026-09-10T08:07:14.409664+09:00",
+      "main_thread_id": "17909038731521749",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_017.png",
+      "answer_due_at": "2026-09-10T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
