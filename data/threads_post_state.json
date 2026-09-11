@@ -1,6 +1,6 @@
 {
-  "last_published_day": 18,
-  "last_published_at": "2026-09-11T08:07:11.952633+09:00",
+  "last_published_day": 19,
+  "last_published_at": "2026-09-12T08:07:12.742742+09:00",
   "history": [
     {
       "day": 1,
@@ -217,6 +217,17 @@
       "answer_thread_id": "18186253918408175",
       "answer_detail_thread_id": "17912150340527172",
       "answer_published_at": "2026-09-11T14:14:38.327437+09:00"
+    },
+    {
+      "day": 19,
+      "phrase": "These places fill up fast.",
+      "published_at": "2026-09-12T08:07:12.742742+09:00",
+      "main_thread_id": "18010862945764603",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_019.png",
+      "answer_due_at": "2026-09-12T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
