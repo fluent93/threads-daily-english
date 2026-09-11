@@ -31,6 +31,25 @@ class StubClient(ThreadsClient):
         return "thread-1"
 
 
+class PublishSequenceClient(ThreadsClient):
+    def __init__(self, responses, *, max_retries=3):
+        self.delays = []
+        super().__init__(
+            access_token="test",
+            sleep=self.delays.append,
+            max_retries=max_retries,
+        )
+        self.responses = iter(responses)
+        self.request_count = 0
+
+    def _request(self, *args, **kwargs):
+        self.request_count += 1
+        response = next(self.responses)
+        if isinstance(response, Exception):
+            raise response
+        return response
+
+
 class ThreadsClientTests(unittest.TestCase):
     def test_post_waits_for_finished_container(self):
         client = StubClient()
@@ -47,6 +66,31 @@ class ThreadsClientTests(unittest.TestCase):
         client.statuses = iter([{"status": "ERROR", "error_message": "bad image"}])
         with self.assertRaisesRegex(RuntimeError, "bad image"):
             client.wait_until_ready("container-1")
+
+
+    def test_publish_retries_transient_missing_resource(self):
+        client = PublishSequenceClient(
+            [
+                RuntimeError(
+                    "Threads API Error (400): The requested resource does not exist"
+                ),
+                {"id": "thread-1"},
+            ]
+        )
+
+        self.assertEqual(client.publish_container("container-1"), "thread-1")
+        self.assertEqual(client.request_count, 2)
+        self.assertEqual(len(client.delays), 1)
+
+    def test_publish_does_not_retry_other_bad_requests(self):
+        client = PublishSequenceClient(
+            [RuntimeError("Threads API Error (400): Invalid parameter")]
+        )
+
+        with self.assertRaisesRegex(RuntimeError, "Invalid parameter"):
+            client.publish_container("container-1")
+        self.assertEqual(client.request_count, 1)
+        self.assertEqual(client.delays, [])
 
 
 if __name__ == "__main__":

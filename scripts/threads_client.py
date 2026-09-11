@@ -32,6 +32,7 @@ load_env(BASE_DIR / ".env")
 
 THREADS_API_BASE = "https://graph.threads.net/v1.0"
 RETRYABLE_HTTP_CODES = {429, 500, 502, 503, 504}
+TRANSIENT_PUBLISH_ERRORS = {"The requested resource does not exist"}
 READY_STATUSES = {"FINISHED"}
 FAILED_STATUSES = {"ERROR", "EXPIRED"}
 
@@ -194,11 +195,20 @@ class ThreadsClient:
     def publish_container(self, container_id: str) -> str:
         """생성된 컨테이너 게시"""
         payload = {"creation_id": container_id}
-        res = self._request("POST", "/me/threads_publish", data=payload)
-        thread_id = res.get("id")
-        if not thread_id:
-            raise RuntimeError("Threads API did not return a published thread id")
-        return thread_id
+        for attempt in range(self.max_retries + 1):
+            try:
+                res = self._request("POST", "/me/threads_publish", data=payload)
+                thread_id = res.get("id")
+                if not thread_id:
+                    raise RuntimeError("Threads API did not return a published thread id")
+                return thread_id
+            except RuntimeError as exc:
+                is_transient = any(message in str(exc) for message in TRANSIENT_PUBLISH_ERRORS)
+                if not is_transient or attempt >= self.max_retries:
+                    raise
+                self._sleep((2**attempt) + random.uniform(0, 0.25))
+
+        raise RuntimeError("Threads container publish exhausted retries")
 
     def post(
         self,
