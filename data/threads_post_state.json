@@ -1,6 +1,6 @@
 {
-  "last_published_day": 19,
-  "last_published_at": "2026-09-12T08:07:12.742742+09:00",
+  "last_published_day": 20,
+  "last_published_at": "2026-09-13T08:07:13.951868+09:00",
   "history": [
     {
       "day": 1,
@@ -229,6 +229,17 @@
       "answer_thread_id": "18148619758539610",
       "answer_detail_thread_id": "18154586908507996",
       "answer_published_at": "2026-09-12T14:07:18.179754+09:00"
+    },
+    {
+      "day": 20,
+      "phrase": "I'm trying to get ahead on work.",
+      "published_at": "2026-09-13T08:07:13.951868+09:00",
+      "main_thread_id": "18332504878273412",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_020.png",
+      "answer_due_at": "2026-09-13T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
