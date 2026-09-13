@@ -1,6 +1,6 @@
 {
-  "last_published_day": 20,
-  "last_published_at": "2026-09-13T08:07:13.951868+09:00",
+  "last_published_day": 21,
+  "last_published_at": "2026-09-14T08:07:47.719010+09:00",
   "history": [
     {
       "day": 1,
@@ -241,6 +241,17 @@
       "answer_thread_id": "17908591764540872",
       "answer_detail_thread_id": "18069777707752598",
       "answer_published_at": "2026-09-13T14:07:18.149152+09:00"
+    },
+    {
+      "day": 21,
+      "phrase": "Can you squeeze me in?",
+      "published_at": "2026-09-14T08:07:47.719010+09:00",
+      "main_thread_id": "18115109447077951",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_021.png",
+      "answer_due_at": "2026-09-14T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
