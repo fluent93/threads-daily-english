@@ -1,6 +1,6 @@
 {
-  "last_published_day": 25,
-  "last_published_at": "2026-09-18T08:07:13.676072+09:00",
+  "last_published_day": 26,
+  "last_published_at": "2026-09-19T08:07:13.675739+09:00",
   "history": [
     {
       "day": 1,
@@ -301,6 +301,17 @@
       "answer_thread_id": "18128617489744011",
       "answer_detail_thread_id": "17969968212158076",
       "answer_published_at": "2026-09-18T14:07:17.637966+09:00"
+    },
+    {
+      "day": 26,
+      "phrase": "The roads are going to be packed.",
+      "published_at": "2026-09-19T08:07:13.675739+09:00",
+      "main_thread_id": "18129072065500739",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_026.png",
+      "answer_due_at": "2026-09-19T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
