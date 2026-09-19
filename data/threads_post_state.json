@@ -1,6 +1,6 @@
 {
-  "last_published_day": 26,
-  "last_published_at": "2026-09-19T08:07:13.675739+09:00",
+  "last_published_day": 27,
+  "last_published_at": "2026-09-20T08:07:13.543512+09:00",
   "history": [
     {
       "day": 1,
@@ -313,6 +313,17 @@
       "answer_thread_id": "17985192537077332",
       "answer_detail_thread_id": "18089004632237395",
       "answer_published_at": "2026-09-19T14:07:17.480952+09:00"
+    },
+    {
+      "day": 27,
+      "phrase": "I need to make a quick stop on the way.",
+      "published_at": "2026-09-20T08:07:13.543512+09:00",
+      "main_thread_id": "18102248297119156",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_027.png",
+      "answer_due_at": "2026-09-20T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
