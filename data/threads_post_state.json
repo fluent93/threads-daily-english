@@ -358,8 +358,9 @@
       "sub_thread_id": null,
       "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_030.png",
       "answer_due_at": "2026-09-23T14:07:00+09:00",
-      "answer_thread_id": null,
-      "answer_detail_thread_id": null
+      "answer_thread_id": "18345314350254138",
+      "answer_detail_thread_id": "18096304421097238",
+      "answer_published_at": "2026-09-23T14:07:23.699143+09:00"
     }
   ],
   "in_progress": null
