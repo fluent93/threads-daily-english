@@ -1,0 +1,17 @@
+{
+  "batch": "Day 31-60",
+  "status": "approved",
+  "planned_publish_window_kst": {
+    "day_31_earliest": "2026-09-26",
+    "day_60_if_uninterrupted": "2026-10-25"
+  },
+  "seasonal_arc": [
+    "연휴·여행 뒤 일상과 업무로 천천히 복귀",
+    "밀린 일 처리와 일정·요청 조율",
+    "문제 해결과 의견 차이를 다루는 대화",
+    "선선한 날의 음식·외출·장소 추천"
+  ],
+  "release_policy": "사용자 승인 완료; 운영 큐에 병합됨",
+  "prepared_at_utc": "2026-09-25",
+  "approved_at_kst": "2026-09-25T11:27:02.945486+09:00"
+}

@@ -1,0 +1,272 @@
+[
+  {
+    "day": 31,
+    "phrase": "I'm still recovering from the trip.",
+    "meaning_ko": "아직 여행 피로가 덜 풀렸어.",
+    "category": "일상 복귀·피로",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 4, "memorability": 4},
+    "selection_reason": "여행·출장·긴 이동 뒤 피로나 생활 리듬이 아직 회복되지 않았음을 자연스럽게 말할 수 있다.",
+    "register_note": "일상적인 중립 표현. recover from 뒤에는 trip, cold, busy week처럼 회복의 원인을 붙인다."
+  },
+  {
+    "day": 32,
+    "phrase": "Let's ease back into it.",
+    "meaning_ko": "천천히 다시 적응해 보자.",
+    "category": "일상 복귀·적응",
+    "scores": {"frequency": 4, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "휴가·부상·공백 뒤 예전 속도로 단번에 돌아가지 말고 부담 없이 재개하자는 뜻으로 활용도가 높다.",
+    "register_note": "캐주얼하고 배려 있는 제안. ease into는 어떤 활동이나 변화에 서서히 익숙해진다는 뜻이다."
+  },
+  {
+    "day": 33,
+    "phrase": "I've got a lot to catch up on.",
+    "meaning_ko": "밀린 게 많아.",
+    "category": "업무·밀린 일",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "휴가나 부재 뒤 밀린 이메일·업무·소식·콘텐츠를 따라잡아야 하는 상황에 폭넓게 쓴다.",
+    "register_note": "일상과 업무 모두 자연스럽다. catch up on 뒤에는 밀린 일이나 확인할 대상을 붙인다."
+  },
+  {
+    "day": 34,
+    "phrase": "Can we push it back?",
+    "meaning_ko": "그거 좀 뒤로 미룰 수 있을까?",
+    "category": "일정·변경 요청",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "회의·예약·마감 시간을 더 늦게 옮기고 싶을 때 짧고 자연스럽게 요청할 수 있다.",
+    "register_note": "push back은 이 문맥에서 일정을 뒤로 미루는 뜻이다. 새 시간을 함께 제안하면 더 명확하다."
+  },
+  {
+    "day": 35,
+    "phrase": "That works for me.",
+    "meaning_ko": "난 그거 괜찮아.",
+    "category": "일정·동의",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 4, "memorability": 5},
+    "selection_reason": "시간·장소·방법에 대한 상대의 제안이 내 사정에 맞는다고 간단히 확인하는 필수 회화 표현이다.",
+    "register_note": "친구와 동료 모두에게 자연스럽다. 여기서 work는 작동하다보다 조건이 맞는다는 뜻이다."
+  },
+  {
+    "day": 36,
+    "phrase": "We're running low on coffee.",
+    "meaning_ko": "커피가 거의 다 떨어져 가.",
+    "category": "집안·재고",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "식품·생활용품·시간·에너지처럼 남은 양이 적어지는 상황을 미리 알리는 실용적인 문형이다.",
+    "register_note": "run low on 뒤에 부족해지는 대상을 붙인다. 완전히 떨어진 run out of보다 아직 조금 남은 상태다."
+  },
+  {
+    "day": 37,
+    "phrase": "I'll pick some up on my way home.",
+    "meaning_ko": "집에 가는 길에 좀 사 갈게.",
+    "category": "장보기·이동",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "귀가 중 필요한 물건을 사 오겠다는 뜻으로 장보기와 가족 대화에서 바로 활용할 수 있다.",
+    "register_note": "pick up은 이 문맥에서 가볍게 사 오거나 가져오는 뜻이다. some은 앞서 말한 물건을 대신한다."
+  },
+  {
+    "day": 38,
+    "phrase": "It's been one of those days.",
+    "meaning_ko": "오늘 참 되는 일이 없는 날이네.",
+    "category": "감정·힘든 하루",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "작은 문제가 계속 겹친 힘든 하루를 일일이 설명하지 않고 공감을 얻는 말맛 좋은 표현이다.",
+    "register_note": "캐주얼한 표현. one of those days는 보통 일이 꼬이고 지치는 날이라는 공유된 뉘앙스를 가진다."
+  },
+  {
+    "day": 39,
+    "phrase": "I need a breather.",
+    "meaning_ko": "나 잠깐 숨 좀 돌려야겠어.",
+    "category": "휴식·컨디션",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "업무·운동·감정적으로 벅찬 대화 중 짧은 휴식이 필요함을 간결하고 자연스럽게 말한다.",
+    "register_note": "캐주얼하지만 무례하지 않다. 긴 휴가보다 당장의 짧은 휴식을 뜻하는 경우가 많다."
+  },
+  {
+    "day": 40,
+    "phrase": "Let's take it one step at a time.",
+    "meaning_ko": "한 번에 하나씩 차근차근 하자.",
+    "category": "문제 해결·격려",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "복잡하거나 막막한 일을 작은 단계로 나누자며 상대를 진정시키고 행동을 시작하게 하는 표현이다.",
+    "register_note": "따뜻하고 중립적인 제안. 즉시 전체 해결책을 요구하지 말자는 의미가 담긴다."
+  },
+  {
+    "day": 41,
+    "phrase": "I'm getting the hang of it.",
+    "meaning_ko": "이제 요령이 좀 생기고 있어.",
+    "category": "학습·적응",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "새 도구·운동·업무를 연습하며 작동 방식이나 요령을 익혀 가는 진전을 자연스럽게 표현한다.",
+    "register_note": "캐주얼하고 긍정적이다. 아직 완벽하지 않지만 점점 익숙해지고 있다는 뜻이다."
+  },
+  {
+    "day": 42,
+    "phrase": "Could you walk me through it?",
+    "meaning_ko": "그거 차근차근 설명해 주실래요?",
+    "category": "요청·설명",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "절차·기능·문제 해결 과정을 처음부터 단계별로 안내해 달라고 정중하게 요청할 때 유용하다.",
+    "register_note": "업무와 일상 모두 자연스럽다. walk someone through는 실제로 걷는 것이 아니라 단계별로 안내한다는 뜻이다."
+  },
+  {
+    "day": 43,
+    "phrase": "I'll look into it.",
+    "meaning_ko": "내가 알아볼게.",
+    "category": "업무·확인",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "문제·비용·가능 여부를 그냥 보는 것이 아니라 조사하고 확인한 뒤 답하겠다는 약속에 쓴다.",
+    "register_note": "중립적이고 업무에도 적합하다. 후속 답변 시점을 덧붙이면 더 신뢰감 있게 들린다."
+  },
+  {
+    "day": 44,
+    "phrase": "Let's not jump to conclusions.",
+    "meaning_ko": "성급하게 결론 내리지 말자.",
+    "category": "판단·신중함",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "정보가 부족한 상황에서 추측을 사실처럼 단정하지 말자고 제동을 거는 핵심 문제 해결 표현이다.",
+    "register_note": "중립적이지만 상대 판단을 지적하는 말이므로 아직 모르는 사실을 함께 언급하면 부드럽다."
+  },
+  {
+    "day": 45,
+    "phrase": "That's beside the point.",
+    "meaning_ko": "그건 요점에서 벗어난 얘기야.",
+    "category": "대화·논점",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "논의의 핵심과 관계없는 주장이나 변명에 휩쓸리지 않고 대화를 본론으로 돌릴 때 유용하다.",
+    "register_note": "다소 단호하게 들릴 수 있다. 부드럽게 말하려면 I see, but을 앞에 붙인다."
+  },
+  {
+    "day": 46,
+    "phrase": "I see where you're coming from.",
+    "meaning_ko": "왜 그렇게 생각하는지 이해해.",
+    "category": "공감·의견 차이",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "상대 의견에 완전히 동의하지 않아도 그 배경과 논리를 이해한다고 먼저 인정해 대화를 부드럽게 만든다.",
+    "register_note": "일상과 업무 모두 가능하다. 뒤에 but을 붙일 때는 인정이 형식적으로 들리지 않도록 구체적으로 이어 말한다."
+  },
+  {
+    "day": 47,
+    "phrase": "Let's meet halfway.",
+    "meaning_ko": "서로 한발씩 양보하자.",
+    "category": "협상·타협",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "가격·시간·방식에 대한 의견 차이에서 양쪽이 조금씩 양보해 중간 지점을 찾자고 제안한다.",
+    "register_note": "협조적인 표현. 물리적으로 중간 장소에서 만난다는 뜻도 있어 문맥으로 구분한다."
+  },
+  {
+    "day": 48,
+    "phrase": "I don't want to make a big deal out of it.",
+    "meaning_ko": "그걸 너무 큰일로 만들고 싶진 않아.",
+    "category": "관계·갈등 조절",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "불편함은 있지만 상황을 과장하거나 공개적인 갈등으로 키우고 싶지 않다는 균형 잡힌 태도를 전달한다.",
+    "register_note": "캐주얼하고 완곡하다. 문제를 무시한다기보다 필요 이상으로 소란스럽게 만들지 않겠다는 뜻이다."
+  },
+  {
+    "day": 49,
+    "phrase": "It's not worth the hassle.",
+    "meaning_ko": "그건 번거로움을 감수할 가치가 없어.",
+    "category": "판단·수고",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "얻는 이익보다 시간·절차·스트레스가 더 클 때 하지 않기로 한 판단을 자연스럽게 설명한다.",
+    "register_note": "일상적인 표현. hassle은 여러 단계나 불편 때문에 생기는 성가심과 수고를 뜻한다."
+  },
+  {
+    "day": 50,
+    "phrase": "I might as well take the bus.",
+    "meaning_ko": "이럴 바엔 버스를 타는 게 낫겠어.",
+    "category": "판단·차선 선택",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "상황을 따져 보니 다른 선택을 하지 않을 이유가 없거나 그 선택이 차라리 낫다는 판단을 표현한다.",
+    "register_note": "might as well 뒤에는 동사원형을 쓴다. 적극적인 최선보다 상황상 합리적인 선택이라는 뉘앙스가 있다."
+  },
+  {
+    "day": 51,
+    "phrase": "I'm leaning toward the blue one.",
+    "meaning_ko": "파란색 쪽으로 마음이 기울고 있어.",
+    "category": "선택·선호",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "최종 결정 전이지만 여러 선택지 중 어느 쪽을 더 선호하는지 부드럽게 밝힐 수 있다.",
+    "register_note": "lean toward 뒤에는 명사나 동명사를 쓴다. 아직 바뀔 여지가 있는 잠정적인 선호다."
+  },
+  {
+    "day": 52,
+    "phrase": "Let's play it by ear.",
+    "meaning_ko": "상황 봐서 정하자.",
+    "category": "계획·유연성",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "날씨·컨디션·진행 상황이 불확실할 때 미리 확정하지 않고 그때그때 대응하자고 말한다.",
+    "register_note": "캐주얼한 표현. 악보 없이 귀로 연주한다는 뜻에서 상황에 맞춰 즉흥적으로 결정한다는 의미가 되었다."
+  },
+  {
+    "day": 53,
+    "phrase": "I'm good either way.",
+    "meaning_ko": "난 어느 쪽이든 괜찮아.",
+    "category": "선택·배려",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 4, "memorability": 5},
+    "selection_reason": "두 선택 모두 받아들일 수 있어 상대가 정해도 좋다는 유연한 태도를 짧게 전달한다.",
+    "register_note": "캐주얼하고 자연스럽다. I'm good은 여기서 상태가 좋다가 아니라 괜찮고 만족한다는 뜻이다."
+  },
+  {
+    "day": 54,
+    "phrase": "I'll take your word for it.",
+    "meaning_ko": "네 말을 믿을게.",
+    "category": "신뢰·판단",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "직접 확인할 수 없거나 확인하지 않기로 하고 상대의 설명을 믿겠다는 뜻을 말맛 있게 표현한다.",
+    "register_note": "억양에 따라 진심 어린 신뢰나 가벼운 의심이 될 수 있다. 따뜻한 억양이면 중립적이다."
+  },
+  {
+    "day": 55,
+    "phrase": "It grew on me.",
+    "meaning_ko": "점점 마음에 들게 됐어.",
+    "category": "취향·변화",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "처음에는 별로였던 음악·음식·사람·장소를 시간이 지나며 좋아하게 된 취향 변화를 생생하게 말한다.",
+    "register_note": "캐주얼하고 긍정적이다. 처음부터 좋아했다는 말이 아니라 반복 경험 뒤 호감이 생겼다는 뜻이다."
+  },
+  {
+    "day": 56,
+    "phrase": "I'm in the mood for something warm.",
+    "meaning_ko": "따뜻한 게 당겨.",
+    "category": "음식·기분",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "선선한 날 음식·영화·활동을 지금 하고 싶은 기분이나 취향에 맞춰 자연스럽게 제안할 수 있다.",
+    "register_note": "be in the mood for 뒤에는 명사나 동명사를 쓴다. 단순히 필요하다보다 현재 기분의 끌림을 나타낸다."
+  },
+  {
+    "day": 57,
+    "phrase": "This place is a hidden gem.",
+    "meaning_ko": "여기 진짜 숨은 명소야.",
+    "category": "외출·장소 추천",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "잘 알려지지는 않았지만 훌륭한 식당·카페·여행지를 발견했을 때 추천의 즐거움을 담아 말한다.",
+    "register_note": "긍정적인 일상 표현. hidden gem은 사람이나 작품처럼 덜 알려진 훌륭한 대상에도 쓸 수 있다."
+  },
+  {
+    "day": 58,
+    "phrase": "It's a bit out of the way.",
+    "meaning_ko": "거기가 조금 외진 데 있어.",
+    "category": "이동·위치",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 4},
+    "selection_reason": "목적지가 평소 동선에서 벗어나 있거나 찾아가기 불편한 위치라는 점을 부드럽게 설명한다.",
+    "register_note": "a bit을 넣어 불편함을 완화한다. out of the way는 문맥에 따라 방해되지 않는 곳이라는 뜻도 있다."
+  },
+  {
+    "day": 59,
+    "phrase": "We should make the most of it.",
+    "meaning_ko": "이 상황을 최대한 잘 활용하자.",
+    "category": "태도·기회 활용",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "시간·날씨·기회가 완벽하지 않아도 주어진 조건에서 최대한 즐기거나 성과를 내자는 긍정적인 태도를 전한다.",
+    "register_note": "중립적이고 격려하는 표현. make the most of 뒤에는 활용할 시간·기회·상황을 붙인다."
+  },
+  {
+    "day": 60,
+    "phrase": "Time got away from me.",
+    "meaning_ko": "시간 가는 줄 몰랐어.",
+    "category": "시간·몰입",
+    "scores": {"frequency": 5, "transfer": 5, "learning_value": 5, "memorability": 5},
+    "selection_reason": "일이나 대화에 몰입해 예상보다 시간이 훌쩍 지나 늦어진 상황을 자연스럽게 설명하고 사과할 수 있다.",
+    "register_note": "캐주얼하지만 업무에도 사과와 함께 쓸 수 있다. 시간 관리를 놓쳤다는 책임을 완전히 없애지는 않는다."
+  }
+]

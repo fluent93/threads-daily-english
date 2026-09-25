@@ -838,5 +838,845 @@
     "quiz_ko": "난 짐 다 싸고 떠날 준비 끝났어. 너는?",
     "answer_example_en": "I'm all packed and ready to go. How about you?",
     "review_status": "approved"
+  },
+  {
+    "day": 31,
+    "card_id": "REAL-031",
+    "episode": "REAL-LIFE",
+    "phrase": "I'm still recovering from the trip.",
+    "meaning_ko": "아직 여행 피로가 덜 풀렸어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'm still recovering from the trip.\n아직 여행 피로가 덜 풀렸어.\n\n💡 뉘앙스\nrecover from은 힘든 경험이나 아픈 상태 뒤 원래 컨디션을 되찾는다는 뜻이다. 여행뿐 아니라 감기나 바쁜 한 주 뒤에도 쓸 수 있다.\n\n🗣 \"Give me a day—I'm still recovering from the trip.\"\n하루만 시간을 줘. 아직 여행 피로가 덜 풀렸어.\n\n🔄 함께 가능한 표현\n\"I'm still worn out from traveling.\"\n둘 다 여행 뒤 피곤함을 말한다. recovering from the trip은 회복 과정 전체를, worn out은 지금 몹시 지친 상태를 더 강조한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nrecovering from은 /rɪˈkʌvərɪŋ frəm/처럼 잇고, 아직이라는 뜻의 still에 힘을 준다.\n\n✍️ 10초 복습\n\"어제 돌아왔는데 아직 여행 피로가 덜 풀렸어.\"\n\nI got back yesterday, but I'm still recovering from the trip."
+      }
+    ],
+    "hook_ko": "긴 여행을 마치고 돌아왔지만 아직 피곤할 때",
+    "context_ko": "일상 복귀·피로",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "어제 돌아왔는데 아직 여행 피로가 덜 풀렸어.",
+    "answer_example_en": "I got back yesterday, but I'm still recovering from the trip.",
+    "review_status": "approved"
+  },
+  {
+    "day": 32,
+    "card_id": "REAL-032",
+    "episode": "REAL-LIFE",
+    "phrase": "Let's ease back into it.",
+    "meaning_ko": "천천히 다시 적응해 보자.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Let's ease back into it.\n천천히 다시 적응해 보자.\n\n💡 뉘앙스\nease back into something은 공백 뒤 활동을 낮은 강도에서 서서히 다시 시작한다는 뜻이다. 운동·업무·공부에 모두 쓴다.\n\n🗣 \"After the break, let's ease back into it with a short meeting.\"\n휴식 뒤에는 짧은 회의로 천천히 다시 시작하자.\n\n🔄 함께 가능한 표현\n\"Let's start slowly and get back into our routine.\"\n둘 다 서서히 일상으로 돌아가자는 뜻이다. ease back into it은 부담을 줄여 부드럽게 재개한다는 느낌이 더 강하다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nease back into는 /iːz bæk ˈɪntuː/로 자연스럽게 이어 말하고 ease에 힘을 준다.\n\n✍️ 10초 복습\n\"오늘은 무리하지 말고 천천히 다시 적응해 보자.\"\n\nLet's not overdo it today. Let's ease back into it."
+      }
+    ],
+    "hook_ko": "연휴 뒤 첫날부터 무리하지 말자고 할 때",
+    "context_ko": "일상 복귀·적응",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "오늘은 무리하지 말고 천천히 다시 적응해 보자.",
+    "answer_example_en": "Let's not overdo it today. Let's ease back into it.",
+    "review_status": "approved"
+  },
+  {
+    "day": 33,
+    "card_id": "REAL-033",
+    "episode": "REAL-LIFE",
+    "phrase": "I've got a lot to catch up on.",
+    "meaning_ko": "밀린 게 많아.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I've got a lot to catch up on.\n밀린 게 많아.\n\n💡 뉘앙스\ncatch up on은 놓치거나 미룬 일을 현재 수준까지 따라잡는다는 뜻이다. emails, news, sleep처럼 밀릴 수 있는 대상에 쓴다.\n\n🗣 \"I stayed home to catch up on some sleep.\"\n밀린 잠을 보충하려고 집에 있었어.\n\n🔄 함께 가능한 표현\n\"I have a huge backlog of emails to get through.\"\n둘 다 밀린 일을 말한다. catch up on은 뒤처진 만큼 따라잡는 행동에, backlog는 쌓여 있는 업무량에 초점을 둔다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\ncatch up on은 /kætʃ ʌp ɑːn/으로 이어지고, 많다는 뜻의 a lot에 중심 강세를 준다.\n\n✍️ 10초 복습\n\"며칠 쉬었더니 밀린 이메일이 정말 많아.\"\n\nI took a few days off, and I've got a lot to catch up on."
+      }
+    ],
+    "hook_ko": "며칠 자리를 비운 뒤 받은 편지함을 열었을 때",
+    "context_ko": "업무·밀린 일",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "며칠 쉬었더니 밀린 이메일이 정말 많아.",
+    "answer_example_en": "I took a few days off, and I've got a lot to catch up on.",
+    "review_status": "approved"
+  },
+  {
+    "day": 34,
+    "card_id": "REAL-034",
+    "episode": "REAL-LIFE",
+    "phrase": "Can we push it back?",
+    "meaning_ko": "그거 좀 뒤로 미룰 수 있을까?",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Can we push it back?\n그거 좀 뒤로 미룰 수 있을까?\n\n💡 뉘앙스\npush an event back은 예정 시각보다 늦게 옮긴다는 뜻이다. 반대로 더 이르게 당길 때는 move it up을 쓸 수 있다.\n\n🗣 \"They pushed the deadline back by two days.\"\n그들은 마감을 이틀 뒤로 미뤘어.\n\n🔄 함께 가능한 표현\n\"Could we move the meeting to ten?\"\n둘 다 시간을 바꾼다. push it back은 더 늦은 시각으로 미룬다는 방향이 분명하고, move는 단순히 변경한다는 중립적인 말이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\npush it back은 /pʊʃ ɪt bæk/으로 끊지 말고 잇고, 변경 방향을 나타내는 back을 강조한다.\n\n✍️ 10초 복습\n\"오전 9시는 어려운데 회의를 10시로 미룰 수 있을까요?\"\n\nNine is difficult for me. Can we push it back to ten?"
+      }
+    ],
+    "hook_ko": "회의 시간이 너무 일러 늦추고 싶을 때",
+    "context_ko": "일정·변경 요청",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "오전 9시는 어려운데 회의를 10시로 미룰 수 있을까요?",
+    "answer_example_en": "Nine is difficult for me. Can we push it back to ten?",
+    "review_status": "approved"
+  },
+  {
+    "day": 35,
+    "card_id": "REAL-035",
+    "episode": "REAL-LIFE",
+    "phrase": "That works for me.",
+    "meaning_ko": "난 그거 괜찮아.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 That works for me.\n난 그거 괜찮아.\n\n💡 뉘앙스\nThat works for me는 제안이 실제로 실행 가능하고 내 사정에도 맞는다는 뜻이다. 시간·장소·계획에 두루 쓴다.\n\n🗣 \"We can meet near the station. That works for me.\"\n역 근처에서 만나도 돼. 난 괜찮아.\n\n🔄 함께 가능한 표현\n\"Friday at three is fine with me.\"\n둘 다 제안에 동의한다. works for me는 일정이나 방법이 내 조건에 맞는다는 회화적 표현이고, is fine은 더 직접적이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nworks for는 /wɜːrks fər/처럼 이어지고, 동의를 분명히 하려면 works에 힘을 준다.\n\n✍️ 10초 복습\n\"금요일 오후 3시? 난 그 시간 괜찮아.\"\n\nFriday at three? That works for me."
+      }
+    ],
+    "hook_ko": "상대가 제안한 시간이 내 일정에도 맞을 때",
+    "context_ko": "일정·동의",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "금요일 오후 3시? 난 그 시간 괜찮아.",
+    "answer_example_en": "Friday at three? That works for me.",
+    "review_status": "approved"
+  },
+  {
+    "day": 36,
+    "card_id": "REAL-036",
+    "episode": "REAL-LIFE",
+    "phrase": "We're running low on coffee.",
+    "meaning_ko": "커피가 거의 다 떨어져 가.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 We're running low on coffee.\n커피가 거의 다 떨어져 가.\n\n💡 뉘앙스\nrun low on something은 그 물건이 아직 조금 남았지만 곧 부족해질 상태다. coffee 자리에 milk, gas, time을 넣어 응용할 수 있다.\n\n🗣 \"We're running low on milk again.\"\n우유가 또 거의 다 떨어져 가.\n\n🔄 함께 가능한 표현\n\"We're almost out of coffee.\"\n둘 다 얼마 남지 않았다는 뜻이다. running low on은 재고가 줄고 있음을 미리 알리고, almost out of는 거의 소진된 상태를 더 직접적으로 말한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nrunning low on은 /ˈrʌnɪŋ loʊ ɑːn/으로 잇고 부족한 대상인 coffee에 힘을 준다.\n\n✍️ 10초 복습\n\"커피가 거의 다 떨어져 가. 오늘 더 사야겠어.\"\n\nWe're running low on coffee. We should get more today."
+      }
+    ],
+    "hook_ko": "아침에 마지막 남은 커피를 내렸을 때",
+    "context_ko": "집안·재고",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "커피가 거의 다 떨어져 가. 오늘 더 사야겠어.",
+    "answer_example_en": "We're running low on coffee. We should get more today.",
+    "review_status": "approved"
+  },
+  {
+    "day": 37,
+    "card_id": "REAL-037",
+    "episode": "REAL-LIFE",
+    "phrase": "I'll pick some up on my way home.",
+    "meaning_ko": "집에 가는 길에 좀 사 갈게.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'll pick some up on my way home.\n집에 가는 길에 좀 사 갈게.\n\n💡 뉘앙스\npick something up은 이동 중 물건을 사거나 수령한다는 뜻이다. 앞서 물건을 말했다면 pick some up처럼 대명사로 받을 수 있다.\n\n🗣 \"I'll pick some up after work.\"\n퇴근하고 좀 사 갈게.\n\n🔄 함께 가능한 표현\n\"I'll stop and get some milk on the way home.\"\n둘 다 귀가 중 구매한다. pick some up은 필요한 것을 가볍게 사 오겠다는 자연스러운 회화 표현이고, stop and get은 행동을 더 풀어 말한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\npick some up은 /pɪk səm ʌp/으로 이어지고, on my way home은 한 덩어리처럼 말한다.\n\n✍️ 10초 복습\n\"우유 필요하지? 집에 가는 길에 좀 사 갈게.\"\n\nWe need milk, right? I'll pick some up on my way home."
+      }
+    ],
+    "hook_ko": "집에 필요한 물건을 퇴근길에 사 오겠다고 할 때",
+    "context_ko": "장보기·이동",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "우유 필요하지? 집에 가는 길에 좀 사 갈게.",
+    "answer_example_en": "We need milk, right? I'll pick some up on my way home.",
+    "review_status": "approved"
+  },
+  {
+    "day": 38,
+    "card_id": "REAL-038",
+    "episode": "REAL-LIFE",
+    "phrase": "It's been one of those days.",
+    "meaning_ko": "오늘 참 되는 일이 없는 날이네.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 It's been one of those days.\n오늘 참 되는 일이 없는 날이네.\n\n💡 뉘앙스\none of those days는 별도 설명 없이도 사소한 불운과 스트레스가 연달아 생기는 날을 뜻한다. 보통 한숨 섞인 가벼운 어조로 쓴다.\n\n🗣 \"Don't mind me—it's been one of those days.\"\n나 때문에 신경 쓰지 마. 오늘 되는 일이 없는 날이야.\n\n🔄 함께 가능한 표현\n\"Everything seems to be going wrong today.\"\n둘 다 일이 꼬인 하루를 말한다. one of those days는 상대도 느낌을 알아주길 바라는 관용적인 공감 표현이고, going wrong은 상황을 직접 설명한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\none of those는 /wʌn əv ðoʊz/로 잇고, those와 days에 힘을 주면 말맛이 산다.\n\n✍️ 10초 복습\n\"버스도 놓치고 커피도 쏟았어. 오늘 참 되는 일이 없네.\"\n\nI missed the bus and spilled my coffee. It's been one of those days."
+      }
+    ],
+    "hook_ko": "아침부터 작은 문제가 계속 겹친 날",
+    "context_ko": "감정·힘든 하루",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "버스도 놓치고 커피도 쏟았어. 오늘 참 되는 일이 없네.",
+    "answer_example_en": "I missed the bus and spilled my coffee. It's been one of those days.",
+    "review_status": "approved"
+  },
+  {
+    "day": 39,
+    "card_id": "REAL-039",
+    "episode": "REAL-LIFE",
+    "phrase": "I need a breather.",
+    "meaning_ko": "나 잠깐 숨 좀 돌려야겠어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I need a breather.\n나 잠깐 숨 좀 돌려야겠어.\n\n💡 뉘앙스\na breather는 숨을 돌리고 에너지를 회복하는 짧은 휴식이다. 일이 많거나 감정적인 대화가 벅찰 때도 쓸 수 있다.\n\n🗣 \"Let's stop here and take a breather.\"\n여기서 멈추고 잠깐 숨 좀 돌리자.\n\n🔄 함께 가능한 표현\n\"I need to take a short break.\"\n둘 다 짧은 휴식을 원한다. need a breather는 숨을 고르고 여유를 되찾는 생생한 느낌이고, take a short break는 더 중립적이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nneed a는 /niːdə/처럼 잇고, breather의 첫 음절 /briː/에 강세를 준다.\n\n✍️ 10초 복습\n\"계속 세 시간째 일했어. 잠깐 숨 좀 돌려야겠어.\"\n\nI've been working for three hours straight. I need a breather."
+      }
+    ],
+    "hook_ko": "일이 몰려 잠깐 쉬고 다시 집중하고 싶을 때",
+    "context_ko": "휴식·컨디션",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "계속 세 시간째 일했어. 잠깐 숨 좀 돌려야겠어.",
+    "answer_example_en": "I've been working for three hours straight. I need a breather.",
+    "review_status": "approved"
+  },
+  {
+    "day": 40,
+    "card_id": "REAL-040",
+    "episode": "REAL-LIFE",
+    "phrase": "Let's take it one step at a time.",
+    "meaning_ko": "한 번에 하나씩 차근차근 하자.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Let's take it one step at a time.\n한 번에 하나씩 차근차근 하자.\n\n💡 뉘앙스\ntake it one step at a time은 전체 규모에 압도되지 말고 현재 단계에만 집중하자는 격려다. 문제 해결과 회복 과정에 두루 쓴다.\n\n🗣 \"Learning a language takes time, so take it one step at a time.\"\n언어 학습에는 시간이 걸리니 한 단계씩 해.\n\n🔄 함께 가능한 표현\n\"Let's break it down and handle one thing at a time.\"\n둘 다 일을 작게 나눈다. one step at a time은 차분한 진행을 강조하고, break it down은 문제를 실제 작업 단위로 쪼개자는 뜻이 강하다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nstep at a는 /step ət ə/처럼 연결하고, one과 time을 강조해 차근차근의 리듬을 살린다.\n\n✍️ 10초 복습\n\"한꺼번에 다 해결하려 하지 말고 한 번에 하나씩 하자.\"\n\nWe don't have to solve everything at once. Let's take it one step at a time."
+      }
+    ],
+    "hook_ko": "해야 할 일이 너무 많아 막막해하는 사람에게",
+    "context_ko": "문제 해결·격려",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "한꺼번에 다 해결하려 하지 말고 한 번에 하나씩 하자.",
+    "answer_example_en": "We don't have to solve everything at once. Let's take it one step at a time.",
+    "review_status": "approved"
+  },
+  {
+    "day": 41,
+    "card_id": "REAL-041",
+    "episode": "REAL-LIFE",
+    "phrase": "I'm getting the hang of it.",
+    "meaning_ko": "이제 요령이 좀 생기고 있어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'm getting the hang of it.\n이제 요령이 좀 생기고 있어.\n\n💡 뉘앙스\nget the hang of something은 연습을 통해 방법이나 감각을 터득한다는 뜻이다. 이미 완전히 숙달했다는 말은 아니다.\n\n🗣 \"Keep practicing—you'll get the hang of it.\"\n계속 연습해. 곧 요령이 생길 거야.\n\n🔄 함께 가능한 표현\n\"I'm starting to figure out how it works.\"\n둘 다 이해가 늘고 있다. getting the hang of it은 반복해 보며 실전 요령이 생긴다는 뜻이고, figure out은 작동 원리를 이해하는 데 초점을 둔다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nhang of it은 /hæŋ əv ɪt/으로 자연스럽게 연결하고, 진전을 나타내는 getting을 살린다.\n\n✍️ 10초 복습\n\"처음엔 어려웠는데 이제 요령이 좀 생기고 있어.\"\n\nIt was difficult at first, but I'm getting the hang of it."
+      }
+    ],
+    "hook_ko": "새 프로그램을 며칠 써 보니 익숙해지기 시작할 때",
+    "context_ko": "학습·적응",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "처음엔 어려웠는데 이제 요령이 좀 생기고 있어.",
+    "answer_example_en": "It was difficult at first, but I'm getting the hang of it.",
+    "review_status": "approved"
+  },
+  {
+    "day": 42,
+    "card_id": "REAL-042",
+    "episode": "REAL-LIFE",
+    "phrase": "Could you walk me through it?",
+    "meaning_ko": "그거 차근차근 설명해 주실래요?",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Could you walk me through it?\n그거 차근차근 설명해 주실래요?\n\n💡 뉘앙스\nwalk someone through something은 절차의 시작부터 끝까지 차례대로 안내하거나 설명한다는 뜻이다. 업무 인수인계에도 자주 쓴다.\n\n🗣 \"Can you walk me through the setup process?\"\n설정 과정을 차근차근 설명해 줄래?\n\n🔄 함께 가능한 표현\n\"Could you show me how it works step by step?\"\n둘 다 단계별 설명을 요청한다. walk me through it은 함께 과정을 따라가며 안내해 달라는 자연스러운 표현이고, show me는 더 직접적이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nwalk me는 /wɔːk mi/로 잇고, through의 /θ/ 소리를 혀끝으로 또렷하게 낸다.\n\n✍️ 10초 복습\n\"이 기능이 처음인데 처음부터 차근차근 설명해 주실래요?\"\n\nThis feature is new to me. Could you walk me through it?"
+      }
+    ],
+    "hook_ko": "새 시스템 사용법을 단계별로 배우고 싶을 때",
+    "context_ko": "요청·설명",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "이 기능이 처음인데 처음부터 차근차근 설명해 주실래요?",
+    "answer_example_en": "This feature is new to me. Could you walk me through it?",
+    "review_status": "approved"
+  },
+  {
+    "day": 43,
+    "card_id": "REAL-043",
+    "episode": "REAL-LIFE",
+    "phrase": "I'll look into it.",
+    "meaning_ko": "내가 알아볼게.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'll look into it.\n내가 알아볼게.\n\n💡 뉘앙스\nlook into는 문제나 의문을 조사해 정보를 알아내는 것이다. 단순히 look at처럼 눈으로 본다는 뜻이 아니다.\n\n🗣 \"I'll look into it this afternoon and call you back.\"\n오늘 오후에 알아보고 다시 전화드릴게요.\n\n🔄 함께 가능한 표현\n\"I'll check what happened and get back to you.\"\n둘 다 조사 후 답하겠다는 뜻이다. look into it은 원인이나 사실을 자세히 확인한다는 말이고, check what happened는 더 직접적이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nlook into는 /lʊk ˈɪntuː/로 이어지고, 약속의 주체인 I'll을 분명하게 말한다.\n\n✍️ 10초 복습\n\"왜 요금이 두 번 청구됐는지 확인해서 알려드릴게요.\"\n\nI'll look into it and let you know why you were charged twice."
+      }
+    ],
+    "hook_ko": "바로 답하기 어려운 문제를 확인해 보겠다고 할 때",
+    "context_ko": "업무·확인",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "왜 요금이 두 번 청구됐는지 확인해서 알려드릴게요.",
+    "answer_example_en": "I'll look into it and let you know why you were charged twice.",
+    "review_status": "approved"
+  },
+  {
+    "day": 44,
+    "card_id": "REAL-044",
+    "episode": "REAL-LIFE",
+    "phrase": "Let's not jump to conclusions.",
+    "meaning_ko": "성급하게 결론 내리지 말자.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Let's not jump to conclusions.\n성급하게 결론 내리지 말자.\n\n💡 뉘앙스\njump to conclusions는 충분한 증거를 확인하기 전에 결론으로 뛰어간다는 비유다. conclusions는 보통 복수형으로 쓴다.\n\n🗣 \"Don't jump to conclusions based on one message.\"\n메시지 하나만 보고 성급하게 결론 내리지 마.\n\n🔄 함께 가능한 표현\n\"Let's wait for the facts before we decide.\"\n둘 다 판단을 보류한다. jump to conclusions는 근거 없이 너무 빨리 단정하는 행동을 경계하고, wait for the facts는 필요한 다음 행동을 제시한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\njump to는 /dʒʌmp tə/로 잇고, conclusions의 두 번째 음절 /kluː/에 중심 강세를 준다.\n\n✍️ 10초 복습\n\"아직 무슨 일이 있었는지 모르니 성급하게 결론 내리지 말자.\"\n\nWe don't know what happened yet, so let's not jump to conclusions."
+      }
+    ],
+    "hook_ko": "일부 정보만으로 누군가를 탓하려 할 때",
+    "context_ko": "판단·신중함",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "아직 무슨 일이 있었는지 모르니 성급하게 결론 내리지 말자.",
+    "answer_example_en": "We don't know what happened yet, so let's not jump to conclusions.",
+    "review_status": "approved"
+  },
+  {
+    "day": 45,
+    "card_id": "REAL-045",
+    "episode": "REAL-LIFE",
+    "phrase": "That's beside the point.",
+    "meaning_ko": "그건 요점에서 벗어난 얘기야.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 That's beside the point.\n그건 요점에서 벗어난 얘기야.\n\n💡 뉘앙스\nbeside the point는 틀린 말이라는 뜻이 아니라 현재 논의의 핵심과 관련이 없다는 뜻이다. 단호하므로 인정 표현을 먼저 붙이면 좋다.\n\n🗣 \"The price is beside the point—we need something reliable.\"\n가격은 요점이 아니야. 우리에겐 믿을 만한 게 필요해.\n\n🔄 함께 가능한 표현\n\"That's not the issue we're discussing right now.\"\n둘 다 본론으로 돌아간다. beside the point는 언급한 사실이 핵심 판단과 무관하다고 짧게 선을 긋고, not the issue는 논점을 직접 밝힌다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nbeside the는 /bɪˈsaɪd ðə/로 잇고, 핵심인 point를 또렷하게 강조한다.\n\n✍️ 10초 복습\n\"네가 바빴던 건 알지만 그건 지금 이야기의 요점이 아니야.\"\n\nI know you were busy, but that's beside the point."
+      }
+    ],
+    "hook_ko": "상대가 본론과 관계없는 이야기를 꺼낼 때",
+    "context_ko": "대화·논점",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "네가 바빴던 건 알지만 그건 지금 이야기의 요점이 아니야.",
+    "answer_example_en": "I know you were busy, but that's beside the point.",
+    "review_status": "approved"
+  },
+  {
+    "day": 46,
+    "card_id": "REAL-046",
+    "episode": "REAL-LIFE",
+    "phrase": "I see where you're coming from.",
+    "meaning_ko": "왜 그렇게 생각하는지 이해해.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I see where you're coming from.\n왜 그렇게 생각하는지 이해해.\n\n💡 뉘앙스\nsee where someone is coming from은 그 사람의 경험이나 논리에서 왜 그런 의견이 나왔는지 이해한다는 뜻이다. 동의와는 다르다.\n\n🗣 \"I see where you're coming from, but I have a different concern.\"\n왜 그렇게 생각하는지는 알겠지만 내 걱정은 조금 달라.\n\n🔄 함께 가능한 표현\n\"I understand why you're concerned about the cost.\"\n둘 다 상대 관점을 인정한다. see where you're coming from은 생각의 배경과 논리를 이해한다는 회화적 표현이고, understand why는 이유를 구체적으로 말한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nwhere you're는 /wer jər/처럼 이어지고, 이해를 전달하는 see에 부드럽게 힘을 준다.\n\n✍️ 10초 복습\n\"왜 비용이 걱정되는지는 이해해. 다른 방법도 찾아보자.\"\n\nI see where you're coming from. Let's look for another option."
+      }
+    ],
+    "hook_ko": "의견은 다르지만 상대의 이유부터 인정하고 싶을 때",
+    "context_ko": "공감·의견 차이",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "왜 비용이 걱정되는지는 이해해. 다른 방법도 찾아보자.",
+    "answer_example_en": "I see where you're coming from. Let's look for another option.",
+    "review_status": "approved"
+  },
+  {
+    "day": 47,
+    "card_id": "REAL-047",
+    "episode": "REAL-LIFE",
+    "phrase": "Let's meet halfway.",
+    "meaning_ko": "서로 한발씩 양보하자.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Let's meet halfway.\n서로 한발씩 양보하자.\n\n💡 뉘앙스\nmeet halfway는 의견이나 조건의 중간 지점에서 합의한다는 뜻이다. 장소 문맥에서는 실제 중간 위치에서 만난다는 뜻도 된다.\n\n🗣 \"If we both adjust the plan, we can meet halfway.\"\n우리 둘 다 계획을 조정하면 중간에서 합의할 수 있어.\n\n🔄 함께 가능한 표현\n\"How about we compromise and meet at seven?\"\n둘 다 타협을 제안한다. meet halfway는 양쪽이 비슷하게 양보한다는 그림이 살아 있고, compromise는 타협 자체를 직접 말한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nmeet halfway는 /miːt ˌhæfˈweɪ/로 잇고, halfway의 뒤 음절 way를 강조한다.\n\n✍️ 10초 복습\n\"넌 6시, 난 8시를 원하니 7시로 서로 한발씩 양보하자.\"\n\nYou want six and I want eight, so let's meet halfway at seven."
+      }
+    ],
+    "hook_ko": "서로 원하는 시간이 달라 타협점을 찾을 때",
+    "context_ko": "협상·타협",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "넌 6시, 난 8시를 원하니 7시로 서로 한발씩 양보하자.",
+    "answer_example_en": "You want six and I want eight, so let's meet halfway at seven.",
+    "review_status": "approved"
+  },
+  {
+    "day": 48,
+    "card_id": "REAL-048",
+    "episode": "REAL-LIFE",
+    "phrase": "I don't want to make a big deal out of it.",
+    "meaning_ko": "그걸 너무 큰일로 만들고 싶진 않아.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I don't want to make a big deal out of it.\n그걸 너무 큰일로 만들고 싶진 않아.\n\n💡 뉘앙스\nmake a big deal out of something은 작은 일을 지나치게 심각하게 다루거나 소란스럽게 만든다는 뜻이다.\n\n🗣 \"It was an honest mistake, so don't make a big deal out of it.\"\n솔직한 실수였으니 너무 큰일로 만들지 마.\n\n🔄 함께 가능한 표현\n\"I'd rather not turn this into a bigger issue.\"\n둘 다 갈등을 키우지 않으려 한다. make a big deal은 필요 이상으로 심각하게 다루는 느낌이고, bigger issue는 확대를 직접 말한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\ndeal out of it은 /diːl aʊt əv ɪt/으로 이어 말하고, big deal에 중심 강세를 준다.\n\n✍️ 10초 복습\n\"조금 불편하긴 했지만 그걸 너무 큰일로 만들고 싶진 않아.\"\n\nIt bothered me a little, but I don't want to make a big deal out of it."
+      }
+    ],
+    "hook_ko": "작은 불편을 크게 다투고 싶지는 않을 때",
+    "context_ko": "관계·갈등 조절",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "조금 불편하긴 했지만 그걸 너무 큰일로 만들고 싶진 않아.",
+    "answer_example_en": "It bothered me a little, but I don't want to make a big deal out of it.",
+    "review_status": "approved"
+  },
+  {
+    "day": 49,
+    "card_id": "REAL-049",
+    "episode": "REAL-LIFE",
+    "phrase": "It's not worth the hassle.",
+    "meaning_ko": "그건 번거로움을 감수할 가치가 없어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 It's not worth the hassle.\n그건 번거로움을 감수할 가치가 없어.\n\n💡 뉘앙스\nbe worth the hassle은 결과가 번거로움을 감수할 만큼 가치 있는지를 따진다. not을 붙이면 시간과 에너지를 들일 이유가 없다는 뜻이다.\n\n🗣 \"Returning it would cost more, so it's not worth the hassle.\"\n반품 비용이 더 들어서 번거롭게 할 가치가 없어.\n\n🔄 함께 가능한 표현\n\"The savings aren't worth all that trouble.\"\n둘 다 이익보다 수고가 크다고 판단한다. not worth the hassle은 번거로운 과정과 스트레스를 한 덩어리로 평가하고, trouble은 수고를 직접 말한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nworth the는 /wɜːrθ ðə/로 잇고, hassle의 첫 음절 /hæs/를 강조한다.\n\n✍️ 10초 복습\n\"5천 원 아끼자고 세 번 갈아타는 건 너무 번거로워.\"\n\nThree transfers just to save five dollars? It's not worth the hassle."
+      }
+    ],
+    "hook_ko": "조금 아끼려다 절차가 너무 복잡해졌을 때",
+    "context_ko": "판단·수고",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "5천 원 아끼자고 세 번 갈아타는 건 너무 번거로워.",
+    "answer_example_en": "Three transfers just to save five dollars? It's not worth the hassle.",
+    "review_status": "approved"
+  },
+  {
+    "day": 50,
+    "card_id": "REAL-050",
+    "episode": "REAL-LIFE",
+    "phrase": "I might as well take the bus.",
+    "meaning_ko": "이럴 바엔 버스를 타는 게 낫겠어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I might as well take the bus.\n이럴 바엔 버스를 타는 게 낫겠어.\n\n💡 뉘앙스\nmight as well은 완벽한 선택이라기보다 상황을 고려할 때 차라리 그렇게 하는 편이 낫다는 뜻이다. 뒤에는 동사원형을 쓴다.\n\n🗣 \"We're already here, so we might as well go inside.\"\n이미 여기 왔으니 들어가 보는 게 낫겠다.\n\n🔄 함께 가능한 표현\n\"The bus makes more sense if the wait is that long.\"\n둘 다 버스를 선택한다. might as well은 현재 조건에서는 굳이 다른 선택을 고집할 이유가 없다는 느낌이고, makes more sense는 합리성을 강조한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nmight as well은 /maɪt əz wel/로 한 덩어리처럼 말하고, 실제 선택인 take the bus를 강조한다.\n\n✍️ 10초 복습\n\"택시가 30분 걸린다면 이럴 바엔 버스를 타는 게 낫겠어.\"\n\nIf the taxi takes thirty minutes, I might as well take the bus."
+      }
+    ],
+    "hook_ko": "택시를 오래 기다리느니 다른 교통편이 나을 때",
+    "context_ko": "판단·차선 선택",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "택시가 30분 걸린다면 이럴 바엔 버스를 타는 게 낫겠어.",
+    "answer_example_en": "If the taxi takes thirty minutes, I might as well take the bus.",
+    "review_status": "approved"
+  },
+  {
+    "day": 51,
+    "card_id": "REAL-051",
+    "episode": "REAL-LIFE",
+    "phrase": "I'm leaning toward the blue one.",
+    "meaning_ko": "파란색 쪽으로 마음이 기울고 있어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'm leaning toward the blue one.\n파란색 쪽으로 마음이 기울고 있어.\n\n💡 뉘앙스\nlean toward something은 결정을 확정하지 않았지만 한 선택을 더 긍정적으로 보고 있다는 뜻이다. 계획과 의견에도 쓸 수 있다.\n\n🗣 \"I'm leaning toward staying home tonight.\"\n오늘 밤은 집에 있는 쪽으로 마음이 기울어.\n\n🔄 함께 가능한 표현\n\"I think I prefer the blue one.\"\n둘 다 파란색을 더 좋아한다. leaning toward는 아직 최종 결정 전인 잠정적 기울어짐을, prefer는 비교적 분명한 선호를 나타낸다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nleaning toward는 /ˈliːnɪŋ təˈwɔːrd/로 잇고, 선택 대상인 blue에 힘을 준다.\n\n✍️ 10초 복습\n\"둘 다 괜찮지만 파란색 쪽으로 마음이 기울고 있어.\"\n\nThey're both nice, but I'm leaning toward the blue one."
+      }
+    ],
+    "hook_ko": "두 가지 중 아직 결정 전이지만 선호가 생겼을 때",
+    "context_ko": "선택·선호",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "둘 다 괜찮지만 파란색 쪽으로 마음이 기울고 있어.",
+    "answer_example_en": "They're both nice, but I'm leaning toward the blue one.",
+    "review_status": "approved"
+  },
+  {
+    "day": 52,
+    "card_id": "REAL-052",
+    "episode": "REAL-LIFE",
+    "phrase": "Let's play it by ear.",
+    "meaning_ko": "상황 봐서 정하자.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Let's play it by ear.\n상황 봐서 정하자.\n\n💡 뉘앙스\nplay it by ear는 계획을 세우지 않는다는 무책임함보다 지금은 정보가 부족하니 상황을 보고 조정하자는 유연함을 나타낸다.\n\n🗣 \"We don't need a strict schedule. Let's play it by ear.\"\n빡빡한 일정은 필요 없어. 상황 봐서 하자.\n\n🔄 함께 가능한 표현\n\"Let's decide on Saturday once we see the weather.\"\n둘 다 나중에 결정한다. play it by ear는 변화하는 상황에 맞춰 유연하게 대응한다는 뜻이고, decide later는 결정 시점을 직접 밝힌다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nplay it은 /pleɪ ɪt/으로 잇고, by ear는 /baɪ ɪr/로 부드럽게 연결한다.\n\n✍️ 10초 복습\n\"비가 올 수도 있으니 토요일 아침에 상황 봐서 정하자.\"\n\nIt might rain, so let's play it by ear on Saturday morning."
+      }
+    ],
+    "hook_ko": "날씨가 불확실해 주말 계획을 확정하기 어려울 때",
+    "context_ko": "계획·유연성",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "비가 올 수도 있으니 토요일 아침에 상황 봐서 정하자.",
+    "answer_example_en": "It might rain, so let's play it by ear on Saturday morning.",
+    "review_status": "approved"
+  },
+  {
+    "day": 53,
+    "card_id": "REAL-053",
+    "episode": "REAL-LIFE",
+    "phrase": "I'm good either way.",
+    "meaning_ko": "난 어느 쪽이든 괜찮아.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'm good either way.\n난 어느 쪽이든 괜찮아.\n\n💡 뉘앙스\nI'm good either way는 제시된 두 선택 중 어느 것이 되어도 괜찮다는 뜻이다. 무관심보다 유연한 수용에 가깝다.\n\n🗣 \"We can walk or take a taxi—I'm good either way.\"\n걸어도 되고 택시를 타도 돼. 난 어느 쪽이든 괜찮아.\n\n🔄 함께 가능한 표현\n\"I don't mind which one we choose.\"\n둘 다 선택을 상대에게 맡긴다. good either way는 두 결과 모두 만족스럽다는 긍정적인 느낌이고, don't mind는 특별한 선호가 없음을 말한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\ngood either는 /ɡʊd ˈiːðər/로 이어지고, 두 선택을 모두 받는 either way에 힘을 준다.\n\n✍️ 10초 복습\n\"한식도 좋고 이탈리아 음식도 좋아. 난 어느 쪽이든 괜찮아.\"\n\nKorean or Italian both sound good. I'm good either way."
+      }
+    ],
+    "hook_ko": "두 식당 모두 좋아서 상대가 골라도 될 때",
+    "context_ko": "선택·배려",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "한식도 좋고 이탈리아 음식도 좋아. 난 어느 쪽이든 괜찮아.",
+    "answer_example_en": "Korean or Italian both sound good. I'm good either way.",
+    "review_status": "approved"
+  },
+  {
+    "day": 54,
+    "card_id": "REAL-054",
+    "episode": "REAL-LIFE",
+    "phrase": "I'll take your word for it.",
+    "meaning_ko": "네 말을 믿을게.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'll take your word for it.\n네 말을 믿을게.\n\n💡 뉘앙스\ntake someone's word for it은 증거나 직접 경험 대신 그 사람의 말을 사실로 받아들인다는 뜻이다. 억양이 차가우면 가벼운 의심처럼 들릴 수 있다.\n\n🗣 \"You know this area better, so I'll take your word for it.\"\n네가 이 동네를 더 잘 아니까 네 말을 믿을게.\n\n🔄 함께 가능한 표현\n\"I trust your judgment on this one.\"\n둘 다 상대 판단을 믿는다. take your word for it은 직접 확인하지 않고 말을 받아들이겠다는 뜻이고, trust your judgment는 상대의 판단 능력을 강조한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nword for it은 /wɜːrd fər ɪt/으로 이어지고, 신뢰 대상을 나타내는 your를 살린다.\n\n✍️ 10초 복습\n\"난 안 먹어 봤지만 네가 정말 맛있다니 네 말을 믿을게.\"\n\nI haven't tried it, but if you say it's great, I'll take your word for it."
+      }
+    ],
+    "hook_ko": "직접 먹어 보진 않았지만 친구의 추천을 믿을 때",
+    "context_ko": "신뢰·판단",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "난 안 먹어 봤지만 네가 정말 맛있다니 네 말을 믿을게.",
+    "answer_example_en": "I haven't tried it, but if you say it's great, I'll take your word for it.",
+    "review_status": "approved"
+  },
+  {
+    "day": 55,
+    "card_id": "REAL-055",
+    "episode": "REAL-LIFE",
+    "phrase": "It grew on me.",
+    "meaning_ko": "점점 마음에 들게 됐어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 It grew on me.\n점점 마음에 들게 됐어.\n\n💡 뉘앙스\nsomething grows on you는 처음에는 매력을 못 느꼈지만 반복해서 접하며 점점 좋아하게 된다는 뜻이다. 사람·장소·스타일에도 쓴다.\n\n🗣 \"The neighborhood was quiet, but it grew on me.\"\n그 동네는 조용했지만 점점 마음에 들었어.\n\n🔄 함께 가능한 표현\n\"I started to like it more after a few listens.\"\n둘 다 나중에 호감이 생겼다. grew on me는 대상이 서서히 마음속에서 자라난 듯한 자연스러운 취향 변화를, started to like는 변화를 직접 설명한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\ngrew on은 /ɡruː ɑːn/으로 이어지고, 변화를 받는 대상인 me를 부드럽게 마무리한다.\n\n✍️ 10초 복습\n\"처음엔 이 노래가 별로였는데 들을수록 점점 좋아졌어.\"\n\nI didn't like this song at first, but it grew on me."
+      }
+    ],
+    "hook_ko": "처음엔 별로였던 노래를 자꾸 듣게 될 때",
+    "context_ko": "취향·변화",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "처음엔 이 노래가 별로였는데 들을수록 점점 좋아졌어.",
+    "answer_example_en": "I didn't like this song at first, but it grew on me.",
+    "review_status": "approved"
+  },
+  {
+    "day": 56,
+    "card_id": "REAL-056",
+    "episode": "REAL-LIFE",
+    "phrase": "I'm in the mood for something warm.",
+    "meaning_ko": "따뜻한 게 당겨.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 I'm in the mood for something warm.\n따뜻한 게 당겨.\n\n💡 뉘앙스\nbe in the mood for는 특정 음식·활동·장르를 지금 즐기고 싶은 기분이라는 뜻이다. for 뒤에는 명사나 동명사를 쓴다.\n\n🗣 \"I'm in the mood for a quiet movie tonight.\"\n오늘 밤은 잔잔한 영화가 보고 싶어.\n\n🔄 함께 가능한 표현\n\"I feel like having something hot tonight.\"\n둘 다 따뜻한 음식을 원한다. in the mood for는 현재 기분과 분위기에 맞는 선택을, feel like는 하고 싶은 마음을 더 직접적으로 말한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nin the mood for는 /ɪn ðə muːd fər/로 한 덩어리처럼 말하고, mood에 힘을 준다.\n\n✍️ 10초 복습\n\"오늘은 쌀쌀해서 따뜻한 게 당겨.\"\n\nIt's chilly today, so I'm in the mood for something warm."
+      }
+    ],
+    "hook_ko": "쌀쌀한 저녁에 메뉴를 고를 때",
+    "context_ko": "음식·기분",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "오늘은 쌀쌀해서 따뜻한 게 당겨.",
+    "answer_example_en": "It's chilly today, so I'm in the mood for something warm.",
+    "review_status": "approved"
+  },
+  {
+    "day": 57,
+    "card_id": "REAL-057",
+    "episode": "REAL-LIFE",
+    "phrase": "This place is a hidden gem.",
+    "meaning_ko": "여기 진짜 숨은 명소야.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 This place is a hidden gem.\n여기 진짜 숨은 명소야.\n\n💡 뉘앙스\na hidden gem은 널리 알려지지 않았지만 발견할 가치가 큰 대상이다. 식당·여행지뿐 아니라 책이나 배우에도 쓸 수 있다.\n\n🗣 \"That little bookstore is a hidden gem.\"\n그 작은 서점은 진짜 숨은 명소야.\n\n🔄 함께 가능한 표현\n\"This place is amazing and still under the radar.\"\n둘 다 덜 알려진 좋은 장소를 칭찬한다. hidden gem은 숨겨진 보석 같은 가치에, under the radar는 아직 대중의 주목을 받지 않았다는 점에 초점을 둔다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nhidden gem은 /ˈhɪdən dʒem/으로 각각 첫 음절에 힘을 주고, gem의 /dʒ/를 또렷하게 낸다.\n\n✍️ 10초 복습\n\"사람들은 잘 모르지만 여기 진짜 숨은 명소야.\"\n\nNot many people know about it, but this place is a hidden gem."
+      }
+    ],
+    "hook_ko": "우연히 찾은 작은 카페가 기대 이상으로 좋을 때",
+    "context_ko": "외출·장소 추천",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "사람들은 잘 모르지만 여기 진짜 숨은 명소야.",
+    "answer_example_en": "Not many people know about it, but this place is a hidden gem.",
+    "review_status": "approved"
+  },
+  {
+    "day": 58,
+    "card_id": "REAL-058",
+    "episode": "REAL-LIFE",
+    "phrase": "It's a bit out of the way.",
+    "meaning_ko": "거기가 조금 외진 데 있어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 It's a bit out of the way.\n거기가 조금 외진 데 있어.\n\n💡 뉘앙스\na place is out of the way라고 하면 주요 동선에서 벗어나 일부러 찾아가야 한다는 뜻이다. a bit을 넣으면 불평을 완화한다.\n\n🗣 \"The hotel was beautiful, but it was out of the way.\"\n호텔은 아름다웠지만 위치가 외졌어.\n\n🔄 함께 가능한 표현\n\"It's nice, but it's not very convenient to get to.\"\n둘 다 접근이 불편하다고 말한다. out of the way는 평소 경로나 중심에서 벗어난 위치를 그리고, not convenient는 불편함을 직접 평가한다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nout of the는 /aʊtəðə/처럼 빠르게 잇고, 위치를 나타내는 way에 힘을 준다.\n\n✍️ 10초 복습\n\"그 식당은 좋지만 위치가 조금 외진 데 있어.\"\n\nThe restaurant is great, but it's a bit out of the way."
+      }
+    ],
+    "hook_ko": "가 보고 싶은 식당이 평소 동선에서 멀리 있을 때",
+    "context_ko": "이동·위치",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "그 식당은 좋지만 위치가 조금 외진 데 있어.",
+    "answer_example_en": "The restaurant is great, but it's a bit out of the way.",
+    "review_status": "approved"
+  },
+  {
+    "day": 59,
+    "card_id": "REAL-059",
+    "episode": "REAL-LIFE",
+    "phrase": "We should make the most of it.",
+    "meaning_ko": "이 상황을 최대한 잘 활용하자.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 We should make the most of it.\n이 상황을 최대한 잘 활용하자.\n\n💡 뉘앙스\nmake the most of something은 제한된 시간이나 불완전한 상황에서도 가능한 이익과 즐거움을 최대한 얻는다는 뜻이다.\n\n🗣 \"We only have an hour, so let's make the most of it.\"\n한 시간밖에 없으니 최대한 알차게 보내자.\n\n🔄 함께 가능한 표현\n\"Let's enjoy what we can despite the weather.\"\n둘 다 조건 속에서 즐길 방법을 찾는다. make the most of it은 가능한 가치와 기회를 최대한 끌어낸다는 적극적인 태도를, enjoy what we can은 즐거움에 초점을 둔다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\nmost of it은 /moʊst əv ɪt/으로 이어지고, 최대한이라는 뜻의 most를 강조한다.\n\n✍️ 10초 복습\n\"날씨는 못 바꾸니 주어진 상황을 최대한 잘 활용하자.\"\n\nWe can't change the weather, so we should make the most of it."
+      }
+    ],
+    "hook_ko": "갑자기 비가 와도 남은 여행을 즐기고 싶을 때",
+    "context_ko": "태도·기회 활용",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "날씨는 못 바꾸니 주어진 상황을 최대한 잘 활용하자.",
+    "answer_example_en": "We can't change the weather, so we should make the most of it.",
+    "review_status": "approved"
+  },
+  {
+    "day": 60,
+    "card_id": "REAL-060",
+    "episode": "REAL-LIFE",
+    "phrase": "Time got away from me.",
+    "meaning_ko": "시간 가는 줄 몰랐어.",
+    "posts": [
+      {
+        "index": 1,
+        "type": "main",
+        "text": "📌 Time got away from me.\n시간 가는 줄 몰랐어.\n\n💡 뉘앙스\ntime gets away from you는 다른 일에 몰입하거나 바빠서 시간 관리를 놓치고 예상보다 늦어졌다는 뜻이다. 사과와 함께 쓰는 것이 좋다.\n\n🗣 \"I meant to call earlier, but time got away from me.\"\n더 일찍 전화하려 했는데 시간 가는 줄 몰랐어.\n\n🔄 함께 가능한 표현\n\"Sorry, I completely lost track of time.\"\n둘 다 시간 흐름을 놓쳤다. time got away from me는 시간이 손에서 빠져나간 듯 예상보다 훌쩍 지났다는 말맛이 있고, lost track은 시각 확인을 놓쳤다는 뜻이 직접적이다."
+      },
+      {
+        "index": 2,
+        "type": "sub",
+        "text": "🗣️ 발음 포인트\n\ngot away는 /ɡɑːt əˈweɪ/로 이어지고, 예상 밖의 흐름을 살려 away를 강조한다.\n\n✍️ 10초 복습\n\"미안해. 일에 집중하다 보니 시간 가는 줄 몰랐어.\"\n\nSorry I'm late. I was focused on work, and time got away from me."
+      }
+    ],
+    "hook_ko": "일에 몰두하다 약속 시간에 늦었을 때",
+    "context_ko": "시간·몰입",
+    "source_label": "REAL-LIFE ENGLISH · 상황 기반",
+    "delayed_answer": true,
+    "quality_version": 3,
+    "quiz_mode": "free",
+    "quiz_ko": "미안해. 일에 집중하다 보니 시간 가는 줄 몰랐어.",
+    "answer_example_en": "Sorry I'm late. I was focused on work, and time got away from me.",
+    "review_status": "approved"
   }
 ]
