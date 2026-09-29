@@ -1,6 +1,6 @@
 {
-  "last_published_day": 35,
-  "last_published_at": "2026-09-29T08:07:17.793225+09:00",
+  "last_published_day": 36,
+  "last_published_at": "2026-09-30T08:07:15.569910+09:00",
   "history": [
     {
       "day": 1,
@@ -421,6 +421,17 @@
       "answer_thread_id": "18100628996212563",
       "answer_detail_thread_id": "18107414597227947",
       "answer_published_at": "2026-09-29T14:07:18.511598+09:00"
+    },
+    {
+      "day": 36,
+      "phrase": "We're running low on coffee.",
+      "published_at": "2026-09-30T08:07:15.569910+09:00",
+      "main_thread_id": "18099871007220664",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_036.png",
+      "answer_due_at": "2026-09-30T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
