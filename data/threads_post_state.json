@@ -1,6 +1,6 @@
 {
-  "last_published_day": 39,
-  "last_published_at": "2026-10-03T08:07:18.765139+09:00",
+  "last_published_day": 40,
+  "last_published_at": "2026-10-04T08:07:12.400327+09:00",
   "history": [
     {
       "day": 1,
@@ -469,6 +469,17 @@
       "answer_thread_id": "17893559052611931",
       "answer_detail_thread_id": "17936782296380402",
       "answer_published_at": "2026-10-03T14:07:20.261658+09:00"
+    },
+    {
+      "day": 40,
+      "phrase": "Let's take it one step at a time.",
+      "published_at": "2026-10-04T08:07:12.400327+09:00",
+      "main_thread_id": "18025086029872833",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_040.png",
+      "answer_due_at": "2026-10-04T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
