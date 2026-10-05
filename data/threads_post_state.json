@@ -1,6 +1,6 @@
 {
-  "last_published_day": 41,
-  "last_published_at": "2026-10-05T08:07:13.155460+09:00",
+  "last_published_day": 42,
+  "last_published_at": "2026-10-06T08:07:14.671973+09:00",
   "history": [
     {
       "day": 1,
@@ -493,6 +493,17 @@
       "answer_thread_id": "18025633901863639",
       "answer_detail_thread_id": "17884791396504327",
       "answer_published_at": "2026-10-05T14:07:16.194463+09:00"
+    },
+    {
+      "day": 42,
+      "phrase": "Could you walk me through it?",
+      "published_at": "2026-10-06T08:07:14.671973+09:00",
+      "main_thread_id": "18088855478680856",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_042.png",
+      "answer_due_at": "2026-10-06T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
