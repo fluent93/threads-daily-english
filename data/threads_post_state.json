@@ -1,6 +1,6 @@
 {
-  "last_published_day": 42,
-  "last_published_at": "2026-10-06T08:07:14.671973+09:00",
+  "last_published_day": 43,
+  "last_published_at": "2026-10-07T08:07:13.018128+09:00",
   "history": [
     {
       "day": 1,
@@ -505,6 +505,17 @@
       "answer_thread_id": "18111247928598342",
       "answer_detail_thread_id": "18629288908005352",
       "answer_published_at": "2026-10-06T14:07:16.537914+09:00"
+    },
+    {
+      "day": 43,
+      "phrase": "I'll look into it.",
+      "published_at": "2026-10-07T08:07:13.018128+09:00",
+      "main_thread_id": "18077750822418845",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_043.png",
+      "answer_due_at": "2026-10-07T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
