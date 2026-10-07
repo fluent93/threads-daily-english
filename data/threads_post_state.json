@@ -1,6 +1,6 @@
 {
-  "last_published_day": 43,
-  "last_published_at": "2026-10-07T08:07:13.018128+09:00",
+  "last_published_day": 44,
+  "last_published_at": "2026-10-08T08:07:12.584887+09:00",
   "history": [
     {
       "day": 1,
@@ -517,6 +517,17 @@
       "answer_thread_id": "18101948246573006",
       "answer_detail_thread_id": "17899712715388795",
       "answer_published_at": "2026-10-07T14:07:17.207440+09:00"
+    },
+    {
+      "day": 44,
+      "phrase": "Let's not jump to conclusions.",
+      "published_at": "2026-10-08T08:07:12.584887+09:00",
+      "main_thread_id": "18132115162705709",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_044.png",
+      "answer_due_at": "2026-10-08T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
