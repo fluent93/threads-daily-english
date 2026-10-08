@@ -1,6 +1,6 @@
 {
-  "last_published_day": 44,
-  "last_published_at": "2026-10-08T08:07:12.584887+09:00",
+  "last_published_day": 45,
+  "last_published_at": "2026-10-09T08:07:14.276023+09:00",
   "history": [
     {
       "day": 1,
@@ -529,6 +529,17 @@
       "answer_thread_id": "17909726988515633",
       "answer_detail_thread_id": "17916212373263753",
       "answer_published_at": "2026-10-08T14:07:17.399658+09:00"
+    },
+    {
+      "day": 45,
+      "phrase": "That's beside the point.",
+      "published_at": "2026-10-09T08:07:14.276023+09:00",
+      "main_thread_id": "18117867739954618",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_045.png",
+      "answer_due_at": "2026-10-09T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
