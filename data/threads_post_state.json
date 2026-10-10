@@ -1,6 +1,6 @@
 {
-  "last_published_day": 46,
-  "last_published_at": "2026-10-10T08:07:14.787474+09:00",
+  "last_published_day": 47,
+  "last_published_at": "2026-10-11T08:07:15.129015+09:00",
   "history": [
     {
       "day": 1,
@@ -553,6 +553,17 @@
       "answer_thread_id": "18346899058268374",
       "answer_detail_thread_id": "17883884598688612",
       "answer_published_at": "2026-10-10T14:07:20.015352+09:00"
+    },
+    {
+      "day": 47,
+      "phrase": "Let's meet halfway.",
+      "published_at": "2026-10-11T08:07:15.129015+09:00",
+      "main_thread_id": "18114559265148453",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_047.png",
+      "answer_due_at": "2026-10-11T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
