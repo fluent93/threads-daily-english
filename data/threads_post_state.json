@@ -1,6 +1,6 @@
 {
-  "last_published_day": 47,
-  "last_published_at": "2026-10-11T08:07:15.129015+09:00",
+  "last_published_day": 48,
+  "last_published_at": "2026-10-12T08:07:12.769803+09:00",
   "history": [
     {
       "day": 1,
@@ -565,6 +565,17 @@
       "answer_thread_id": "18643701220049727",
       "answer_detail_thread_id": "18200402719377420",
       "answer_published_at": "2026-10-11T14:07:16.184902+09:00"
+    },
+    {
+      "day": 48,
+      "phrase": "I don't want to make a big deal out of it.",
+      "published_at": "2026-10-12T08:07:12.769803+09:00",
+      "main_thread_id": "18080265968380373",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_048.png",
+      "answer_due_at": "2026-10-12T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
