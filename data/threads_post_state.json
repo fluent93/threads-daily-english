@@ -1,6 +1,6 @@
 {
-  "last_published_day": 48,
-  "last_published_at": "2026-10-12T08:07:12.769803+09:00",
+  "last_published_day": 49,
+  "last_published_at": "2026-10-13T08:07:14.971113+09:00",
   "history": [
     {
       "day": 1,
@@ -577,6 +577,17 @@
       "answer_thread_id": "18118899028760533",
       "answer_detail_thread_id": "18140705380608881",
       "answer_published_at": "2026-10-12T14:07:18.757642+09:00"
+    },
+    {
+      "day": 49,
+      "phrase": "It's not worth the hassle.",
+      "published_at": "2026-10-13T08:07:14.971113+09:00",
+      "main_thread_id": "18478704892113329",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_049.png",
+      "answer_due_at": "2026-10-13T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
