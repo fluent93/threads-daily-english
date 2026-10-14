@@ -1,6 +1,6 @@
 {
-  "last_published_day": 50,
-  "last_published_at": "2026-10-14T08:07:12.438851+09:00",
+  "last_published_day": 51,
+  "last_published_at": "2026-10-15T08:07:12.998524+09:00",
   "history": [
     {
       "day": 1,
@@ -601,6 +601,17 @@
       "answer_thread_id": "18349624333280233",
       "answer_detail_thread_id": "18070626317783293",
       "answer_published_at": "2026-10-14T14:07:15.597544+09:00"
+    },
+    {
+      "day": 51,
+      "phrase": "I'm leaning toward the blue one.",
+      "published_at": "2026-10-15T08:07:12.998524+09:00",
+      "main_thread_id": "17960974065216552",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_051.png",
+      "answer_due_at": "2026-10-15T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
