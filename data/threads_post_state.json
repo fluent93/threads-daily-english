@@ -634,8 +634,9 @@
       "sub_thread_id": null,
       "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_053.png",
       "answer_due_at": "2026-10-19T03:56:08.947685+09:00",
-      "answer_thread_id": null,
-      "answer_detail_thread_id": null
+      "answer_thread_id": "18105747845458742",
+      "answer_detail_thread_id": "18130939339787804",
+      "answer_published_at": "2026-10-19T14:07:16.795202+09:00"
     },
     {
       "day": 54,
@@ -645,8 +646,9 @@
       "sub_thread_id": null,
       "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_054.png",
       "answer_due_at": "2026-10-19T14:07:00+09:00",
-      "answer_thread_id": null,
-      "answer_detail_thread_id": null
+      "answer_thread_id": "18097781123441290",
+      "answer_detail_thread_id": "18101877956173987",
+      "answer_published_at": "2026-10-19T14:07:16.795202+09:00"
     }
   ],
   "in_progress": null
