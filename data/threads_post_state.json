@@ -1,6 +1,6 @@
 {
-  "last_published_day": 54,
-  "last_published_at": "2026-10-19T08:07:16.691007+09:00",
+  "last_published_day": 55,
+  "last_published_at": "2026-10-20T08:07:12.667442+09:00",
   "history": [
     {
       "day": 1,
@@ -649,6 +649,17 @@
       "answer_thread_id": "18097781123441290",
       "answer_detail_thread_id": "18101877956173987",
       "answer_published_at": "2026-10-19T14:07:16.795202+09:00"
+    },
+    {
+      "day": 55,
+      "phrase": "It grew on me.",
+      "published_at": "2026-10-20T08:07:12.667442+09:00",
+      "main_thread_id": "18119435470990105",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_055.png",
+      "answer_due_at": "2026-10-20T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
