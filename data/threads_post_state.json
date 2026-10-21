@@ -1,6 +1,6 @@
 {
-  "last_published_day": 56,
-  "last_published_at": "2026-10-21T08:07:14.318221+09:00",
+  "last_published_day": 57,
+  "last_published_at": "2026-10-22T08:07:13.801895+09:00",
   "history": [
     {
       "day": 1,
@@ -673,6 +673,17 @@
       "answer_thread_id": "18112707236466937",
       "answer_detail_thread_id": "18168320869479919",
       "answer_published_at": "2026-10-21T14:07:18.408669+09:00"
+    },
+    {
+      "day": 57,
+      "phrase": "This place is a hidden gem.",
+      "published_at": "2026-10-22T08:07:13.801895+09:00",
+      "main_thread_id": "18108562391243351",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_057.png",
+      "answer_due_at": "2026-10-22T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
