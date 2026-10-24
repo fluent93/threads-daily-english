@@ -1,6 +1,6 @@
 {
-  "last_published_day": 59,
-  "last_published_at": "2026-10-24T08:07:14.023144+09:00",
+  "last_published_day": 60,
+  "last_published_at": "2026-10-25T08:07:14.071374+09:00",
   "history": [
     {
       "day": 1,
@@ -709,6 +709,17 @@
       "answer_thread_id": "18082129535344431",
       "answer_detail_thread_id": "18128896957885569",
       "answer_published_at": "2026-10-24T14:07:18.259731+09:00"
+    },
+    {
+      "day": 60,
+      "phrase": "Time got away from me.",
+      "published_at": "2026-10-25T08:07:14.071374+09:00",
+      "main_thread_id": "17986442645892266",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_060.png",
+      "answer_due_at": "2026-10-25T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
