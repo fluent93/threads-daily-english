@@ -1,6 +1,6 @@
 {
-  "last_published_day": 61,
-  "last_published_at": "2026-10-26T09:55:48.323632+09:00",
+  "last_published_day": 62,
+  "last_published_at": "2026-10-27T08:07:15.171754+09:00",
   "history": [
     {
       "day": 1,
@@ -733,6 +733,17 @@
       "answer_thread_id": "17889729780686013",
       "answer_detail_thread_id": "18195181900392978",
       "answer_published_at": "2026-10-26T14:07:23.353100+09:00"
+    },
+    {
+      "day": 62,
+      "phrase": "You might want to bundle up.",
+      "published_at": "2026-10-27T08:07:15.171754+09:00",
+      "main_thread_id": "18133056151768000",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_062.png",
+      "answer_due_at": "2026-10-27T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
