@@ -57,14 +57,14 @@ jobs:
 
       - name: Validate latest monthly source batch
         run: |
-          python scripts/validate_expression_selection.py data/batch_031_060_selection.json
+          python scripts/validate_expression_selection.py data/batch_061_090_selection.json
           python scripts/validate_pilot_copy.py \
-            --selection data/batch_031_060_selection.json \
-            --copy data/batch_031_060_card_copy.json
+            --selection data/batch_061_090_selection.json \
+            --copy data/batch_061_090_card_copy.json
           python scripts/validate_content.py \
             --review \
-            --queue data/batch_031_060_review_queue.json \
-            --images review_images/batch_031_060
+            --queue data/batch_061_090_review_queue.json \
+            --images review_images/batch_061_090
 
       - name: Validate production queue and cards
         run: python scripts/validate_content.py

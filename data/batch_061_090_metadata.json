@@ -1,0 +1,17 @@
+{
+  "batch": "Day 61-90",
+  "status": "approved",
+  "planned_publish_window_kst": {
+    "day_61_earliest": "2026-10-27",
+    "day_90_if_uninterrupted": "2026-11-25"
+  },
+  "seasonal_arc": [
+    "늦가을의 차가운 공기와 짧아진 낮",
+    "환절기 컨디션 관리와 회복",
+    "약속 변경에 대한 배려와 구체적인 감사",
+    "협업·판단·소비에서 균형 잡기"
+  ],
+  "release_policy": "사용자 승인 완료; 운영 큐에 병합됨",
+  "prepared_at_utc": "2026-10-26",
+  "approved_at_kst": "2026-10-26T09:55:14.825122+09:00"
+}
