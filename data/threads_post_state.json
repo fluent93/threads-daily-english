@@ -1,6 +1,6 @@
 {
-  "last_published_day": 64,
-  "last_published_at": "2026-10-29T08:07:14.349683+09:00",
+  "last_published_day": 65,
+  "last_published_at": "2026-10-30T08:07:12.337760+09:00",
   "history": [
     {
       "day": 1,
@@ -769,6 +769,17 @@
       "answer_thread_id": "17881395633543786",
       "answer_detail_thread_id": "18503040268103187",
       "answer_published_at": "2026-10-29T14:07:19.040295+09:00"
+    },
+    {
+      "day": 65,
+      "phrase": "I could go for some soup.",
+      "published_at": "2026-10-30T08:07:12.337760+09:00",
+      "main_thread_id": "18100587749541898",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_065.png",
+      "answer_due_at": "2026-10-30T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
