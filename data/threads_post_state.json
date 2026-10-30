@@ -1,6 +1,6 @@
 {
-  "last_published_day": 65,
-  "last_published_at": "2026-10-30T08:07:12.337760+09:00",
+  "last_published_day": 66,
+  "last_published_at": "2026-10-31T08:07:13.814121+09:00",
   "history": [
     {
       "day": 1,
@@ -781,6 +781,17 @@
       "answer_thread_id": "18127660924917550",
       "answer_detail_thread_id": "18145443772593384",
       "answer_published_at": "2026-10-30T14:07:21.114620+09:00"
+    },
+    {
+      "day": 66,
+      "phrase": "The weather took a turn for the worse.",
+      "published_at": "2026-10-31T08:07:13.814121+09:00",
+      "main_thread_id": "17867352378680200",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_066.png",
+      "answer_due_at": "2026-10-31T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
