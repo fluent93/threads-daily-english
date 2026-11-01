@@ -1,6 +1,6 @@
 {
-  "last_published_day": 67,
-  "last_published_at": "2026-11-01T08:07:12.426696+09:00",
+  "last_published_day": 68,
+  "last_published_at": "2026-11-02T08:07:12.040611+09:00",
   "history": [
     {
       "day": 1,
@@ -805,6 +805,17 @@
       "answer_thread_id": "18096119582172238",
       "answer_detail_thread_id": "17979733896170177",
       "answer_published_at": "2026-11-01T14:07:18.141093+09:00"
+    },
+    {
+      "day": 68,
+      "phrase": "I need to take it easy today.",
+      "published_at": "2026-11-02T08:07:12.040611+09:00",
+      "main_thread_id": "18022321601944890",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_068.png",
+      "answer_due_at": "2026-11-02T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
