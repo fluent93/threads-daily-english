@@ -1,6 +1,6 @@
 {
-  "last_published_day": 69,
-  "last_published_at": "2026-11-03T08:07:14.681316+09:00",
+  "last_published_day": 70,
+  "last_published_at": "2026-11-04T08:07:13.390345+09:00",
   "history": [
     {
       "day": 1,
@@ -829,6 +829,17 @@
       "answer_thread_id": "17914824642548749",
       "answer_detail_thread_id": "18647080354028859",
       "answer_published_at": "2026-11-03T14:07:18.408672+09:00"
+    },
+    {
+      "day": 70,
+      "phrase": "I'm finally feeling like myself again.",
+      "published_at": "2026-11-04T08:07:13.390345+09:00",
+      "main_thread_id": "18379998340210118",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_070.png",
+      "answer_due_at": "2026-11-04T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
