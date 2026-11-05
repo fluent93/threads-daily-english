@@ -1,6 +1,6 @@
 {
-  "last_published_day": 71,
-  "last_published_at": "2026-11-05T08:07:15.960331+09:00",
+  "last_published_day": 72,
+  "last_published_at": "2026-11-06T08:07:13.656306+09:00",
   "history": [
     {
       "day": 1,
@@ -853,6 +853,17 @@
       "answer_thread_id": "18154352014555317",
       "answer_detail_thread_id": "18126503548934818",
       "answer_published_at": "2026-11-05T14:07:17.582745+09:00"
+    },
+    {
+      "day": 72,
+      "phrase": "I'll make it up to you.",
+      "published_at": "2026-11-06T08:07:13.656306+09:00",
+      "main_thread_id": "17893502622684895",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_072.png",
+      "answer_due_at": "2026-11-06T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
