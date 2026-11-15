@@ -1,6 +1,6 @@
 {
-  "last_published_day": 81,
-  "last_published_at": "2026-11-15T08:07:12.616664+09:00",
+  "last_published_day": 82,
+  "last_published_at": "2026-11-16T08:07:15.203998+09:00",
   "history": [
     {
       "day": 1,
@@ -973,6 +973,17 @@
       "answer_thread_id": "18001129007824916",
       "answer_detail_thread_id": "18117061430019064",
       "answer_published_at": "2026-11-15T14:07:18.272252+09:00"
+    },
+    {
+      "day": 82,
+      "phrase": "Let's weigh the pros and cons.",
+      "published_at": "2026-11-16T08:07:15.203998+09:00",
+      "main_thread_id": "18145203292520760",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_082.png",
+      "answer_due_at": "2026-11-16T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
