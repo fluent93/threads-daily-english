@@ -1,6 +1,6 @@
 {
-  "last_published_day": 84,
-  "last_published_at": "2026-11-18T08:07:14.619198+09:00",
+  "last_published_day": 85,
+  "last_published_at": "2026-11-19T08:07:15.864130+09:00",
   "history": [
     {
       "day": 1,
@@ -1009,6 +1009,17 @@
       "answer_thread_id": "18161366860513264",
       "answer_detail_thread_id": "17970899133077789",
       "answer_published_at": "2026-11-18T14:07:16.528043+09:00"
+    },
+    {
+      "day": 85,
+      "phrase": "Let's leave some room for error.",
+      "published_at": "2026-11-19T08:07:15.864130+09:00",
+      "main_thread_id": "18062872196659939",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_085.png",
+      "answer_due_at": "2026-11-19T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
