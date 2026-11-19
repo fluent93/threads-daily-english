@@ -1,6 +1,6 @@
 {
-  "last_published_day": 85,
-  "last_published_at": "2026-11-19T08:07:15.864130+09:00",
+  "last_published_day": 86,
+  "last_published_at": "2026-11-20T08:07:13.753494+09:00",
   "history": [
     {
       "day": 1,
@@ -1021,6 +1021,17 @@
       "answer_thread_id": "18646447105028032",
       "answer_detail_thread_id": "18036162875856862",
       "answer_published_at": "2026-11-19T14:07:16.387553+09:00"
+    },
+    {
+      "day": 86,
+      "phrase": "Better safe than sorry.",
+      "published_at": "2026-11-20T08:07:13.753494+09:00",
+      "main_thread_id": "18121569200596738",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_086.png",
+      "answer_due_at": "2026-11-20T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
