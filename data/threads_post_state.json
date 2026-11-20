@@ -1,6 +1,6 @@
 {
-  "last_published_day": 86,
-  "last_published_at": "2026-11-20T08:07:13.753494+09:00",
+  "last_published_day": 87,
+  "last_published_at": "2026-11-21T08:07:13.405346+09:00",
   "history": [
     {
       "day": 1,
@@ -1033,6 +1033,17 @@
       "answer_thread_id": "18105225122372770",
       "answer_detail_thread_id": "18245370031316015",
       "answer_published_at": "2026-11-20T14:07:16.612945+09:00"
+    },
+    {
+      "day": 87,
+      "phrase": "I went a little overboard.",
+      "published_at": "2026-11-21T08:07:13.405346+09:00",
+      "main_thread_id": "17911173678332025",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_087.png",
+      "answer_due_at": "2026-11-21T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
