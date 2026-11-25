@@ -1,6 +1,6 @@
 {
-  "last_published_day": 90,
-  "last_published_at": "2026-11-24T08:07:16.406793+09:00",
+  "last_published_day": 91,
+  "last_published_at": "2026-11-25T14:58:25.145258+09:00",
   "history": [
     {
       "day": 1,
@@ -1081,6 +1081,17 @@
       "answer_thread_id": "18362825353220962",
       "answer_detail_thread_id": "18122757442984330",
       "answer_published_at": "2026-11-24T14:07:15.857569+09:00"
+    },
+    {
+      "day": 91,
+      "phrase": "It's freezing out.",
+      "published_at": "2026-11-25T14:58:25.145258+09:00",
+      "main_thread_id": "17895589161618222",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_091.png",
+      "answer_due_at": "2026-11-25T20:58:25.145258+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
