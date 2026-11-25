@@ -1,0 +1,17 @@
+{
+  "batch": "Day 91-120",
+  "status": "approved",
+  "planned_publish_window_kst": {
+    "day_91_earliest": "2026-11-25",
+    "day_120_if_uninterrupted": "2026-12-24"
+  },
+  "seasonal_arc": [
+    "초겨울 날씨와 난방",
+    "연말 업무와 일정 관리",
+    "선물 쇼핑과 예산",
+    "모임 초대와 환대"
+  ],
+  "release_policy": "사용자 승인 완료; 운영 큐에 병합",
+  "prepared_at_utc": "2026-11-25",
+  "approved_at_kst": "2026-11-25T15:00:00+09:00"
+}

@@ -1,0 +1,17 @@
+{
+  "batch": "Day 121-150",
+  "status": "approved",
+  "planned_publish_window_kst": {
+    "day_121_earliest": "2026-12-25",
+    "day_150_if_uninterrupted": "2027-01-23"
+  },
+  "seasonal_arc": [
+    "연말 휴식과 회고",
+    "새해의 현실적인 시작",
+    "루틴과 꾸준함 회복",
+    "피드백과 문제 해결"
+  ],
+  "release_policy": "사용자 승인 완료; 운영 큐에 병합",
+  "prepared_at_utc": "2026-11-25",
+  "approved_at_kst": "2026-11-25T15:00:00+09:00"
+}

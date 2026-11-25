@@ -55,16 +55,18 @@ jobs:
       - name: Validate approved card copy
         run: python scripts/validate_pilot_copy.py
 
-      - name: Validate latest monthly source batch
+      - name: Validate approved two-month source batches
         run: |
-          python scripts/validate_expression_selection.py data/batch_061_090_selection.json
-          python scripts/validate_pilot_copy.py \
-            --selection data/batch_061_090_selection.json \
-            --copy data/batch_061_090_card_copy.json
-          python scripts/validate_content.py \
-            --review \
-            --queue data/batch_061_090_review_queue.json \
-            --images review_images/batch_061_090
+          for batch in 091_120 121_150; do
+            python scripts/validate_expression_selection.py "data/batch_${batch}_selection.json"
+            python scripts/validate_pilot_copy.py \
+              --selection "data/batch_${batch}_selection.json" \
+              --copy "data/batch_${batch}_card_copy.json"
+            python scripts/validate_content.py \
+              --review \
+              --queue "data/batch_${batch}_review_queue.json" \
+              --images "review_images/batch_${batch}"
+          done
 
       - name: Validate production queue and cards
         run: python scripts/validate_content.py
