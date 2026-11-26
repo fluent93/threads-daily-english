@@ -1,6 +1,6 @@
 {
-  "last_published_day": 92,
-  "last_published_at": "2026-11-26T08:07:14.070810+09:00",
+  "last_published_day": 93,
+  "last_published_at": "2026-11-27T08:07:12.594376+09:00",
   "history": [
     {
       "day": 1,
@@ -1105,6 +1105,17 @@
       "answer_thread_id": "18135638095686566",
       "answer_detail_thread_id": "18142504168627995",
       "answer_published_at": "2026-11-26T14:07:17.749021+09:00"
+    },
+    {
+      "day": 93,
+      "phrase": "I can barely feel my fingers.",
+      "published_at": "2026-11-27T08:07:12.594376+09:00",
+      "main_thread_id": "18100249400396495",
+      "sub_thread_id": null,
+      "image_url": "https://raw.githubusercontent.com/fluent93/threads-daily-english/master/images/day_093.png",
+      "answer_due_at": "2026-11-27T14:07:00+09:00",
+      "answer_thread_id": null,
+      "answer_detail_thread_id": null
     }
   ],
   "in_progress": null
